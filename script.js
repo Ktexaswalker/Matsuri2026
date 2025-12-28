@@ -18,3 +18,31 @@ if (logo) {
         fondo.style.backgroundPosition = 'center';
     }, 20);
 }
+
+// Carousel
+const swiper = new Swiper(".mySwiper", {
+    spaceBetween: 16,
+    loop: false,
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+
+    breakpoints: {
+        0: {
+        slidesPerView: 1,   // móvil
+        },
+        576: {
+        slidesPerView: 2,   // tablet
+        },
+        768: {
+        slidesPerView: 3,   // desktop
+        },
+    },
+});

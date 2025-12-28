@@ -4,33 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matsuri Plantilla Responsive</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+     <link rel="stylesheet" href="personalStyle.css">
     <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
-    <script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.js"></script>
+    <!-- <script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script> -->
+    <script defer src="swiper-12.0.3/package/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="swiper-12.0.3/package/swiper-bundle.min.css">
     <script defer src="script.js"></script>
 </head>
 <body>
-    <nav class="navbar d-none d-md-block">
+    <nav class="navbar d-none d-md-block sticky-top bg-white">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col">
-                    <a href="Matsuri">Matsuri</a>
-                    <a href="Act">act</a>
-                    <a href="About">about</a>
-                    <a href="Suport">suport</a>
-                    <a href="Contact">contact</a>
-                    <a href="Tiquets">tiquets</a>
-                    <a href="Idiomas">idiomas</a>
+            <div class="d-flex align-items-center w-100 pe-4 me-0">
+                <!-- LOGO -->
+                <div>
+                    <a href="Matsuri">
+                        <img src="assets/etiqueta.png" alt="Matsuri">
+                    </a>
+                </div>
+                <!-- MENU -->
+                <div class="ms-auto d-flex align-items-center gap-4">
+                <!-- LINKS IZQUIERDA -->
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" 
+                            type="button" 
+                            data-bs-toggle="dropdown" 
+                            aria-expanded="false">
+                            Activities
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Program</a></li>
+                            <li><a class="dropdown-item" href="#">Performers</a></li>
+                            <li><a class="dropdown-item" href="#">Kids</a></li>
+                            <li><a class="dropdown-item" href="#">Booths</a></li>
+                            <li><a class="dropdown-item" href="#">Food</a></li>
+                        </ul>
+                    </div>
+                    <div><a href="About" class="nav-link">About</a></div>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" 
+                            type="button" 
+                            data-bs-toggle="dropdown" 
+                            aria-expanded="false">
+                            Support us
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Performers</a></li>
+                        </ul>
+                    </div>
+                    <div><a href="Contact" class="nav-link">Contact</a></div>
+                </div>
+                <!-- TICKETS -->
+                <div class="ms-auto d-flex align-items-center">
+                    <div>
+                        <button class="tickets-nav ms-0 me-2 me-lg-5">TICKETS</button>
+                        <div class="dropdown d-md-block d-lg-none">
+                            <button class="dropdown-toggle normal_btn-nav me-0"
+                                type="button" 
+                                data-bs-toggle="dropdown" 
+                                aria-expanded="false">ENG</button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a class="dropdown-item" href="#">ESP</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">CAT</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- IDIOMA -->
+                    <div class="dropdown d-md-none d-lg-block">
+                        <button class="dropdown-toggle normal_btn-nav me-0"
+                            type="button" 
+                            data-bs-toggle="dropdown" 
+                            aria-expanded="false">ENG</button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <a class="dropdown-item" href="#">ESP</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">CAT</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
     <!-- Hamburgesa -->
-    <nav class="navbar bg-cherryRed border-body d-block d-md-none p-0 fixed-top" data-bs-theme="dark">
+    <nav class="bg-white sticky-top navbar navbar-expand-md bg-cherryRed border-body d-block d-md-none p-0" data-bs-theme="dark">
         <div class="container-fluid">
+            <div>
+                <a class="navbar-brand" href="Matsuri">
+                    <img src="assets/etiqueta.png" alt="Matsuri">
+                </a>
+            </div>
             <!-- Botón hamburguesa -->
-            <button class="navbar-toggler position-absolute top-0 end-0" 
+            <button class="navbar-toggler ms-auto" 
                 type="button"
+                role="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#desplegar"
                 aria-controls="desplegar"
@@ -44,39 +120,66 @@
             <div class="collapse navbar-collapse" id="desplegar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Item 1</a>
+                        <a class="nav-link itemColor" href="#">Item 1</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Item 2</a>
+                        <a class="nav-link itemColor" href="#">Item 2</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Item 3</a>
+                        <a class="nav-link itemColor" href="#">Item 3</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Item 4</a>
+                        <a class="nav-link itemColor" href="#">Item 4</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Item 5</a>
+                        <a class="nav-link itemColor" href="#">Item 5</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <section class="imgMatsuri">
+    <section class="imgMatsuri d-flex align-items-end">
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
-
+                    <h2 class="titleMatsuri">MATSURI FESTIVAL BARCELONA 2026</h2>
+                    <h5 class="subtitleMatsuri">16 and 17 of may - At moll de la fusta</h5>
                 </div>
             </div>
-        </div>
+            <div class="row">
+                <div class="col">
+                    <button class="tickets">TICKETS</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="normal_btn">Sponsor us</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="normal_btn">Crowdfund us</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="normal_btn">Volunteer</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="separation"></div>
+                </div>
+            </div>
     </section>
     <section>
         <!-- SPONSORS -->
         <div class="slider">
             <div class="slider-track">
                 <img class="sponsor-img" src="https://matsuri-bcn.com/public/images/Sponsors/Sponsor-12.png" alt="">
-                <!-- <img class="sponsor-img" src="https://matsuri-bcn.com/public/images/Sponsors/Sponsor-2.jpg" alt=""> -->
+                
+                <!-- NO<img class="sponsor-img" src="https://matsuri-bcn.com/public/images/Sponsors/Sponsor-2.jpg" alt=""> -->
+                
                 <img class="sponsor-img" src="https://matsuri-bcn.com/public/images/Sponsors/Sponsor-3.jpg" alt="">
                 <img class="sponsor-img" src="https://matsuri-bcn.com/public/images/Sponsors/Sponsor-4.jpg" alt="">
                 <img class="sponsor-img" src="https://matsuri-bcn.com/public/images/Sponsors/Sponsor-5.png" alt="">
@@ -88,8 +191,8 @@
                 <img class="sponsor-img" src="https://matsuri-bcn.com/public/images/Sponsors/Sponsor-11.png" alt="">
                 <img class="sponsor-img" src="https://matsuri-bcn.com/public/images/Sponsors/Sponsor-1.jpg" alt="">
                 <!-- DUPLICADOS -->
-                 <img class="sponsor-img" src="https://matsuri-bcn.com/public/images/Sponsors/Sponsor-12.png" alt="">
-                <!-- <img class="sponsor-img" src="https://matsuri-bcn.com/public/images/Sponsors/Sponsor-2.jpg" alt=""> -->
+                <img class="sponsor-img" src="https://matsuri-bcn.com/public/images/Sponsors/Sponsor-12.png" alt="">
+                <!-- NO<img class="sponsor-img" src="https://matsuri-bcn.com/public/images/Sponsors/Sponsor-2.jpg" alt=""> -->
                 <img class="sponsor-img" src="https://matsuri-bcn.com/public/images/Sponsors/Sponsor-3.jpg" alt="">
                 <img class="sponsor-img" src="https://matsuri-bcn.com/public/images/Sponsors/Sponsor-4.jpg" alt="">
                 <img class="sponsor-img" src="https://matsuri-bcn.com/public/images/Sponsors/Sponsor-5.png" alt="">
@@ -103,31 +206,322 @@
             </div>
         </div>
     </section>
+    <!-- WHAT IS MATSURI -->
     <section>
-        <!-- PEQUEÑO movil -->
-        <div class="container-fluid d-block d-md-none">
-            <div class="row">
-                <div class="col">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.7675227972195!2d2.1812584855806927!3d41.379135342140316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a31bfa32df1b%3A0xd262de734a5102a7!2sMuelle%20de%20la%20Madera%20-%20Moll%20de%20la%20Fusta!5e0!3m2!1ses!2ses!4v1766366974970!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="bg-container-animation container-fluid bg-deepBlue">
+            <div class="row d-flex align-items-center">
+                <div class="col-11 offset-1 offset-sm-0 col-sm-5">
+                    <h3 class="text-cherryRed pt-3 fw-bold">What is the Matsuri BCN?</h3>
+                    <p>Matsuri BCN is a Japanese cultural festival here in Barcelona where people can come and enjoy live performance, authentic food and activities just like in Japan!</p>
                 </div>
-            </div>
-        </div>
-        <!-- MEDIANO tablet -->
-        <div class="container-fluid d-none d-md-block d-lg-none">
-            <div class="row">
-                <div class="col">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.7675227972195!2d2.1812584855806927!3d41.379135342140316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a31bfa32df1b%3A0xd262de734a5102a7!2sMuelle%20de%20la%20Madera%20-%20Moll%20de%20la%20Fusta!5e0!3m2!1ses!2ses!4v1766366974970!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-        </div>
-        <!-- GRANDE PC -->
-         <div class="container-fluid d-none d-lg-block">
-            <div class="row">
-                <div class="col">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.7675227972195!2d2.1812584855806927!3d41.379135342140316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a31bfa32df1b%3A0xd262de734a5102a7!2sMuelle%20de%20la%20Madera%20-%20Moll%20de%20la%20Fusta!5e0!3m2!1ses!2ses!4v1766366974970!5m2!1ses!2ses" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="col-11 offset-1 mt-3 mb-3 col-sm-5">
+                    <img class="border-start border-end border-5 border-black" src="assets/event_m_Matsuri_25_postcard_.png" alt="">
                 </div>
             </div>
         </div>
     </section>
+    <!-- SPACE -->
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col bg-white">
+                    <br><br>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Information -->
+    <section>
+        <div class="bg-container-animation container-fluid bg-deepBlue">
+            <div class="justify-content-center align-items-center">
+                <div class="col">
+                    <h3 class="text-cherryRed pt-3 ps-3 fw-bold">Information</h3>
+                    <!-- <div id="carousel" class="carousel slide">
+                        <div class="carousel-inner"> -->
+                            <!-- SLIDE 1 -->
+                            <!-- <div class="carousel-item active">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 col-sm-6 col-md-4 d-block">
+                                        <div class="card bg-deepBlue text-white h-100">
+                                            <img src="assets/dancing.jpg" alt="">
+                                            <div class="card-body">
+                                                <p class="card-text"><a class="text-white text-decoration-none" href="">PROGRAM1 ></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4 d-none d-sm-block">
+                                        <div class="card bg-deepBlue text-white h-100">
+                                            <img src="assets/sumi-e.jpg" alt="">
+                                            <div class="card-body">
+                                                <p class="card-text"><a class="text-white text-decoration-none" href="">PERFORMERS1 ></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4 d-none d-md-block">
+                                        <div class="card bg-deepBlue text-white h-100">
+                                            <img src="assets/onigiri.jpg" alt="">
+                                            <div class="card-body">
+                                                <p class="card-text"><a class="text-white text-decoration-none" href="">KIDS1 ></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- SLIDE 2 -->
+                            <!-- <div class="carousel-item">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 col-sm-6 col-md-4 d-none d-sm-block">
+                                        <div class="card bg-deepBlue text-white h-100">
+                                            <img src="assets/dancing.jpg" alt="">
+                                            <div class="card-body">
+                                                <p class="card-text"><a class="text-white text-decoration-none" href="">PROGRAM2 ></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4">
+                                        <div class="card bg-deepBlue text-white h-100">
+                                            <img src="assets/sumi-e.jpg" alt="">
+                                            <div class="card-body">
+                                                <p class="card-text"><a class="text-white text-decoration-none" href="">PERFORMERS2 ></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4 d-none d-md-block">
+                                        <div class="card bg-deepBlue text-white h-100">
+                                            <img src="assets/onigiri.jpg" alt="">
+                                            <div class="card-body">
+                                                <p class="card-text"><a class="text-white text-decoration-none" href="">KIDS2 ></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- SLIDE 3 -->
+                            <!-- <div class="carousel-item">
+                                <div class="row justify-content-center">
+                                    <div class="col-12 col-sm-6 col-md-4 d-none d-md-block">
+                                        <div class="card bg-deepBlue text-white h-100">
+                                            <img src="assets/dancing.jpg" alt="">
+                                            <div class="card-body">
+                                                <p class="card-text"><a class="text-white text-decoration-none" href="">PROGRAM3 ></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4 d-none d-sm-block">
+                                        <div class="card bg-deepBlue text-white h-100">
+                                            <img src="assets/sumi-e.jpg" alt="">
+                                            <div class="card-body">
+                                                <p class="card-text"><a class="text-white text-decoration-none" href="">PERFORMERS3 ></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-sm-6 col-md-4 d-md-block">
+                                        <div class="card bg-deepBlue text-white h-100">
+                                            <img src="assets/onigiri.jpg" alt="">
+                                            <div class="card-body">
+                                                <p class="card-text"><a class="text-white text-decoration-none" href="">KIDS3 ></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="swiper mySwiper px-3">
+                                <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card bg-deepBlue text-white h-100">
+                                        <div class="ratio ratio-4x3">
+                                            <img class="img-fluid object-fit-cover"src="assets/dancing.jpg" alt="">
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                <a href="#" class="text-white text-decoration-none">
+                                                    PROGRAM >
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card bg-deepBlue text-white h-100">
+                                        <div class="ratio ratio-4x3">
+                                            <img class="img-fluid object-fit-cover" src="assets/sumi-e.jpg" alt="">
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                <a href="#" class="text-white text-decoration-none">
+                                                    PERFORMERS >
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card bg-deepBlue text-white h-100">
+                                        <div class="ratio ratio-4x3">
+                                            <img class="img-fluid object-fit-cover" src="assets/onigiri.jpg" alt="">
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                <a href="#" class="text-white text-decoration-none">
+                                                    KIDS >
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- añade todas las cards que quieras -->
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <!-- <div class="swiper-pagination"></div> -->
+                            
+                            <!-- <button class="carousel-control-prev"
+                                type="button"
+                                data-bs-target="#carousel"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"
+                                    aria-hidden="true">
+                                </span>
+                                <span class="visually-hidden">
+                                    Previous
+                                </span>
+                            </button>
+                            <button class="carousel-control-next" 
+                                type="button" 
+                                data-bs-target="#carousel" 
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" 
+                                    aria-hidden="true">
+                                </span>
+                                <span class="visually-hidden">
+                                    Next
+                                </span>
+                            </button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- WHERE IS THE MATSURI -->
+    <section>
+        <div class="container-fluid p-5">
+            <div class="bg-container-animation container-fluid bg-deepBlue border rounded-5 p-4">
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="bg-container-animation h-100
+                                offset-1 col-11 
+                                offset-sm-0 col-sm-12 order-sm-1
+                                offset-md-0 col-md-6 order-md-2
+                                offset-lg-0 col-lg-5 order-lg-2
+                                offset-xl-1 col-xl-4 order-xl-2
+                                offset-xxl-1 col-xxl-5 order-xxl-2
+                                bg-deepBlue rounded-5 p-5">
+                        <h3 class="text-cherryRed pt-3 fw-bold">Where is the Matsuri?</h3>
+                        <span>Moll de la fusta</span>
+                        <p>Ronda Litoral, 1740, Ciutat Vella, 08039 Barcelona</p>
+                    </div>
+                    <!-- PEQUEÑO movil -->
+                    <div class="mt-3 mb-3
+                        col-12
+                        order-2 offset-0 d-block d-sm-none">
+                        <iframe class="rounded-4" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.7675227972195!2d2.1812584855806927!3d41.379135342140316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a31bfa32df1b%3A0xd262de734a5102a7!2sMuelle%20de%20la%20Madera%20-%20Moll%20de%20la%20Fusta!5e0!3m2!1ses!2ses!4v1766366974970!5m2!1ses!2ses" width="300" height="275" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <!-- PEQUEÑO movil/tablet -->
+                    <div class="mt-3 mb-3
+                        d-none
+                        col-sm-12 offset-sm-0 order-sm-2 d-sm-block
+                        col-md-6 offset-md-0 order-md-1 d-md-block
+                        d-lg-none
+                        d-xl-none">
+                        <iframe class="rounded-4" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.7675227972195!2d2.1812584855806927!3d41.379135342140316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a31bfa32df1b%3A0xd262de734a5102a7!2sMuelle%20de%20la%20Madera%20-%20Moll%20de%20la%20Fusta!5e0!3m2!1ses!2ses!4v1766366974970!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <!-- MEDIANO tablet -->
+                    <div class="mt-3 mb-3
+                        d-none
+                        d-sm-none
+                        d-md-none
+                        col-lg-6 order-lg-1 d-lg-block 
+                        col-xl-7 order-xl-1 d-xl-block d-xxl-none">
+                        <iframe class="rounded-4" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.7675227972195!2d2.1812584855806927!3d41.379135342140316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a31bfa32df1b%3A0xd262de734a5102a7!2sMuelle%20de%20la%20Madera%20-%20Moll%20de%20la%20Fusta!5e0!3m2!1ses!2ses!4v1766366974970!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <!-- GRANDE PC -->
+                    <div class="mt-3 mb-3
+                        d-none
+                        offset-xxl-1 col-xxl-5 d-xxl-block">
+                        <iframe class="rounded-4" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.7675227972195!2d2.1812584855806927!3d41.379135342140316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a31bfa32df1b%3A0xd262de734a5102a7!2sMuelle%20de%20la%20Madera%20-%20Moll%20de%20la%20Fusta!5e0!3m2!1ses!2ses!4v1766366974970!5m2!1ses!2ses" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- WANT TO HELP THE MATSURI -->
+    <section>
+        <div class="container-fluid px-5 pb-5 mb-5">
+            <div class="bg-container-animation container-fluid bg-deepBlue border rounded-5 p-4">
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="bg-container-animation h-100
+                                offset-0 col-12 order-1
+                                offset-sm-0 col-sm-6 order-1
+                                offset-xl-1 col-xl-4 order-1
+                                bg-deepBlue rounded-5 ps-5">
+                        <h3 class="text-cherryRed pt-3 fw-bold">Want to help the Matsuri?</h3>
+                        <h6>
+                            <a class="text-white text-decoration-none" href="">Become a volunteer 
+                                <svg class="ms-1" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M6.646 1.646a.5.5 0 0 1 .708 0l5 5a.5.5 0 0 1 0 .708l-5 5a.5.5 0 0 1-.708-.708L11.293 8 6.646 3.354z"/>
+                                </svg>
+                            </a>
+                        </h6>
+                        <h6>
+                            <a class="text-white text-decoration-none" href="">Crowdfund us 
+                                <svg class="ms-1" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M6.646 1.646a.5.5 0 0 1 .708 0l5 5a.5.5 0 0 1 0 .708l-5 5a.5.5 0 0 1-.708-.708L11.293 8 6.646 3.354z"/>
+                                </svg>    
+                            </a>
+                        </h6>
+                    </div>
+                    <div class="mt-3 mb-3
+                        d-flex align-items-start
+                        col-12 order-2 
+                        col-sm-6 order-sm-6
+                        card bg-deepBlue">
+                        <img src="assets/scenario.jpg" class="card-img-top" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="bg-container-animation bg-deepBlue fixed-bottom">
+            <div class="container-fluid">
+                <div class="container-fluid d-flex justify-content-center">
+                    <div class="d-flex justify-content-evenly px-4 pt-1 mt-3">
+                        <div><a href="" class="text-decoration-none text-white mx-1 mx-sm-2 mx-md-3">FAQ's</a></div>
+                        <div><a href="" class="text-decoration-none text-white mx-1 mx-sm-2 mx-md-3">Contact</a></div>
+                        <div><a href="" class="text-decoration-none text-white mx-1 mx-sm-2 mx-md-3">Cookie&nbsp;policy</a></div>
+                        <div><a href="" class="text-decoration-none text-white mx-1 mx-sm-2 mx-md-3">Privacy&nbsp;policy</a></div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <a href="" class="instagram text-decoration-none text-white px-1 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+                        </svg>
+                    </a>
+                    <a href="" class="twitter text-decoration-none text-white px-1 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                        </svg>
+                    </a>
+                    <a href="" class="youtube text-decoration-none text-white px-1 mb-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
