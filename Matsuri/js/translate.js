@@ -45,7 +45,7 @@ const translations = {
         "TICKETS": "ENTRADES",
         "Activities": "Activitats",
         "Program": "Programa",
-        "Performers": "Artistas",
+        "Performers": "Artistes",
         "Kids": "Nens",
         "Booths": "Estands",
         "Food": "Menjar",

@@ -416,7 +416,7 @@
     -webkit-background-clip: text !important;
     background-clip: text !important;
     color: transparent !important;
-	/* background-size: 100% 100% !important; */
+	margin-bottom: 0 !important;
     animation: pasada 1.4s linear infinite !important;
 }
 .animation-funny:hover > img {
