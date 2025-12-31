@@ -128,31 +128,51 @@ window.addEventListener('load', applyTranslation);
 window.addEventListener('idioma', applyTranslation);
 
 
-// Optimización de imagenes
+// Optimización de imagenes (GENERAR IMAGENES PARA GUARDAR EN FORMATO ".WEBP")
+/*
+function generarRutaWebP(rutaOriginal) {
+    // Separar carpeta y nombre
+    if (/^https?:\/\//i.test(rutaOriginal)) return null;
+    const partes = rutaOriginal.split('/'); 
+    const nombreArchivo = partes.pop();
+    const nombreSinExt = rutaOriginal.split('.').slice(0, -1).join('.');
+    return `webp/${nombreSinExt}.webp`;
+}
 function convertToWebP(imgElement) {
-  return new Promise((resolve) => {
-    const jpgUrl = imgElement.dataset.src;
-    const img = new Image();
-    img.src = jpgUrl;
+    return new Promise((resolve) => {
+        const jpgUrl = imgElement.dataset.src;
+        const url = generarRutaWebP(jpgUrl);
+        
+        if (sessionStorage.getItem(jpgUrl)) {
+            console.log('Cargando desde sessionStorage:', jpgUrl);
+            imgElement.src = sessionStorage.getItem(jpgUrl);
+            resolve();
+            return;
+        }
+        if (!generarRutaWebP(jpgUrl)) {
+            resolve(); // Imagen externa → ignorar
+            return;
+        }
+        const img = new Image();
+        img.src = jpgUrl;
+        img.onload = () => {
+            const canvas = document.createElement('canvas');
+            canvas.width = img.width;
+            canvas.height = img.height;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0);
 
-    img.onload = () => {
-        const canvas = document.createElement('canvas');
-        canvas.width = img.width;
-        canvas.height = img.height;
-        const ctx = canvas.getContext('2d');
-        ctx.drawImage(img, 0, 0);
-
-        const webpDataUrl = canvas.toDataURL('image/webp', 0.8);
-        imgElement.src = webpDataUrl;
-        resolve();
-    };
-    
-    img.onerror = () => {
-        console.warn(`No se pudo cargar la imagen: ${jpgUrl}`);
-        imgElement.src = jpgUrl;
-        resolve();
-    };
-  });
+            const webpDataUrl = canvas.toDataURL('image/webp', 0.0000001);
+            sessionStorage.setItem(jpgUrl, webpDataUrl);
+            imgElement.src = webpDataUrl;
+            resolve();
+        };
+        img.onerror = () => {
+            console.warn(`No se pudo cargar la imagen: ${jpgUrl}`);
+            imgElement.src = jpgUrl;
+            resolve();
+        };
+    });
 }
 if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries, obs) => {
@@ -163,11 +183,25 @@ if ('IntersectionObserver' in window) {
         }
     });
     }, { rootMargin: '50px' });
+    document.querySelectorAll('.optimizable').forEach(img => {
+        observer.observe(img);
+    });
 } else {
     document.querySelectorAll('.optimizable').forEach(img => {
         convertToWebP(img);
     });
-}
+}*/
+
+// Cargar imagen en formato .webp
+document.querySelectorAll('.optimizable').forEach(img => {
+    const dataSrc = img.dataset.src;
+
+    // Ignorar URLs externas
+    if (!dataSrc || /^https?:\/\//i.test(dataSrc)) return;
+
+    // Pasar data-src → src
+    img.src = dataSrc;
+});
 
 // LUPA
 const lupa = document.querySelectorAll(".lupa").forEach(lupa => {
@@ -177,13 +211,13 @@ const lupa = document.querySelectorAll(".lupa").forEach(lupa => {
     lupa.addEventListener("pointerdown", e => {
         if (e.button === 0) {
             index++;
-            console.log("izquierdo");
+            // console.log("izquierdo");
         }
         if (e.button === 1) {
-            console.log("central");
+            // console.log("central");
         }
         if (e.button === 2) {
-            console.log("derecho");
+            // console.log("derecho");
             index--;
         }
     });
@@ -210,3 +244,12 @@ const lupa = document.querySelectorAll(".lupa").forEach(lupa => {
         img.style.transform = `scale(1)`;
     });
 })
+
+// Comprar entrada
+function comprarTicket() {
+  window.open(
+    "https://entradium.com/events/festival-matsuri-barcelona-2025",
+    "_blank",
+    "noopener,noreferrer"
+  );
+}

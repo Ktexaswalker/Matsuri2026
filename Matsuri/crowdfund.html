@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Volunteer</title>
+	<title>Matsuri 2026</title>
+    <link rel="shortcut icon" href="./img/logo/acj logo red.png" type="image/x-icon">
+    <meta name="author" content="Hector Martinez">
+    <meta name="description" content="Festival Matsuri 2026">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="js/bootstrap.bundle.js"></script>
+	<script defer src="js/swiper-bundle.min.js"></script>
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script defer src="js/script.js"></script>
+    <script defer src="js/translate.js"></script>
+</head>
+<body>
+    <nav class="navbar d-none d-md-block sticky-top bg-white">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center w-100 pe-4 me-0">
+                <!-- LOGO -->
+                <div>
+                    <a href="index.html">
+                        <img src="img/logo/matsuri_logo.png" class="logo" alt="logo matsuri">
+                    </a>
+                </div>
+                <!-- MENU -->
+                <div class="ms-auto d-flex align-items-center gap-4">
+                <!-- LINKS IZQUIERDA -->
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle navmenu rounded-pill border-0" 
+                            type="button" 
+                            data-bs-toggle="dropdown" 
+                            aria-expanded="false">
+                            Activities
+                        </button>
+                        <ul class="dropdown-menu border-0">
+                            <li><a class="dropdown-item" href="program.html">Program</a></li>
+                            <li><a class="dropdown-item" href="performers.html">Performers</a></li>
+                            <li><a class="dropdown-item" href="kids.html">Kids</a></li>
+                            <li><a class="dropdown-item" href="booths.html">Booths</a></li>
+                            <li><a class="dropdown-item" href="food.html">Food</a></li>
+                        </ul>
+                    </div>
+                    <div class="navmenu"><a href="About.html" class="nav-link">About</a></div>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle rounded-pill border-0" 
+                            type="button" 
+                            data-bs-toggle="dropdown" 
+                            aria-expanded="false">
+                            Support us
+                        </button>
+                        <ul class="dropdown-menu border-0">
+                            <li><a class="dropdown-item" href="volunteer.html">Volunteer</a></li>
+                            <li><a class="dropdown-item" href="crowdfund.html">Crowdfund us</a></li>
+                            <li><a class="dropdown-item" href="sponsor.html">Sponsor us</a></li>
+                        </ul>
+                    </div>
+                    <div class="navmenu"><a href="contact.html" target="_blank" class="nav-link">Contact</a></div>
+                </div>
+                <!-- TICKETS -->
+                <div class="ms-auto d-flex align-items-center">
+                    <div>
+                        <button class="tickets-nav ms-0 me-2 me-lg-5" type="button" onclick="comprarTicket()">TICKETS</button>
+                        <div class="dropdown d-md-block d-lg-none">
+                            <button class="dropdown-toggle normal_btn-nav me-0 langBtn"
+                                type="button"
+                                data-bs-toggle="dropdown" 
+                                aria-expanded="false">English</button>
+                                <ul class="dropdown-menu border-0">
+                                    <li>
+                                        <a class="dropdown-item idioma d-none" href="#">English</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item idioma" href="#">Español</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item idioma" href="#">Català</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item idioma" href="#">日本語</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- IDIOMA -->
+                    <div class="dropdown d-md-none d-lg-block">
+                        <button class="dropdown-toggle normal_btn-nav me-0 langBtn"
+                            type="button"
+                            data-bs-toggle="dropdown" 
+                            aria-expanded="false">English</button>
+                            <ul class="dropdown-menu border-0">
+                                <li>
+                                    <a class="dropdown-item idioma d-none" href="#">English</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item idioma" href="#">Español</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item idioma" href="#">Català</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item idioma" href="#">日本語</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Hamburgesa -->
+    <nav class="bg-white sticky-top navbar navbar-expand-md bg-cred border-body d-block d-md-none p-0" data-bs-theme="dark">
+        <div class="container-fluid">
+            <div>
+                <a class="navbar-brand" href="#">
+                    <img class="logo" src="img/logo/matsuri_logo.png" alt="Matsuri">
+                </a>
+            </div>
+            <!-- Botón hamburguesa -->
+            <button class="navbar-toggler ms-auto" 
+                type="button"
+                role="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#desplegar"
+                aria-controls="desplegar"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                data-bs-theme="dark">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menú desplegable -->
+            <div class="collapse navbar-collapse" id="desplegar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link itemColor" href="#">Item 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link itemColor" href="#">Item 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link itemColor" href="#">Item 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link itemColor" href="#">Item 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link itemColor" href="#">Item 5</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	<div class="container">
+        <h2 class="d-flex align-items-start">Crowdfund</h2>
+    </div>
+    <div class="container-fluid">
+        <div class="container-fluid">
+            <img class="img-fluid" src="img/comingsoon.png" alt="">
+        </div>
+    </div>
+	<footer>
+        <div class="bg-container-animation bg-dblue fixed-bottom">
+            <div class="container-fluid">
+                <div class="container-fluid d-flex justify-content-center">
+                    <div class="d-flex justify-content-evenly px-4 pt-1 mt-3">
+                        <div><a href="FAQ's.html" class="text-decoration-none text-white mx-1 mx-sm-2 mx-md-3">FAQ's</a></div>
+                        <div><a href="contact.html" class="text-decoration-none text-white mx-1 mx-sm-2 mx-md-3">Contact</a></div>
+                        <div><a href="cookiepolicy.html" class="text-decoration-none text-white mx-1 mx-sm-2 mx-md-3">Cookie&nbsp;policy</a></div>
+                        <div><a href="privacypolicy.html" class="text-decoration-none text-white mx-1 mx-sm-2 mx-md-3">Privacy&nbsp;policy</a></div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end socialNetworks">
+                    <a href="https://www.instagram.com/matsuribarcelona/?hl=en" 
+                        class="instagram text-decoration-none text-white px-1 mb-2"
+                        target="_blank" rel="noopener noreferrer" alt="Instagram">
+                        <img class="instagram" src="img/logo/instagram.png">
+                    </a>
+                    <a href="https://www.youtube.com/@MATSURI-Barcelona/videos" 
+                        class="youtube text-decoration-none text-white px-1 mb-2"
+                        target="_blank" rel="noopener noreferrer">
+                        <img class="youtube" src="img/logo/youtube.png" alt="YouTube">
+                    </a>
+                    <a href="https://www.facebook.com/matsurijapaninbarcelona/?locale=es_ES" 
+                        class="facebook text-decoration-none text-white px-1 mb-1"
+                        target="_blank" rel="noopener noreferrer">
+                        <img class="facebook" src="img/logo/facebook.png" alt="Facebook">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

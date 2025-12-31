@@ -34,6 +34,7 @@ const translations = {
         "Contact":"Contacto",
         "Cookie policy":"Política de cookies",
         "Privacy policy":"Política de privacidad",
+        "Food stals": "puestos de comida"
     },
     Català: {
         "MATSURI FESTIVAL BARCELONA 2026":"MATSURI FESTIVAL BARCELONA 2026",
@@ -70,6 +71,7 @@ const translations = {
         "Contact":"Contacte",
         "Cookie policy":"Política de cookies",
         "Privacy policy":"Política de privacitat",
+        "Food stals": "Parades de menjar"
     },
     日本語: {
         "MATSURI FESTIVAL BARCELONA 2026":"バルセロナ祭り2026",
@@ -106,6 +108,7 @@ const translations = {
         "Contact":"接触",
         "Cookie policy":"クッキーポリシー",
         "Privacy policy":"プライバシーポリシー",
+        "Food stals": "屋台"
     }
 };
 
