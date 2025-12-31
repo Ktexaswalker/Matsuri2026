@@ -34,11 +34,12 @@ const translations = {
         "Contact":"Contacto",
         "Cookie policy":"Política de cookies",
         "Privacy policy":"Política de privacidad",
-        "Food stals": "puestos de comida"
+        "Food stals": "puestos de comida",
+        "Crowdfund":"Micromecenazgo"
     },
     Català: {
         "MATSURI FESTIVAL BARCELONA 2026":"MATSURI FESTIVAL BARCELONA 2026",
-        "16 and 17 of may - At moll de la fusta":"16 y 17 de maig - En el moll de la fusta",
+        "16 and 17 of may - At moll de la fusta":"16 i 17 de maig - En el moll de la fusta",
         "Welcome": "Benvingut",
         "Buy your tickets now": "Compra les teves entrades ara",
         "TICKETS": "ENTRADES",
@@ -71,7 +72,8 @@ const translations = {
         "Contact":"Contacte",
         "Cookie policy":"Política de cookies",
         "Privacy policy":"Política de privacitat",
-        "Food stals": "Parades de menjar"
+        "Food stals": "Parades de menjar",
+        "Crowdfund":"Micromecenatge"
     },
     日本語: {
         "MATSURI FESTIVAL BARCELONA 2026":"バルセロナ祭り2026",
@@ -108,7 +110,8 @@ const translations = {
         "Contact":"接触",
         "Cookie policy":"クッキーポリシー",
         "Privacy policy":"プライバシーポリシー",
-        "Food stals": "屋台"
+        "Food stals": "屋台",
+        "Crowdfund":"クラウドファンディング"
     }
 };
 

@@ -195,10 +195,8 @@ if ('IntersectionObserver' in window) {
 // Cargar imagen en formato .webp
 document.querySelectorAll('.optimizable').forEach(img => {
     const dataSrc = img.dataset.src;
-
     // Ignorar URLs externas
     if (!dataSrc || /^https?:\/\//i.test(dataSrc)) return;
-
     // Pasar data-src → src
     img.src = dataSrc;
 });
