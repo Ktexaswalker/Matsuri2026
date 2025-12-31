@@ -55,6 +55,11 @@
 	font-size: large;
 }
 
+.dropdown-item:active {
+	background-color: var(--lgrey) !important;
+	color: var(--dblue) !important;
+}
+
 .langBtn {
 	border: none;
 	background: transparent;
