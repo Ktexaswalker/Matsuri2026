@@ -1,7 +1,7 @@
 const translations = {
     Español: {
         "MATSURI FESTIVAL BARCELONA 2026":"MATSURI FESTIVAL BARCELONA 2026",
-        "16 and 17 of may - At moll de la fusta":"16 y 17 de maig - En el moll de la fusta",
+        "16 and 17 of may - At moll de la fusta":"16 y 17 de mayo - En el moll de la fusta",
         "Welcome": "Bienvenido",
         "Buy your tickets now": "Compra tus entradas ahora",
         "TICKETS": "ENTRADAS",
@@ -38,7 +38,7 @@ const translations = {
     },
     Català: {
         "MATSURI FESTIVAL BARCELONA 2026":"MATSURI FESTIVAL BARCELONA 2026",
-        "16 and 17 of may - At moll de la fusta":"16 y 17 de mayo - En el moll de la fusta",
+        "16 and 17 of may - At moll de la fusta":"16 y 17 de maig - En el moll de la fusta",
         "Welcome": "Benvingut",
         "Buy your tickets now": "Compra les teves entrades ara",
         "TICKETS": "ENTRADES",

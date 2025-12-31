@@ -253,3 +253,27 @@ function comprarTicket() {
     "noopener,noreferrer"
   );
 }
+// boton Sponsor us
+function sponsorUs() {
+    window.open(
+        "sponsor.html",
+        "_self",
+        "noopener,noreferrer"
+    );
+}
+// boton Crowdfund us
+function crowdunfUs() {
+    window.open(
+        "crowdfund.html",
+        "_self",
+        "noopener,noreferrer"
+    );
+}
+// boton Volunteer
+function volunteer() {
+    window.open(
+        "volunteer.html",
+        "_self",
+        "noopener,noreferrer"
+    );
+}
