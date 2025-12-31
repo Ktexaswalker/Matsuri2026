@@ -34,7 +34,7 @@ const translations = {
         "Contact":"Contacto",
         "Cookie policy":"Política de cookies",
         "Privacy policy":"Política de privacidad",
-        "Food stals": "puestos de comida",
+        "Food stals": "Puestos de comida",
         "Crowdfund":"Micromecenazgo"
     },
     Català: {
