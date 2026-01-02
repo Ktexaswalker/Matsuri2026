@@ -68,11 +68,12 @@
 /* ------------ */
 /* IMAGEN INTRO */
 .homephoto {
-    background-image: linear-gradient(to right, var(--dblue), transparent),
-	url("./../img/Stage/stage_ncrowd.jpg");
+    background-image: linear-gradient( to right, var(--dblue) 0%,
+		transparent 45%, transparent 100%),
+		url("./../img/Stage/stage_ncrowd.jpg");
     width: 100%;
     background-size: cover;
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -196,7 +197,7 @@
 
 /* NAV-BUTTONS */
 .tickets-nav:hover {
-	animation: move-bg .35s linear infinite;
+	/* animation: move-bg .35s linear infinite; */
 }
 .tickets-nav {
 	background-color: var(--cred);
@@ -222,7 +223,7 @@
 	transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .tickets:hover {
-	animation: move-bg .35s linear infinite;
+	/* animation: move-bg .35s linear infinite; */
 }
 
 @keyframes move-bg {
@@ -315,7 +316,10 @@
 /* ¿MATSURI? */
 .img50 {
 	width: 70%;
-	height: 35vh;
+	max-width: 17rem;
+	min-width: 17rem;
+	height: 45vh;
+	min-height: 40vh;
 	background-image: url("./../img/other/yukataplp1.jpg");
 	background-size: cover;
 	background-position: center center;
@@ -327,9 +331,20 @@
 .carousel-control-prev, .carousel-control-next {
 	align-self: center;
 }
+.mySwiper {
+	position: relative;
+	background-color: var(--dblue);
+}
 .swiper-button-next, .swiper-button-prev {
+	width: 1.2rem !important;
 	color: var(--wwhite) !important;
 	height: 10% !important;
+}
+.swiper-button-next {
+	translate: calc(.4rem);
+}
+.swiper-button-prev {
+	translate: calc(-.4rem);
 }
 .carousel-control-prev-icon {
   background-image: url("./../img/png/right-arrow.png");
@@ -341,7 +356,7 @@
 /* -------- */
 /* containers */
 .bg-container-animation:hover {
-	animation: blub .5s linear;
+	/* animation: blub .5s linear; */
 }
 @keyframes blub {
     0% {transform:calc(0%); background: linear-gradient(0deg,rgba(34, 28, 67, 0.2) 60%, rgba(72, 72, 163, 0.2) 100%);}
@@ -410,20 +425,21 @@
 /* -------------- */
 /* WHANT HELP */
 .animation-funny:hover {
-	display: inline-flex;
-	align-items: center;
-    font-weight: bold;
-    -webkit-background-clip: text !important;
-    background-clip: text !important;
-    color: transparent !important;
-	margin-bottom: 0 !important;
-    animation: pasada 1.4s linear infinite !important;
+	/* display: inline-flex; */
+	/* align-items: center; */
+    /* font-weight: bold; */
+    /* -webkit-background-clip: text !important; */
+    /* background-clip: text !important; */
+    /* color: transparent !important; */
+	color: var(--lgrey) !important;
+	/* margin-bottom: 0 !important; */
+    /* animation: pasada 1.4s linear infinite !important; */
 }
 .animation-funny:hover > img {
-	padding-left: 10px;
-	display: inline-flex;
-	align-items: center;
-	animation: move-move 1.4s linear infinite !important;
+	/* padding-left: 10px; */
+	/* display: inline-flex; */
+	/* align-items: center; */
+	/* animation: move-move 1.4s linear infinite !important; */
 }
 
 @keyframes move-move {
@@ -486,9 +502,11 @@
 /* ---------- */
 /* SOCIAL NETWORKS */
 .socialNetworks img {
-	height: 3vw;
+	/* height: 3vw; */
+	width: 1rem;
+	max-width: 24px;
 }
-.instagram:hover {
+/* .instagram:hover {
 	transform: scale(1.2);
 	background: linear-gradient(121deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 30%, rgba(252, 176, 69, 1) 100%);
 	border-radius: 0.5rem;
@@ -501,5 +519,6 @@
 .facebook:hover {
 	transform: scale(1.2);
 	background: linear-gradient(135deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
-}
+	border-radius: 0.5rem / 0.5rem;
+} */
 /* --------------- */

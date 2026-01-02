@@ -41,15 +41,38 @@ if (logo) {
 }
 
 // Carousel
-const swiper = new Swiper(".mySwiper", {
-    spaceBetween: 16,
-    loop: false,
+// const swiper = new Swiper(".mySwiper", {
+//     spaceBetween: 16,
+//     loop: false,
 
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
+//     pagination: {
+//         el: ".swiper-pagination",
+//         clickable: true,
+//     },
 
+//     navigation: {
+//         nextEl: ".swiper-button-next",
+//         prevEl: ".swiper-button-prev",
+//     },
+
+//     breakpoints: {
+//         0: {
+//         slidesPerView: 1,   // móvil
+//         },
+//         576: {
+//         slidesPerView: 2,   // tablet
+//         },
+//         768: {
+//         slidesPerView: 3,   // desktop
+//         },
+//     },
+// });
+new Swiper(".mySwiper", {
+    loop: true,
+    speed: 600,
+    spaceBetween: 20,
+
+    slidesPerView: 3,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -57,16 +80,17 @@ const swiper = new Swiper(".mySwiper", {
 
     breakpoints: {
         0: {
-        slidesPerView: 1,   // móvil
-        },
-        576: {
-        slidesPerView: 2,   // tablet
+        slidesPerView: 1,
         },
         768: {
-        slidesPerView: 3,   // desktop
+        slidesPerView: 2,
+        },
+        1200: {
+        slidesPerView: 3,
         },
     },
 });
+
 
 // IDIOMA
 const langBtns = document.querySelectorAll(".langBtn");
@@ -275,3 +299,16 @@ function volunteer() {
         "noopener,noreferrer"
     );
 }
+
+function addSpaceUntilFooter() {
+    const footer = document.getElementsByTagName("footer")[0];
+    const body = document.getElementsByTagName("body")[0];
+    const alturaFooter = footer.offsetHeight;
+    const alturaBody = body.offsetHeight;
+    const alturaWindow = window.innerHeight;
+
+    if ((alturaBody+alturaFooter) < alturaWindow) {
+        footer.style.marginTop = `${(alturaWindow - (alturaBody))}px`;
+    }
+}
+addSpaceUntilFooter();
