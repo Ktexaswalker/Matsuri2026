@@ -46,7 +46,9 @@
 	background-position: center;
 	border: none !important;
 }
-.nav-link.dropdown-toggle, .nav-link.itemColor, a.dropdown-item {
+.navbar.d-md-none .nav-link.dropdown-toggle,
+.navbar.d-md-none .nav-link.itemColor,
+.navbar.d-md-none .dropdown-item {
 	border-top: 1px solid var(--dgrey);
 	margin: 2px;
 }
