@@ -35,7 +35,8 @@ const translations = {
         "Cookie policy":"Política de cookies",
         "Privacy policy":"Política de privacidad",
         "Food stals": "Puestos de comida",
-        "Crowdfund":"Micromecenazgo"
+        "Crowdfund":"Micromecenazgo",
+        "Lang":"Idioma"
     },
     Català: {
         "MATSURI FESTIVAL BARCELONA 2026":"MATSURI FESTIVAL BARCELONA 2026",
@@ -73,7 +74,8 @@ const translations = {
         "Cookie policy":"Política de cookies",
         "Privacy policy":"Política de privacitat",
         "Food stals": "Parades de menjar",
-        "Crowdfund":"Micromecenatge"
+        "Crowdfund":"Micromecenatge",
+        "Lang":"Llengua"
     },
     日本語: {
         "MATSURI FESTIVAL BARCELONA 2026":"バルセロナ祭り2026",
@@ -111,7 +113,8 @@ const translations = {
         "Cookie policy":"クッキーポリシー",
         "Privacy policy":"プライバシーポリシー",
         "Food stals": "屋台",
-        "Crowdfund":"クラウドファンディング"
+        "Crowdfund":"クラウドファンディング",
+        "Lang":"言語"
     }
 };
 

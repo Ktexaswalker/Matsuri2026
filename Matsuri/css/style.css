@@ -16,7 +16,11 @@
 /* BOTON MATSURI HAMBURGESA */
 .navbar-toggler .navbar-toggler-icon {
 	background-image: url("./../img/png/hamburger.png");
-	scale: calc(1.5);
+	/* scale: calc(1.5); */
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+	background-image: url("./../img/png/hamburger2.png");
+	/* scale: calc(1.5); */
 }
 /* ------------------------ */
 /* nav and more */
@@ -42,10 +46,20 @@
 	background-position: center;
 	border: none !important;
 }
-.dropdown-toggle:hover + .dropdown-menu,
+.nav-link.dropdown-toggle, .nav-link.itemColor, a.dropdown-item {
+	border-top: 1px solid var(--dgrey);
+	margin: 2px;
+}
+.nav-link.dropdown-toggle::after {
+	transform: rotate(270deg);
+}
+.nav-link[aria-expanded="true"].dropdown-toggle::after {
+	transform: rotate(0deg);
+}
+/* .dropdown-toggle:hover + .dropdown-menu,
 .dropdown-menu:hover {
     display: block;
-}
+} */
 .dropdown-menu {
 	min-width: 7.5rem !important;
 }
@@ -89,7 +103,7 @@
 		margin-bottom: 2vh;
 	}
 	.logo {
-		width: 62vw;
+		width: 42vw;
 	}
 }
 @media (min-width: 768px) {
@@ -102,6 +116,9 @@
 	}
 	.separation {
 		margin-bottom: 2vh;
+	}
+	.logo {
+		width: 42vw;
 	}
 	.navmenu, .btn.dropdown-toggle {
 		font-size: 1rem;
