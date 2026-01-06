@@ -1,0 +1,24 @@
+/* COLORS */
+:root { 
+	--dblue: #221C43; 
+	--cred: #C0282E; 
+	--wwhite: #FFFFFF;
+	--lblack: #3C3C3B; 
+	--2blue: #39558B;
+	--lpink: #F4CFCE;
+	--dgrey: #BDBCC9;
+	--lgrey: #EAEAF4;
+	--3blue: #0071B8;
+	--font-family: "Noto Sans JP", "Gotham", sans-serif;
+}
+/* ------ */
+.pdf {
+    height: 70%;
+    object-fit: contain;
+}
+.downloadPdf {
+    font-family: var(--font-family);
+    color: var(--wwhite);
+    text-decoration: none;
+    background-color: var(--cred);
+}
