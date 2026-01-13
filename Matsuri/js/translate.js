@@ -1,6 +1,6 @@
 const translations = {
     Español: {
-        "MATSURI FESTIVAL BARCELONA 2026":"MATSURI FESTIVAL BARCELONA 2026",
+        "MATSURI BARCELONA 2026":"MATSURI BARCELONA 2026",
         "16 and 17 of may - At moll de la fusta":"16 y 17 de mayo - En el moll de la fusta",
         "Welcome": "Bienvenido",
         "Buy your tickets now": "Compra tus entradas ahora",
@@ -39,7 +39,7 @@ const translations = {
         "Lang":"Idioma"
     },
     Català: {
-        "MATSURI FESTIVAL BARCELONA 2026":"MATSURI FESTIVAL BARCELONA 2026",
+        "MATSURI BARCELONA 2026":"MATSURI BARCELONA 2026",
         "16 and 17 of may - At moll de la fusta":"16 i 17 de maig - En el moll de la fusta",
         "Welcome": "Benvingut",
         "Buy your tickets now": "Compra les teves entrades ara",
@@ -57,7 +57,7 @@ const translations = {
         "Crowdfund us":"Micromecenatge",
         "Volunteer":"Voluntariat",
         "What is the Matsuri BCN?":"On és el Matsuri?",
-        "---":"Matsuri BCN és un dels festivals de cultura japonesa més grans d'Espanya que se celebra a Barcelona, ​​amb actuacions en directe, menjar de carrer i activitats per gaudir amb la família i els amics.",
+        "Matsuri BCN is one of Spain's largest Japanese culture festivals held in Barcelona, featuring live performances, street food, and activities to enjoy with family and friends.":"Matsuri BCN és un dels festivals de cultura japonesa més grans d'Espanya que se celebra a Barcelona, ​​amb actuacions en directe, menjar de carrer i activitats per gaudir amb la família i els amics.",
         "Information":"Informació",
         "PROGRAM":"PROGRAMA",
         "PERFORMERS":"INTERPRETS",
@@ -78,10 +78,10 @@ const translations = {
         "Lang":"Llengua"
     },
     日本語: {
-        "MATSURI FESTIVAL BARCELONA 2026":"バルセロナ祭り2026",
+        "MATSURI BARCELONA 2026":"バルセロナ祭り2026",
         "16 and 17 of may - At moll de la fusta":"5月16日と17日 - モール・デ・ラ・フスタにて",
         "Welcome": "ようこそ",
-        "Buy your tickets now": "チケットを購入してください",
+        "Buy your tickets now": "チケット購入",
         "TICKETS": "チケット",
         "Activities": "アクティビティ",
         "Program": "プログラム",
