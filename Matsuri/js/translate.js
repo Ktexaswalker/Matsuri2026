@@ -79,7 +79,7 @@ const translations = {
     },
     日本語: {
         "MATSURI BARCELONA 2026":"バルセロナ祭り2026",
-        "16 and 17 of may - At moll de la fusta":"5月16日と17日 - モール・デ・ラ・フスタにて",
+        "16 and 17 of may - At moll de la fusta":"5月16日と17日 - Moll de la Fusta",
         "Welcome": "ようこそ",
         "Buy your tickets now": "チケット購入",
         "TICKETS": "チケット",
@@ -109,7 +109,7 @@ const translations = {
         "Want to help the Matsuri?":"祭りを手伝ってみませんか？",
         "Become a volunteer":"ボランティアになる",
         "FAQ's":"よくある質問",
-        "Contact":"コンタクト",
+        "Contact":"接触",
         "Cookie policy":"クッキーポリシー",
         "Privacy policy":"プライバシーポリシー",
         "Food stals": "屋台",
