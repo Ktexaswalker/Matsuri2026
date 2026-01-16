@@ -13,6 +13,7 @@
 	<script src="js/bootstrap.bundle.js"></script>
 	<script defer src="js/swiper-bundle.min.js"></script>
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="">
     <script defer src="js/script.js"></script>
     <script defer src="js/translate.js"></script>
 </head>
@@ -185,10 +186,20 @@
         </div>
     </nav>
 	<div class="container">
-        <h2 class="d-flex align-items-start">Contact</h2>
+        <h2 class="d-flex align-items-start">
+            <a class="text-dark text-decoration-none" 
+            href="mailto:info@acjm.es">Contact</a>
+            <a id="ryuji" href="#" onclick="copiar('info@acjm.es')"
+            class="text-decoration-none">&nbsp;→ info@acjm.es&nbsp;</a>
+            <div onclick="copiar('info@acjm.es')" id="copiar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="cursor: pointer;" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/>
+                </svg>
+            </div>
+        </h2>
     </div>
     <div class="container-fluid">
-        <div class="container-fluid">
+        <div class="container px-5">
             <img class="img-fluid" src="img/comingsoon.png" alt="">
         </div>
     </div>
@@ -198,7 +209,7 @@
                 <div class="container-fluid d-flex justify-content-start justify-content-md-center">
                     <div class="d-flex flex-column flex-md-row justify-content-evenly px-4 pt-1 mt-3">
                         <div class=""><a href="FAQ's.html" class="text-decoration-none text-white mx-1 mx-sm-2 mx-md-3">FAQ's</a></div>
-                        <div class=""><a href="contact.html" class="text-decoration-none text-white mx-1 mx-sm-2 mx-md-3">Contact</a></div>
+                        <div class=""><a href="mailto:info@acjm.es" class="text-decoration-none text-white mx-1 mx-sm-2 mx-md-3">Contact</a></div>
                         <div class=""><a href="cookiepolicy.html" class="text-decoration-none text-white mx-1 mx-sm-2 mx-md-3">Cookie&nbsp;policy</a></div>
                         <div class=""><a href="privacypolicy.html" class="text-decoration-none text-white mx-1 mx-sm-2 mx-md-3">Privacy&nbsp;policy</a></div>
                     </div>

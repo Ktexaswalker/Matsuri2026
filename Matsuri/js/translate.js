@@ -36,7 +36,11 @@ const translations = {
         "Privacy policy":"Política de privacidad",
         "Food stals": "Puestos de comida",
         "Crowdfund":"Micromecenazgo",
-        "Lang":"Idioma"
+        "Lang":"Idioma",
+        "It will be announced in April":"Se anunciará en abril",
+        "Call for applications expected in February":"Convocatoria prevista para febrero",
+        "Start date planned for February":"Inicio previsto para febrero",
+        "Sponsors 2025":"patrocinadores 2025"
     },
     Català: {
         "MATSURI BARCELONA 2026":"MATSURI BARCELONA 2026",
@@ -75,7 +79,11 @@ const translations = {
         "Privacy policy":"Política de privacitat",
         "Food stals": "Parades de menjar",
         "Crowdfund":"Micromecenatge",
-        "Lang":"Llengua"
+        "Lang":"Llengua",
+        "It will be announced in April":"S'anunciarà en abril",
+        "Call for applications expected in February":"Convocatoria prevista per a febrer",
+        "Start date planned for February":"Inici previst per a febrer",
+        "Sponsors 2025":"patrocinadors 2025"
     },
     日本語: {
         "MATSURI BARCELONA 2026":"バルセロナ祭り2026",
@@ -114,7 +122,11 @@ const translations = {
         "Privacy policy":"プライバシーポリシー",
         "Food stals": "屋台",
         "Crowdfund":"クラウドファンディング",
-        "Lang":"言語"
+        "Lang":"言語",
+        "It will be announced in April":"4月に発表予定",
+        "Call for applications expected in February":"応募の呼びかけは2月に予定されている",
+        "Start date planned for February":"開始予定日は2月",
+        "Sponsors 2025":"スポンサー2025"
     }
 };
 
