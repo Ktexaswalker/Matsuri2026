@@ -379,7 +379,7 @@
 .nuvesRojas {
 	height: 4.8rem;
 	border: none;
-	background-image: url("./../img/png/separador\ olas\ rojo\ TOP.png");
+	background-image: url("./../img/png/Separador\ olas\ part_Top.png");
 	background-repeat: repeat-x;
 	background-position: center;
 	opacity: 1;
@@ -387,7 +387,7 @@
 .olasRojas {
 	height: 4.8rem;
 	border: none;
-	background-image: url("./../img/png/separador\ olas\ rojo\ Bottom.png");
+	background-image: url("./../img/png/Separador\ olas\ part_Bottom.png");
 	background-repeat: repeat-x;
 	background-position: center;
 	opacity: 1;

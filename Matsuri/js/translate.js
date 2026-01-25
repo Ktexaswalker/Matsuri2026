@@ -1,6 +1,6 @@
 const translations = {
     Español: {
-        "Matsuri Festival Barcelona ":"FESTIVAL MATSURI BARCELONA ",
+        "Matsuri Festival Barcelona":"Festival Matsuri Barcelona",
         "16th & 17th MAY - MOLL DE LA FUSTA":"16 y 17 DE MAYO - MOLL DE LA FUSTA",
         "Welcome": "Bienvenido",
         "Buy your tickets now": "Compra tus entradas ahora",
@@ -50,7 +50,7 @@ const translations = {
         "Sponsors 2025":"patrocinadores 2025"
     },
     Català: {
-        "Matsuri Festival Barcelona ":"FESTIVAL MATSURI BARCELONA ",
+        "Matsuri Festival Barcelona":"Festival Matsuri Barcelona",
         "16th & 17th MAY - MOLL DE LA FUSTA":"16 i 17 DE MAIG - MOLL DE LA FUSTA",
         "Welcome": "Benvingut",
         "Buy your tickets now": "Compra les teves entrades ara",
@@ -100,7 +100,7 @@ const translations = {
         "Sponsors 2025":"patrocinadors 2025"
     },
     日本語: {
-        "Matsuri Festival Barcelona ":"バルセロナ祭り ",
+        "Matsuri Festival Barcelona":"バルセロナ祭り",
         "16th & 17th MAY - MOLL DE LA FUSTA":"5月16日と17日 - MOLL DE LA FUSTA",
         "Welcome": "ようこそ",
         "Buy your tickets now": "チケット購入",
