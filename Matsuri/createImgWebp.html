@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREATE_PROFILE</title>
+    <style>
+        .avatar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 40px;
+            max-width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- <img class="optimizable" data-src="webp/voluntarios/Hector.png" src="webp/voluntarios/Hector.png" alt="" loading="lazy"> -->
+    <div id="bucle">
+
+    </div>
+    <script>
+        // MIRAR CHATGPT
+        let numImgs = 1000;
+        let i = 1;
+        let count = 1;
+        const maxAttempts = 3;
+        let fails = 0;
+        function tryLoad() {
+            const img = new Image();
+            img.src = `./webp/voluntarios/${count}.webp`;
+            img.onload = () => {
+                // imagen existe
+                bucle.appendChild(img);
+                count++;
+                fails = 0;
+                tryLoad();
+            };
+            img.onerror = () => {
+                fails++;
+                if (fails < maxAttempts) {
+                    count++;
+                    setTimeout(tryLoad, 50);
+                } else {
+                    console.log(`Se detuvo el contador. Última imagen encontrada: ${count - fails}`);
+                }
+            };
+        }
+
+        while (i < numImgs) {
+            const element = document.createElement("img");
+            element.src = `./webp/voluntarios/${i}.webp`;
+            element.className = "avatar"
+            element.onload = () => {
+                bucle.appendChild(element);
+            };
+            element.onerror = () => {
+                i = numImgs;
+            }
+        }
+        const anchoMaximo = 70;
+        if (location.protocol === "file:") {
+            document.body.innerHTML = `
+                <div style="
+                font-family:sans-serif;
+                padding:2rem;
+                background:#111;
+                color:#fff;
+                ">
+                <h2>⚠️ Esta web requiere servidor local</h2>
+                <p>
+                    Has abierto el archivo con <code>file://</code><br>
+                    Esta aplicación necesita ejecutarse con un servidor HTTP.
+                </p>
+                <p>
+                    Ejecuta uno de estos comandos:
+                </p>
+                <pre>
+            python -m http.server
+            npx serve
+            npx live-server
+                </pre>
+                <p>
+                    Luego abre: <a style="text-decoration: none; color: white;" href="http://127.0.0.1:5500/Matsuri/createImgWebp.html"><strong>http://localhost:5500</strong></a>
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a style="text-decoration: none; color: white;" href="http://127.0.0.1:8000/Matsuri/createImgWebp.html"><strong>http://localhost:8000</strong></a>
+                </p>
+                
+                <label for="nombre">Introduce el nombre de la imagen:</label><input type="text" name="nombre" id="nombre"><br/>
+            <label for="file">Selecciona la foto a convertir:</label><input type="file" name="file" id="file"><br/>
+            <div style="max-width: ${anchoMaximo}vw; max-height: ${anchoMaximo}vh; overflow-x: auto; overflow-y: auto; display: flex; justify-content: center; align-items: center;">
+                <img style="display: block;" id="preview"><br/>
+                </div>
+                <button id="guardar">Guardar imagen en webp</button>
+                </div>
+                `;
+        } else {
+        const bucle = document.getElementById("bucle");
+        let count = 1;
+        const maxFails = 3;
+        let fails = 0;
+        document.addEventListener("DOMContentLoaded", () => {
+        // Optimización de imagenes (GENERAR IMAGENES PARA GUARDAR EN FORMATO ".WEBP")
+            function generarRutaWebP(rutaOriginal) {
+                // Separar carpeta y nombre
+                if (/^https?:\/\//i.test(rutaOriginal)) return null;
+                const partes = rutaOriginal.split('/'); 
+                const nombreArchivo = partes.pop();
+                const nombreSinExt = rutaOriginal.split('.').slice(0, -1).join('.');
+                return `${nombreSinExt}.webp`;
+            }
+            function convertToWebP(imgElement) {
+                return new Promise((resolve) => {
+                    const jpgUrl = imgElement.dataset.src;
+                    const url = generarRutaWebP(jpgUrl);
+                    
+                    if (sessionStorage.getItem(jpgUrl)) {
+                        console.log('Cargando desde sessionStorage:', jpgUrl);
+                        imgElement.src = sessionStorage.getItem(jpgUrl);
+                        resolve();
+                        return;
+                    }
+                    if (!generarRutaWebP(jpgUrl)) {
+                        resolve(); // Imagen externa → ignorar
+                        return;
+                    }
+                    const img = new Image();
+                    img.src = jpgUrl;
+                    console.log(img.src)
+                    img.onload = () => {
+                        const canvas = document.createElement('canvas');
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        const ctx = canvas.getContext('2d');
+                        ctx.drawImage(img, 0, 0);
+                        const webpDataUrl = canvas.toDataURL('image/webp', 0.01);
+                        sessionStorage.setItem(jpgUrl, webpDataUrl);
+                        imgElement.src = webpDataUrl;
+                        resolve();
+                    };
+                    img.onerror = () => {
+                        console.warn(`No se pudo cargar la imagen: ${jpgUrl}`);
+                        imgElement.src = jpgUrl;
+                        resolve();
+                    };
+                });
+            }
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                    convertToWebP(entry.target);
+                    obs.unobserve(entry.target);
+                    }
+                });
+                }, { rootMargin: '50px' });
+                document.querySelectorAll('.optimizable').forEach(img => {
+                    observer.observe(img);
+                });
+            } else {
+                document.querySelectorAll('.optimizable').forEach(img => {
+                    convertToWebP(img);
+                });
+                document.getElementById("file").addEventListener("change", e => {
+                    const file = e.target.files[0];
+                    if (!file) return;
+                    const url = URL.createObjectURL(file);
+                    document.getElementById("preview").src = url;
+                });
+                document.getElementById("guardar").addEventListener("click", () => {
+                    const img = document.getElementById("preview");
+                    const link = document.createElement("a");
+                    link.href = img.src;
+                    link.download = `${nombre}.webp`;
+
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                });
+            }
+        });
+    }
+    </script>
+</body>
+</html>

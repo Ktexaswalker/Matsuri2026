@@ -31,7 +31,8 @@ if (logo) {
             }
         }
         angle += 1;
-        fondo.style.background = `conic-gradient(from ${angle}deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1)), url("./img/logo/acj\ logo red.png")`;
+        // fondo.style.background = `conic-gradient(from ${angle}deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1)), url("./img/logo/acj\ logo red.png")`;
+        fondo.style.background = `conic-gradient(from ${angle}deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1)), url("./img/svg/Isologo_matsuri_dorado.svg")`;
         fondo.style.backgroundSize = 'cover';
         fondo.style.borderRadius = `50%`;
         fondo.style.backgroundRepeat = 'no-repeat';
@@ -93,6 +94,15 @@ new Swiper(".mySwiper", {
 
 
 // IDIOMA
+function changeMap(sl) {
+    const langActiva = Object.keys(browserLangMap).find(key => browserLangMap[key] === sl);
+    Object.keys(browserLangMap).forEach(lang => {
+        document.querySelectorAll(`.idioma-${lang}`).forEach(el =>
+            el.classList.toggle("d-none", lang !== langActiva)
+        );
+    });
+}
+
 const langBtns = document.querySelectorAll(".langBtn");
 const items = document.querySelectorAll(".idioma");
 const idiomas = document.querySelectorAll(".dropdown-item.idioma");
@@ -104,7 +114,7 @@ const browserLangMap = {
         ja: "日本語"
 };
 
-const savedLang = localStorage.getItem("lang");
+const savedLang = localStorage.getItem("lang") || "Español"; //cargar idioma inicial
 const browserLang = (navigator.language || navigator.userLanguage).slice(0, 2);
 const currentLang = savedLang || browserLangMap[browserLang] || "English";
 
@@ -118,6 +128,7 @@ items.forEach(item => {
         e.preventDefault();
         const selectedLang = item.textContent.trim();
         translatePage(selectedLang);
+        changeMap(selectedLang);
         langBtns.forEach(btn => {
             btn.textContent = selectedLang;
         });
@@ -135,6 +146,7 @@ items.forEach(item => {
 const langBtn = [...langBtns].map(
     btn => btn.textContent.trim()
 );
+
 items.forEach(i => {
     const item = i.textContent.trim();
     if (langBtn.includes(item)) {
@@ -143,9 +155,10 @@ items.forEach(i => {
         i.classList.remove("d-none");
     }
 });
-    
+
 function applyTranslation() {
     translatePage(savedLang);
+    changeMap(savedLang);
 }
 
 window.addEventListener('load', applyTranslation);
@@ -277,7 +290,7 @@ function isExpired(encodedDate) {
   return Date.now() > decodeDate(encodedDate).getTime();
 }
 
-const cad = "MjAyNi0wMy0wMVQxOTowMDowMA==";
+const cad = "MjAyOC0xNy0wNVQxOTowMDowMA==";
 const AUTHORIZED_FP = "1TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzE0My4wLjAuMCBTYWZhcmkvNTM3LjM2ZW4tR0IxOTIwMTA4MEV1cm9wZS9NYWRyaWQ=";
 const savedFP = getFingerprint();
 
@@ -300,43 +313,45 @@ document.querySelectorAll('.optimizable').forEach(img => {
 
 // LUPA
 const lupa = document.querySelectorAll(".lupa").forEach(lupa => {
-    const img = lupa.querySelector("img");
-    let index = 1;
-    lupa.addEventListener("contextmenu", e => e.preventDefault());
-    lupa.addEventListener("pointerdown", e => {
-        if (e.button === 0) {
-            index++;
-            // console.log("izquierdo");
-        }
-        if (e.button === 1) {
-            // console.log("central");
-        }
-        if (e.button === 2) {
-            // console.log("derecho");
-            index--;
-        }
-    });
-
-    lupa.addEventListener("pointermove", e => {
-        const rect = lupa.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        const px = (x / rect.width) * 100;
-        const py = (y / rect.height) * 100;
-
-        img.style.transformOrigin = `${px}% ${py}%`;
-        img.style.transform = `scale(${index})`;
-    });
-
-    lupa.addEventListener("pointerup", () => {
-        img.style.transform = `scale(${index})`;
-        img.style.transformOrigin = "center";
-    });
-
-    lupa.addEventListener("pointerleave", () => {
-        img.style.transformOrigin = "center";
-        img.style.transform = `scale(1)`;
+    lupa.querySelectorAll("img").forEach(img => {
+            if (!img) return;
+            let index = 1;
+            lupa.addEventListener("contextmenu", e => e.preventDefault());
+            lupa.addEventListener("pointerdown", e => {
+                if (e.button === 0) {
+                index++;
+                // console.log("izquierdo");
+            }
+            if (e.button === 1) {
+                // console.log("central");
+            }
+            if (e.button === 2) {
+                // console.log("derecho");
+                index--;
+            }
+        });
+        
+        lupa.addEventListener("pointermove", e => {
+            const rect = lupa.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const px = (x / rect.width) * 100;
+            const py = (y / rect.height) * 100;
+            
+            img.style.transformOrigin = `${px}% ${py}%`;
+            img.style.transform = `scale(${index})`;
+        });
+        
+        lupa.addEventListener("pointerup", () => {
+            img.style.transform = `scale(${index})`;
+            img.style.transformOrigin = "center";
+        });
+        
+        lupa.addEventListener("pointerleave", () => {
+            img.style.transform = `scale(1)`;
+            img.style.transformOrigin = "center";
+        });
     });
 })
 
@@ -368,6 +383,31 @@ function crowdunfUs() {
 function volunteer() {
     window.open(
         "volunteer.html",
+        "_self",
+        "noopener,noreferrer"
+    );
+}
+// boton Program
+function program() {
+    window.open(
+        "program.html",
+        "_self",
+        "noopener,noreferrer"
+    );
+}
+
+// boton Stands
+function stands() {
+    window.open(
+        "stands.html",
+        "_self",
+        "noopener,noreferrer"
+    );
+}
+// boton learn more
+function about() {
+    window.open(
+        "about.html",
         "_self",
         "noopener,noreferrer"
     );

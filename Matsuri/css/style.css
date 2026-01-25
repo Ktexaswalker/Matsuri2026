@@ -2,14 +2,16 @@
 /* COLORS */
 :root { 
 	--dblue: #221C43; 
-	--cred: #C0282E; 
+	--cred: #C0282E;
+	--cgold: #CE861D;
 	--wwhite: #FFFFFF;
 	--lblack: #3C3C3B; 
 	--2blue: #39558B;
+	--2gold: #FFCC88;
 	--lpink: #F4CFCE;
 	--dgrey: #BDBCC9;
 	--lgrey: #EAEAF4;
-	--3blue: #0071B8;
+	--3blue: #06b4cb;
 	--font-family: "Noto Sans JP", "Gotham", sans-serif;
 }
 /* ------ */
@@ -84,9 +86,10 @@
 /* ------------ */
 /* IMAGEN INTRO */
 .homephoto {
-    background-image: linear-gradient( to right, var(--dblue) 0%,
+    /* background-image: linear-gradient( to right, var(--dblue) 0%,
 		transparent 45%, transparent 100%),
-		url("./../img/Stage/stage_ncrowd.jpg");
+		url("./../img/Stage/stage_ncrowd.jpg"); */
+	background-image: url(./../img/png/Foto\ Home\ Banner\ matsuri_web.png);
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -218,7 +221,7 @@
 
 /* NAV-BUTTONS */
 .tickets-nav:hover {
-	/* animation: move-bg .35s linear infinite; */
+	animation: move-bg .35s linear infinite;
 }
 .tickets-nav {
 	background-color: var(--cred);
@@ -244,7 +247,7 @@
 	transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .tickets:hover {
-	/* animation: move-bg .35s linear infinite; */
+	animation: move-bg .35s linear infinite;
 }
 
 @keyframes move-bg {
@@ -300,6 +303,36 @@
 	font-weight: bold;
 }
 
+.crowd_btn {
+	margin: 2px 2.5vw 2px;
+	border-radius: 50vh;
+	padding: 0.01em 0.3em;
+	width: 12em;
+	font-size: 1em;
+	font-family: var(--font-family);
+	font-weight: bold;
+}
+
+.small_btn {
+	margin: 2px 2.5vw 2px;
+	border-radius: 50vh;
+	padding: 0.01em 0.1em;
+	width: 9em;
+	height: 2.2rem;
+	font-size: 1em;
+	font-family: var(--font-family);
+	font-weight: bold;
+	color: var(--lblack) !important;
+}
+.small_btn:hover {
+	scale: calc(1.1);
+	color: black !important;
+}
+
+.help {
+	scale: calc(0.8);
+}
+
 .itemColor {
 	color: var(--dblue) !important;
 	font-family: var(--font-family) !important;
@@ -334,6 +367,41 @@
     height: 160px;
 }
 /* -------- */
+/* SEPARADORES */
+.nuvesRosas {
+	height: 4.8rem;
+	border: none;
+	background-image: url("./../img/png/Separador\ olas\ part_Top\ pink.png");
+	background-repeat: repeat-x;
+	background-position: center;
+	opacity: 1;
+}
+.nuvesRojas {
+	height: 4.8rem;
+	border: none;
+	background-image: url("./../img/png/separador\ olas\ rojo\ TOP.png");
+	background-repeat: repeat-x;
+	background-position: center;
+	opacity: 1;
+}
+.olasRojas {
+	height: 4.8rem;
+	border: none;
+	background-image: url("./../img/png/separador\ olas\ rojo\ Bottom.png");
+	background-repeat: repeat-x;
+	background-position: center;
+	opacity: 1;
+}
+
+.separador {
+	height: 4.8rem;
+	border: none;
+	background-image: url("./../img/png/Separador\ logo\ dorado\ matsuri.png");
+	background-repeat: repeat-x;
+	background-position: center;
+	opacity: 1;
+}
+/* ----------- */
 /* ¿MATSURI? */
 .img50 {
 	width: 70%;
@@ -377,7 +445,7 @@
 /* -------- */
 /* containers */
 .bg-container-animation:hover {
-	/* animation: blub .5s linear; */
+	animation: blub .5s linear;
 }
 @keyframes blub {
     0% {transform:calc(0%); background: linear-gradient(0deg,rgba(34, 28, 67, 0.2) 60%, rgba(72, 72, 163, 0.2) 100%);}
@@ -418,12 +486,47 @@
 	font-family: var(--font-family);
 }
 
+.bg-eventInfo {
+	background: url("./../img/png/Pastilla\ fondo\ isologo\ matsuri\ azul.png");
+	background-repeat: no-repeat !important;
+	background-position-x: left;
+	background-position-y: top;
+	color:var(--wwhite);
+	font-family: var(--font-family);
+}
+
+.bg-location {
+	background: url("./../img/png/Isologo\ transparencia\ corte\ esquina.png");
+	background-repeat: no-repeat !important;
+	background-position-x: right;
+	background-position-y: bottom;
+	color:var(--wwhite);
+	font-family: var(--font-family);
+}
+
+.bg-2blue {
+	background-color: var(--2blue) !important;
+	color:var(--wwhite);
+	font-family: var(--font-family);
+}
+
+.bg-3blue {
+	background-color: var(--3blue) !important;
+	color:var(--wwhite);
+	font-family: var(--font-family);
+}
+
 .bg-wwhite {
   --bg-opacity: 1;
   background-color: var(--wwhite) !important;
 }
 /* ----------- */
 /* colors letters */
+.text-wwhite {
+	--text-opacity: 1;
+	color: var(--wwhite) !important;
+}
+
 .text-cred {
 	--text-opacity: 1;
 	color: var(--cred) !important;
@@ -434,6 +537,15 @@
 	color: var(--dblue) !important;
 }
 
+.text-cgold {
+	--text-opacity: 1;
+	color: var(--cgold) !important;
+}
+
+.text-2gold {
+	--text-opacity: 1;
+	color: var(--2gold) !important;
+}
 .text-bg-cred {
 	color: #FFFFFF !important;
 	background-color: var(--cred), var(--bg-opacity,1) !important;
