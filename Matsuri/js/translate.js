@@ -171,7 +171,10 @@ while ((node = walker.nextNode())) {
 }
 
 function translatePage(lang) {
-  const dict = translations[lang];
+  const dict = {
+    ...(window.translations?.[lang] || {}),
+    ...(translations?.[lang] || {})
+  };
 
   originalTextNodes.forEach(({ node, text }) => {
     if (lang === 'English') {
