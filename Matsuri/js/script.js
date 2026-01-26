@@ -626,7 +626,8 @@ function cookies(idioma) {
                 animation: gold-shimmer .35s linear infinite;
             }
 
-            .btnCookies {
+            .btnCookies,
+            .cookiesBanner>div {
                 pointer-events: auto !important;
                 animation: gold-shimmer .35s linear infinite;
             }
