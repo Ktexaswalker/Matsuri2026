@@ -1,0 +1,34 @@
+.faq-item1>.collapsed {
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+.faq-item2>.collapsed {
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+.faq-item3>.collapsed {
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+.faq-item4>.collapsed {
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+.faq-item5>.collapsed {
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+.faq-item6>.collapsed {
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+.faq-item7>.collapsed {
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+.faq-icon {
+    content: url("./../img/png/FAQ_Icon_RED.png");
+}
+button:not(.collapsed) .faq-icon {
+    content: url("./../img/png/FAQ_Icon_BLUE.png");
+}

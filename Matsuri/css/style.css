@@ -314,7 +314,7 @@
 }
 
 .small_btn {
-	margin: 2px 2.5vw 2px;
+	margin: 2px 0vw;
 	border-radius: 50vh;
 	padding: 0.01em 0.1em;
 	width: 9em;
@@ -324,9 +324,14 @@
 	font-weight: bold;
 	color: var(--lblack) !important;
 }
-.small_btn:hover {
+.aniBtn:hover {
 	scale: calc(1.1);
 	color: black !important;
+}
+
+.aniBtnTkt:hover {
+	scale: calc(1.1);
+	color: var(--wwhite) !important;
 }
 
 .help {
@@ -399,6 +404,14 @@
 	background-image: url("./../img/png/Separador\ logo\ dorado\ matsuri.png");
 	background-repeat: repeat-x;
 	background-position: center;
+	opacity: 1;
+}
+
+.tejas {
+	height: 4.8rem;
+	border: none;
+	background-image: url("./../img/png/Separador\ olas\ 2_gris.png");
+	background-repeat: repeat-x;
 	opacity: 1;
 }
 /* ----------- */
@@ -480,9 +493,28 @@
 	font-family: var(--font-family);
 }
 
+.bg-cgold {
+	--bg-opacity: 1;
+	background-color: var(--cgold) !important;
+	color:var(--wwhite) !important;
+	font-family: var(--font-family);
+}
+
 .bg-dblue {
 	background-color: var(--dblue) !important;
 	color:var(--wwhite);
+	font-family: var(--font-family);
+}
+
+.bg-dgrey {
+	background-color: var(--dgrey) !important;
+	color:var(--lblack);
+	font-family: var(--font-family);
+}
+
+.bg-lgrey {
+	background-color: var(--lgrey) !important;
+	color:var(--lblack);
 	font-family: var(--font-family);
 }
 
