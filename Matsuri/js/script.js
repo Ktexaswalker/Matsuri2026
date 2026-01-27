@@ -490,12 +490,12 @@ function cookies(idioma) {
     <div id="cookiesBanner_EN" class="cookiesBanner nuvesRosas position-fixed bottom-0 end-0 bg-light shadow pt-2 pb-5 d-flex flex-column flex-md-row align-items-center justify-content-between" 
     style="z-index: 1050; width: 100%; background-repeat: repeat; border-top: 0.4rem solid var(--cgold); padding: 0.5rem 1rem;">
         <div class="mb-2 mb-md-0 text-center text-md-start mx-5 fs-5">
-            We use essential <em>cookies</em> to provide our service and third-party <em>cookies</em> to track the usage of the page. 
-            <a href="cookiepolicy.html">Cookie Policy</a>
+            By using this website, you agree to the use of essential <em>cookies</em> and to our data practices.
+            <a href="cookiepolicy.html">Cookies Policy</a> ·
+            <a href="privacypolicy.html">Privacy Policy</a>
         </div>
         <div class="d-flex gap-2 justify-content-end">
-            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-essentials-close">Essentials only</button>
-            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-all-close">Accept all</button>
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-all-close">Accept</button>
         </div>
     </div>
     `;
@@ -503,12 +503,12 @@ function cookies(idioma) {
     <div id="cookiesBanner_ES" class="cookiesBanner nuvesRosas position-fixed bottom-0 end-0 bg-light shadow pt-2 pb-5 d-flex flex-column flex-md-row align-items-center justify-content-between" 
     style="z-index: 1050; width: 100%; background-repeat: repeat; border-top: 0.4rem solid var(--cgold); padding: 0.5rem 1rem;">
         <div class="mb-2 mb-md-0 text-center text-md-start mx-5 fs-5">
-            Usamos <em>cookies</em> esenciales para ofrecer nuestro servicio y <em>cookies</em> de terceros para rastrear el uso de la página. 
-            <a href="cookiepolicy.html">Política de cookies</a>
+            Al utilizar este sitio web, aceptas el uso de <em>cookies</em> esenciales y nuestras prácticas de privacidad.
+            <a href="cookiepolicy.html">Política de cookies</a> ·
+            <a href="privacypolicy.html">Política de privacidad</a>
         </div>
         <div class="d-flex gap-2 justify-content-end">
-            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-essentials-close">Solo esenciales</button>
-            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-all-close">Aceptar todo</button>
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-all-close">Aceptar</button>
         </div>
     </div>
     `;
@@ -516,12 +516,12 @@ function cookies(idioma) {
     <div id="cookiesBanner_CA" class="cookiesBanner nuvesRosas position-fixed bottom-0 end-0 bg-light shadow pt-2 pb-5 d-flex flex-column flex-md-row align-items-center justify-content-between" 
     style="z-index: 1050; width: 100%; background-repeat: repeat; border-top: 0.4rem solid var(--cgold); padding: 0.5rem 1rem;">
         <div class="mb-2 mb-md-0 text-center text-md-start mx-5 fs-5">
-            Fem servir <em>cookies</em> essencials per oferir el nostre servei i <em>cookies</em> de tercers per fer un seguiment de l’ús de la pàgina. 
-            <a href="cookiepolicy.html">Política de cookies</a>
+            En utilitzar aquest lloc web, acceptes l’ús de <em>cookies</em> essencials i les nostres pràctiques de privacitat.
+            <a href="cookiepolicy.html">Política de cookies</a> ·
+            <a href="privacypolicy.html">Política de privacitat</a>
         </div>
         <div class="d-flex gap-2 justify-content-end">
-            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-essentials-close">Només essencials</button>
-            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-all-close">Accepta-ho tot</button>
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-all-close">Accepta</button>
         </div>
     </div>
     `;
@@ -529,12 +529,12 @@ function cookies(idioma) {
     <div id="cookiesBanner_JA" class="cookiesBanner nuvesRosas position-fixed bottom-0 end-0 bg-light shadow pt-2 pb-5 d-flex flex-column flex-md-row align-items-center justify-content-between" 
     style="z-index: 1050; width: 100%; background-repeat: repeat; border-top: 0.4rem solid var(--cgold); padding: 0.5rem 1rem;">
         <div class="mb-2 mb-md-0 text-center text-md-start mx-5 fs-5">
-            サービスを提供するために必須の<em>クッキー</em>を使用し、ページの利用状況を追跡するために第三者の<em>クッキー</em>を使用しています。 
-            <a href="cookiepolicy.html">クッキーポリシー</a>
+            本サイトを利用することで、必須<em>クッキー</em>の使用および当サイトのデータ取扱方針に同意したものとします。
+            <a href="cookiepolicy.html">クッキーポリシー</a> ·
+            <a href="privacypolicy.html">プライバシーポリシー</a>
         </div>
         <div class="d-flex gap-2 justify-content-end">
-            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-essentials-close">必須のみ</button>
-            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-all-close">すべて受け入れる</button>
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-all-close">同意する</button>
         </div>
     </div>
     `;
@@ -553,7 +553,6 @@ function cookies(idioma) {
 
     const banner = document.querySelector('.cookiesBanner:last-of-type');
     if (!banner) return;
-    const btnEssentials = banner.querySelector('.js-cookies-essentials-close');
     const btnAll = banner.querySelector('.js-cookies-all-close');
 
     // Bloquear scroll/tabulación si quieres
@@ -564,12 +563,12 @@ function cookies(idioma) {
     style.innerHTML = `
         @media (max-width: 575px) {
             .cookiesBanner {
-                height: 40vh;
+                height: 30vh;
             }
         }
         @media (min-width: 576px) {
             .cookiesBanner {
-                height: 30vh;
+                height: 25vh;
             }
         }
         @media (min-width: 768px) {
@@ -579,17 +578,17 @@ function cookies(idioma) {
         }
         @media (min-width: 992px) {
             .cookiesBanner {
-                height: 16vh;
+                height: 15vh;
             }
         }
         @media (min-width: 1200px) {
             .cookiesBanner {
-                height: 15vh;
+                height: 14vh;
             }
         }
         @media (min-width: 1400px) {
             .cookiesBanner {
-                height: 13vh;
+                height: 12vh;
             }
         }
         /* Bloquea toda la web salvo el banner y elementos permitidos */
@@ -680,6 +679,5 @@ function cookies(idioma) {
         document.body.classList.remove('cookies-blocked');
     }
 
-    btnEssentials.addEventListener('click', () => giveConsent('essentials'));
     btnAll.addEventListener('click', () => giveConsent('all'));
 }
