@@ -66,7 +66,7 @@ const translations = {
         "About":"Referent a",
         "Support us":"Dóna'ns suport",
         "Contact":"Contacte",
-        "Sponsor us":"Sigues patrocinador",
+        "Sponsor us":"patrocina’ns",
         "Crowdfund us":"Crowdfunding",
         "Volunteer":"Voluntariat",
         "Stands":"Stands",
