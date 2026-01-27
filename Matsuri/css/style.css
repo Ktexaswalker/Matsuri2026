@@ -672,22 +672,23 @@
 /* SOCIAL NETWORKS */
 .socialNetworks img {
 	/* height: 3vw; */
-	width: 1rem;
-	max-width: 24px;
+	/* width: 1rem; */
+	/* max-width: 24px; */
+	width: 1.8rem;
 }
-/* .instagram:hover {
-	transform: scale(1.2);
+.instagram:hover {
+	transform: scale(1.1);
 	background: linear-gradient(121deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 30%, rgba(252, 176, 69, 1) 100%);
 	border-radius: 0.5rem;
 }
 .youtube:hover {
-	transform: scale(1.2);
+	transform: scale(1.1);
 	background: radial-gradient(circle,rgba(255, 0, 0, 1) 0%, rgba(34, 28, 67, 1) 100%);
 	border-radius: 0.5rem / 0.5rem;
 }
 .facebook:hover {
-	transform: scale(1.2);
+	transform: scale(1.1);
 	background: linear-gradient(135deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
 	border-radius: 0.5rem / 0.5rem;
-} */
+}
 /* --------------- */
