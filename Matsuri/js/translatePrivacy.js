@@ -65,7 +65,7 @@ Object.assign(window.translations.Español, {
     "12. Policy Updates":"12. Modificaciones de la política",
     "This Privacy Policy may be updated at any time to reflect legal, technical, or operational changes. Users are encouraged to review this page periodically.":"a presente Política de Privacidad podrá actualizarse en cualquier momento para reflejar cambios legales, técnicos u operativos. Se recomienda a los usuarios revisar periódicamente esta página.",
     "13. Contact":"13. Contacto",
-    "For any questions regarding this Privacy Policy or the handling of personal data, please refer to the contact section of the Website.":"Para cualquier consulta relacionada con esta Política de Privacidad o con el tratamiento de datos personales, puede consultarse la sección de contacto del Sitio Web."
+    "For any questions regarding this Privacy Policy or the handling of personal data, please refer to the contact section of the Website.":"Para cualquier consulta relacionada con esta Política de Privacidad o con el tratamiento de datos personales, puede consultarse la sección de contacto del Sitio Web.",
 });
 Object.assign(window.translations.Català, {
     "1. Introduction":"1. Introducció",
@@ -129,7 +129,7 @@ Object.assign(window.translations.Català, {
     "12. Policy Updates":"12. Modificacions de la política",
     "This Privacy Policy may be updated at any time to reflect legal, technical, or operational changes. Users are encouraged to review this page periodically.":"Aquesta Política de Privacitat pot actualitzar-se en qualsevol moment per reflectir canvis legals, tècnics o operatius. Es recomana a les persones usuàries revisar periòdicament aquesta pàgina.",
     "13. Contact":"13. Contacte",
-    "For any questions regarding this Privacy Policy or the handling of personal data, please refer to the contact section of the Website.":"Per a qualsevol consulta relacionada amb aquesta Política de Privacitat o amb el tractament de dades personals, es pot consultar la secció de contacte del Lloc Web."
+    "For any questions regarding this Privacy Policy or the handling of personal data, please refer to the contact section of the Website.":"Per a qualsevol consulta relacionada amb aquesta Política de Privacitat o amb el tractament de dades personals, es pot consultar la secció de contacte del Lloc Web.",
 });
 Object.assign(window.translations.日本語, {
     "1. Introduction":"1. はじめに",
@@ -193,5 +193,5 @@ Object.assign(window.translations.日本語, {
     "12. Policy Updates":"12. プライバシーポリシーの変更",
     "This Privacy Policy may be updated at any time to reflect legal, technical, or operational changes. Users are encouraged to review this page periodically.":"本プライバシーポリシーは、法令、技術、運営上の変更に応じて、予告なく更新されることがあります。利用者は定期的に本ページを確認することを推奨します。",
     "13. Contact":"13. お問い合わせ",
-    "For any questions regarding this Privacy Policy or the handling of personal data, please refer to the contact section of the Website.":"本プライバシーポリシーまたは個人情報の取り扱いに関するお問い合わせは、本サイトのお問い合わせページをご参照ください。"
+    "For any questions regarding this Privacy Policy or the handling of personal data, please refer to the contact section of the Website.":"本プライバシーポリシーまたは個人情報の取り扱いに関するお問い合わせは、本サイトのお問い合わせページをご参照ください。",
 });

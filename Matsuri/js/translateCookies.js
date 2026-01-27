@@ -57,7 +57,7 @@ Object.assign(window.translations.Español, {
     "Visiting external links is done at the user’s own discretion.":"El acceso a enlaces externos se realiza bajo la responsabilidad exclusiva del usuario.",
     "10. Acceptance of Terms":"10. Aceptación de los Términos",
     "By continuing to browse this website, users confirm that they have read and accepted this Cookies, Privacy, Legal Notice, and Disclaimer in its entirety.":"Al continuar navegando por este sitio web, los usuarios confirman que han leído y aceptado íntegramente esta Política de Cookies, Privacidad, Aviso Legal y Exención de Responsabilidad.",
-    "The website operator reserves the right to update or modify this notice at any time. Changes will become effective upon publication on the website.":"El operador del sitio web se reserva el derecho de actualizar o modificar este aviso en cualquier momento. Los cambios serán efectivos desde el momento de su publicación en el sitio web."
+    "The website operator reserves the right to update or modify this notice at any time. Changes will become effective upon publication on the website.":"El operador del sitio web se reserva el derecho de actualizar o modificar este aviso en cualquier momento. Los cambios serán efectivos desde el momento de su publicación en el sitio web.",
 });
 Object.assign(window.translations.Català, {
     "Cookies, Privacy, Legal Notice and Disclaimer":"Cookies, Privadesa, Avís Legal i Exempció de Responsabilitat",
@@ -113,7 +113,7 @@ Object.assign(window.translations.Català, {
     "Visiting external links is done at the user’s own discretion.":"L’accés als enllaços externs es realitza sota la responsabilitat exclusiva de l’usuari.",
     "10. Acceptance of Terms":"10. Acceptació dels Termes",
     "By continuing to browse this website, users confirm that they have read and accepted this Cookies, Privacy, Legal Notice, and Disclaimer in its entirety.":"En continuar navegant per aquest lloc web, els usuaris confirmen que han llegit i acceptat íntegrament aquesta Política de Cookies, Privadesa, Avís Legal i Exempció de Responsabilitat.",
-    "The website operator reserves the right to update or modify this notice at any time. Changes will become effective upon publication on the website.":"L’operador del lloc web es reserva el dret d’actualitzar o modificar aquest avís en qualsevol moment. Els canvis seran efectius des del moment de la seva publicació al lloc web."
+    "The website operator reserves the right to update or modify this notice at any time. Changes will become effective upon publication on the website.":"L’operador del lloc web es reserva el dret d’actualitzar o modificar aquest avís en qualsevol moment. Els canvis seran efectius des del moment de la seva publicació al lloc web.",
 });
 Object.assign(window.translations.日本語, {
     "Cookies, Privacy, Legal Notice and Disclaimer":"クッキー、プライバシー、法的通知および免責事項",
@@ -169,5 +169,5 @@ Object.assign(window.translations.日本語, {
     "Visiting external links is done at the user’s own discretion.":"外部リンクへのアクセスは、すべてユーザー自身の責任で行われます。",
     "10. Acceptance of Terms":"10. 条件への同意",
     "By continuing to browse this website, users confirm that they have read and accepted this Cookies, Privacy, Legal Notice, and Disclaimer in its entirety.":"本ウェブサイトを継続して利用することにより、ユーザーは本クッキーポリシー、プライバシー、法的通知および免責事項の内容をすべて読み、同意したものとみなされます。",
-    "The website operator reserves the right to update or modify this notice at any time. Changes will become effective upon publication on the website.":"ウェブサイト運営者は、本通知をいつでも更新または変更する権利を留保します。変更は、本ウェブサイト上に掲載された時点で効力を生じます。"
+    "The website operator reserves the right to update or modify this notice at any time. Changes will become effective upon publication on the website.":"ウェブサイト運営者は、本通知をいつでも更新または変更する権利を留保します。変更は、本ウェブサイト上に掲載された時点で効力を生じます。",
 });
