@@ -1,0 +1,13 @@
+1: {
+    id:"MQ==",
+    name:"UGVwYQ==",
+    rol:"dm9sdW50ZWVy",
+    descripcion:"VGhpcyBpcyBhbiBpbmZvcm1hdGl2ZSBkZXNjcmlwdGlvbiBzbyB1c2VycyBjYW4gdW5kZXJzdGFuZCBob3cgdGhpcyBzb2Z0d2FyZSB3b3Jrcy4gVGhlIFJvbGUgZmVhdHVyZSBpcyBub3QgdG8gYmUgdG91Y2hlZCB1bmxlc3MgeW91IGFyZSBhbiBhZG1pbiwgYXJ0aXN0LCBvciBzb21ldGhpbmcgZWxzZS4=",
+    links: [
+        "cGVwYXdhbGtpbmdncmFzcy5jb20=", "cGVwYWxpbmtlZGluLmNvbS9teWpvYnM=", "aWxvdmVtYXRzdXJpYW5ka2lkcy5jb20=", "ZmFjZWJvb2stcGVwYS5jb20vcHJvZmlsZQ==", "eW91dHViZS5jb20vbXljaGFuZWxpbnlvdXR1YmU="
+    ],
+    trabajos:"SSBhbSBpbiBjaGFyZ2Ugb2YgaGVscGluZyB3aXRoIHRoZSBwcmVwYXJhdGlvbiBvZiB0aGUgc2hvcHMgYW5kIHRoZSBhc3NlbWJseSBvZiBzdGFuZHMu",
+    tags: [
+        "Vm9sdW50ZWVyaW5n", "SW5mb3JtYXRpb24=", "RHJpbmtz", "RW50cmFuY2U=", "Q2hpbGRyZW4="
+    ]
+}

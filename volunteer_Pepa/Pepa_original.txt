@@ -1,0 +1,9 @@
+1: {
+    id:"1",
+    name:"Pepa",
+    rol:"volunteer",
+    descripcion:"This is an informative description so users can understand how this software works. The Role feature is not to be touched unless you are an admin, artist, or something else.",
+    links: ['pepawalkinggrass.com', 'pepalinkedin.com/myjobs', 'ilovematsuriandkids.com', 'facebook-pepa.com/profile', 'youtube.com/mychanelinyoutube'],
+    trabajos:"I am in charge of helping with the preparation of the shops and the assembly of stands.",
+    tags: ['Volunteering', 'Information', 'Drinks', 'Entrance', 'Children']
+}
