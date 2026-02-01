@@ -13,6 +13,7 @@
 	<script src="js/bootstrap.bundle.js"></script>
 	<script defer src="js/swiper-bundle.min.js"></script>
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script defer src="js/translateCrowdfunding.js"></script>
     <script defer src="js/translate.js"></script>
     <script defer src="js/script.js"></script>
 </head>
@@ -185,14 +186,25 @@
         </div>
     </nav>
 	<div class="container">
-        <h2 class="d-flex align-items-start">Crowdfund</h2>
+        <h2 class="d-flex justify-content-center">Crowdfund</h2>
     </div>
     <div class="container-fluid">
         <div class="container px-5">
             <h2>Start date planned for February</h2>
-            <img class="img-fluid" src="img/comingsoon.png" alt="">
+            <!-- <img class="img-fluid" src="img/comingsoon.png" alt=""> -->
+            <p class="ff">Matsuri is made possible thanks to the donations of many people like you who support our crowdfunding. Everyone who is part of Matsuri is a volunteer, which is why Matsuri is the result of the unity and support of wonderful people who come together so that we can enjoy this festival together every year.</p>
+            <p class="ff"><a id="dynamicLink" href="#"><u>Do you want to join our crowdfunding?</u></a><span> </span>You’ll also receive exclusive gifts!</p>
         </div>
     </div>
+    <section>
+        <div class="container px-5">
+            <div class="row">
+                <div class="col px-3 mb-3 lupa rounded-5">
+                    <img class="img-fluid optimizable rounded-5" style="filter: brightness(0.95) contrast(1.3); mix-blend-mode: multiply;" data-src="webp/img/crowdfunding/stickersMatsuri25mockup.webp" src="img/crowdfunding/stickersMatsuri25mockup.png" alt="stickers" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
 	<footer>
         <div class="bg-container-animation bg-dblue">
             <div class="container-fluid">
@@ -224,5 +236,16 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.querySelectorAll(".idioma").forEach(item => {
+            item.addEventListener("click", (e) => {
+                e.preventDefault();
+                const lang = item.textContent.trim();
+                const linksByLang = {"日本語":"http://matsuribcn.jp"};
+                const link = document.getElementById("dynamicLink");
+                link.href = linksByLang[lang] ?? "http://matsuribcn.es";
+            });
+        });
+    </script>
 </body>
 </html>

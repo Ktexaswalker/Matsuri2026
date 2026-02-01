@@ -15,7 +15,7 @@
     <script src="js/bootstrap.bundle.js"></script>
     <script defer src="js/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <script src="js/about.js"></script>
+    <script src="js/translateAbout.js"></script>
     <script defer src="js/translate.js"></script>
     <script defer src="js/script.js"></script>
 </head>
@@ -193,33 +193,36 @@
                                 offset-xl-0 col-xl-6 order-xl-2
                                 offset-xxl-0 col-xxl-6 order-xxl-2
                                 rounded-4 ps-3 w-lg-50 w-xl-50 w-xxl-50 pb-5">
-                        <p class="h6 mt-0 text-break pe-xl-4 pb-3 pb-md-0 mb-3">Lorem ipsum dolor sit amet consectetur,
-                            adipisicing elit. Quisquam, illum? Repellendus ut optio qui iure excepturi similique
-                            deserunt dolorem incidunt, aspernatur commodi non, nesciunt repudiandae minus. Accusantium,
-                            debitis. Quo, eligendi!</p>
+                        <p class="h6 mt-0 text-break pe-xl-4 pb-3 pb-md-0 mb-3 d-md-none d-lg-block d-xs-none ff">The Matsuri Japanese Culture Association (マツリ日本文化協会) is a non-profit organization with over 13 years of experience in Barcelona. Since we started in 2013, we have worked to bring Japanese culture closer to the public in an open and accessible way, growing from 1,500 attendees at the first edition to a well-established festival that attracted over 40,000 visitors in 2024.</p>
+                        <p class="h6 mt-0 text-break pe-xl-4 pb-3 pb-md-0 mb-3 ff">This growth has been made possible thanks to the commitment of our team, the involvement of the community, and a diverse cultural program. In 2019, this work was officially recognized when the association’s president received the Distinction from the Consul General of Japan in Barcelona for his contribution to cultural promotion. Our main asset is human capital. We have more than 130 volunteers from up to 20 different backgrounds, which allows us to work from an intercultural, inclusive perspective deeply connected to Barcelona’s cultural fabric.</p>
                         <div class="container-fluid">
                             <div class="row">
-                                <div class="col-3 ps-0 h-100">
-                                    <button class="small_btn aniBtnTkt tickets text-wwhite mb-1"
-                                        onclick="comprarTicket()">TICKETS</button>
-                                    <button class="small_btn aniBtn bg-cgold pb-1 mt-1" onclick="crowdunfUs()">Support
-                                        us</button>
+                                <div class="col-xxl-3 col-xl-5 col-lg-11 col-md-12 col-sm-8 col-12 ps-0 h-100 order-md-2">
+                                    <button class="small_btn aniBtnTkt tickets text-wwhite pb-1 mb-1 me-1" onclick="comprarTicket()">TICKETS</button>
+                                    <button class="small_btn aniBtn bg-cgold text-dark pb-1 me-1" onclick="sponsorUs()">Sponsor us</button>
+                                    <button class="small_btn aniBtn bg-3blue pb-1 me-1" onclick="crowdunfUs()">Support us</button>
+                                    <button class="small_btn aniBtn pb-1 me-1" onclick="volunteer()">Volunteer</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 order-2 offset-0 d-block d-sm-none w-lg-50 w-xl-50 w-xxl-50">
-                        <img class="img-fluid rounded-3" src="img/other/yukatastage.jpg" alt="about image">
+                    <div class="col-12 order-2 offset-0 d-block d-sm-none w-lg-50 w-xl-50 w-xxl-50 lupa">
+                        <img class="img-fluid rounded-3" src="webp/img/austinPictures/MATSURI25-131.webp" alt="about image">
                     </div>
                     <!-- PEQUEÑO movil/tablet -->
                     <div class="
                         d-none
                         col-sm-12 offset-sm-0 order-sm-2 d-sm-block
-                        col-md-6 offset-md-0 order-md-1 col-lg-6 offset-lg-0 d-md-block w-lg-50 w-xl-50 w-xxl-50">
-                        <a href="https://www.google.com/maps/place/Moll+de+la+Fusta/@41.3796026,2.1820142,16z/data=!3m1!4b1!4m6!3m5!1s0x12a4a31bfa32df1b:0xd262de734a5102a7!8m2!3d41.3796026!4d2.1820142!16s%2Fg%2F11sh4hh3gf?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D"
-                            target="_blank">
-                            <img class="img-fluid rounded-3" src="img/other/yukatastage.jpg" alt="about image">
-                        </a>
+                        col-md-6 offset-md-0 order-md-1 col-lg-6 offset-lg-0 d-md-block w-lg-50 w-xl-50 w-xxl-50 h-50">
+                        <!-- <a href="https://www.google.com/maps/place/Moll+de+la+Fusta/@41.3796026,2.1820142,16z/data=!3m1!4b1!4m6!3m5!1s0x12a4a31bfa32df1b:0xd262de734a5102a7!8m2!3d41.3796026!4d2.1820142!16s%2Fg%2F11sh4hh3gf?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D"
+                            target="_blank"> -->
+                            <div class="lupa rounded-3">
+                                <span>
+                                    <img class="img-fluid rounded-3" src="webp/img/austinPictures/MATSURI25-131.webp" alt="about image">
+                                </span>
+                            </div>
+                        <!-- </a> -->
+                        <p class="h6 mt-0 text-break pe-xl-4 pb-3 pb-md-0 mb-3 mt-3 d-none d-md-block d-lg-none ff">The Matsuri Japanese Culture Association (マツリ日本文化協会) is a non-profit organization with over 13 years of experience in Barcelona. Since we started in 2013, we have worked to bring Japanese culture closer to the public in an open and accessible way, growing from 1,500 attendees at the first edition to a well-established festival that attracted over 40,000 visitors in 2024.</p>
                     </div>
                 </div>
             </div>
@@ -230,98 +233,250 @@
         <div class="container-fluid p-5">
             <div class="container">
                 <h3 class="text-dark fw-normal display-6 mb-4">Frequent Asked Questions</h3>
-
-                <div class="faq-item1 my-2">
-                    <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100" data-bs-toggle="collapse"
-                        data-bs-target="#faq1" aria-expanded="true">
-                        <span class="fs-5 p-2 ps-3 flex-grow-1 text-start">
-                            I bought a ticket, can I change the date?
-                        </span>
-                        <img class="p-2 object-fit-contain faq-icon">
-                    </button>
-                    <div id="faq1" class="collapse show w-100">
-                        <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-3 pt-2">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit...
+                <div class="overflow-y-auto" style="max-height: 67vh; scrollbar-width: none; -ms-overflow-style: none; -webkit-overflow-scrolling: touch; scroll-behavior: smooth;">
+                    <!-- 1 -->
+                    <div class="faq-item1 my-2">
+                        <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#faq1" aria-expanded="true">
+                            <span class="ff fs-5 p-2 ps-3 flex-grow-1 text-start">When and Where is it Held?</span>
+                            <img class="p-2 object-fit-contain faq-icon">
+                        </button>
+                        <div id="faq1" class="collapse w-100">
+                            <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-1 pt-2">
+                                <p class="ff ">MATSURI Barcelona will be held on May 16 and 17, 2026, at Moll de la Fusta in Barcelona.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="faq-item2 my-2">
-                    <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
-                        data-bs-target="#faq2" aria-expanded="false">
-                        <span class="fs-5 p-2 ps-3 flex-grow-1 text-start">Can I bring food and drinks from outside the venue?</span>
-                        <img class="p-2 object-fit-contain faq-icon">
-                    </button>
-                    <div id="faq2" class="collapse w-100">
-                        <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-3 pt-2">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione molestiae placeat ducimus perspiciatis eos, aliquid nesciunt laudantium, voluptatibus delectus aut assumenda velit odit nam ullam tempore quae. Sint, minus quas.</p>
+                    <!-- 2 -->
+                    <div class="faq-item2 my-2">
+                        <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#faq2" aria-expanded="false">
+                            <span class="ff fs-5 p-2 ps-3 flex-grow-1 text-start">Is it a family-friendly event?</span>
+                            <img class="p-2 object-fit-contain faq-icon">
+                        </button>
+                        <div id="faq2" class="collapse w-100">
+                            <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-1 pt-2">
+                                <p class="ff">Yes, MATSURI is a family-friendly event, designed for all audiences and offering cultural and leisure activities suitable for people of all ages.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="faq-item3 my-2">
-                    <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
-                        data-bs-target="#faq3" aria-expanded="false">
-                        <span class="fs-5 p-2 ps-3 flex-grow-1 text-start">Can I re-enter the venue once I exited?</span>
-                        <img class="p-2 object-fit-contain faq-icon">
-                    </button>
-                    <div id="faq3" class="collapse w-100">
-                        <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-3 pt-2">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, ea dolorem nesciunt excepturi nostrum dicta, qui eum aperiam eligendi beatae natus id. Vel possimus provident similique soluta quibusdam minus eaque!</p>
+                    <!-- 3 -->
+                    <div class="faq-item3 my-2">
+                        <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#faq3" aria-expanded="false">
+                            <span class="ff fs-5 p-2 ps-3 flex-grow-1 text-start">Do I need to buy tickets to attend? And where?</span>
+                            <img class="p-2 object-fit-contain faq-icon">
+                        </button>
+                        <div id="faq3" class="collapse w-100">
+                            <div class="faq-content ps-3 bg-lgrey rounded-bottom-5 pb-1 pt-2">
+                                <p class="ff mb-0 pb-0">Yes. To access the festival, it is necessary to purchase a ticket.</p>
+                                <p class="ff mb-0 pb-0 ms-3">Ticket prices:</p>
+                                <ul class="ff mb-0 pb-0 ms-3">
+                                    <li class="ff">1-day ticket: from €5 (€4 with discount).</li>
+                                    <li class="ff">2-day ticket: from €8 (€7 with discount).</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="faq-item4 my-2">
-                    <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
-                        data-bs-target="#faq4" aria-expanded="false">
-                        <span class="fs-5 p-2 ps-3 flex-grow-1 text-start">Can I enter with my dog?</span>
-                        <img class="p-2 object-fit-contain faq-icon">
-                    </button>
-                    <div id="faq4" class="collapse w-100">
-                        <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-3 pt-2">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aliquid dignissimos consequuntur qui. Consectetur ut, officia inventore temporibus neque modi obcaecati suscipit officiis sequi blanditiis aspernatur nisi, consequatur, quasi explicabo!</p>
+                    <!-- 4 -->
+                    <div class="faq-item4 my-2">
+                        <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#faq4" aria-expanded="false">
+                            <span class="ff fs-5 p-2 ps-3 flex-grow-1 text-start">Are pets allowed?</span>
+                            <img class="p-2 object-fit-contain faq-icon">
+                        </button>
+                        <div id="faq4" class="collapse w-100">
+                            <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-1 pt-2">
+                                <p class="ff">Yes, pets are allowed.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="faq-item5 my-2">
-                    <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
-                        data-bs-target="#faq5" aria-expanded="false">
-                        <span class="fs-5 p-2 ps-3 flex-grow-1 text-start">Is the venue adapted for wheel chairs?</span>
-                        <img class="p-2 object-fit-contain faq-icon">
-                    </button>
-                    <div id="faq5" class="collapse w-100">
-                        <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-3 pt-2">
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque voluptatibus officia aperiam repellendus sapiente facilis expedita eaque quis. Quod a vel molestiae exercitationem quis saepe, aspernatur aliquid libero ratione sint.</p>
+                    <!-- 5 -->
+                    <div class="faq-item5 my-2">
+                        <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#faq5" aria-expanded="false">
+                            <span class="ff fs-5 p-2 ps-3 flex-grow-1 text-start">Do minors need a ticket?</span>
+                            <img class="p-2 object-fit-contain faq-icon">
+                        </button>
+                        <div id="faq5" class="collapse w-100">
+                            <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-1 pt-2">
+                                <p class="ff">...</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="faq-item6 my-2">
-                    <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
-                        data-bs-target="#faq6" aria-expanded="false">
-                        <span class="fs-5 p-2 ps-3 flex-grow-1 text-start">Is there any discount on the tickets?</span>
-                        <img class="p-2 object-fit-contain faq-icon">
-                    </button>
-                    <div id="faq6" class="collapse w-100">
-                        <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-3 pt-2">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dolor nam atque ullam necessitatibus harum quis eveniet obcaecati alias. Non, maxime totam! Voluptatibus, ut exercitationem et accusamus tempore nulla obcaecati.</p>
+                    <!-- 6 -->
+                    <div class="faq-item6 my-2">
+                        <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#faq6" aria-expanded="false">
+                            <span class="ff fs-5 p-2 ps-3 flex-grow-1 text-start">Is the ticket refundable?</span>
+                            <img class="p-2 object-fit-contain faq-icon">
+                        </button>
+                        <div id="faq6" class="collapse w-100">
+                            <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-1 pt-2">
+                                <p class="ff">No, tickets are non-refundable. Once purchased, cancellations, exchanges, or returns are not allowed.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="faq-item7 my-2">
-                    <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
-                        data-bs-target="#faq7" aria-expanded="false">
-                        <span class="fs-5 p-2 ps-3 flex-grow-1 text-start">Is the venue adapted for wheel chairs?</span>
-                        <img class="p-2 object-fit-contain faq-icon">
-                    </button>
-                    <div id="faq7" class="collapse w-100">
-                        <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-3 pt-2">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero repellat consequuntur, et quaerat iste rem ea iusto dolorum quo soluta cupiditate dolore nemo animi magni necessitatibus sunt corporis natus cumque?</p>
+                    <!-- 7 -->
+                    <div class="faq-item7 my-2">
+                        <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#faq7" aria-expanded="false">
+                            <span class="ff fs-5 p-2 ps-3 flex-grow-1 text-start">Is the venue accessible for people with reduced mobility?</span>
+                            <img class="p-2 object-fit-contain faq-icon">
+                        </button>
+                        <div id="faq7" class="collapse w-100">
+                            <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-1 pt-2">
+                                <p class="ff">Yes, the venue is accessible for people with reduced mobility.</p>
+                            </div>
                         </div>
                     </div>
+                    <!-- 8 -->
+                    <div class="faq-item8 my-2">
+                        <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#faq8" aria-expanded="false">
+                            <span class="ff fs-5 p-2 ps-3 flex-grow-1 text-start">What kind of activities can you find?</span>
+                            <img class="p-2 object-fit-contain faq-icon">
+                        </button>
+                        <div id="faq8" class="collapse w-100">
+                            <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-1 pt-2">
+                                <p class="ff">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 9 -->
+                    <div class="faq-item9 my-2">
+                        <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#faq9" aria-expanded="false">
+                            <span class="ff fs-5 p-2 ps-3 flex-grow-1 text-start">Is it necessary to register in advance for the workshops?</span>
+                            <img class="p-2 object-fit-contain faq-icon">
+                        </button>
+                        <div id="faq9" class="collapse w-100">
+                            <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-1 pt-2">
+                                <p class="ff">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 10 -->
+                    <div class="faq-item10 my-2">
+                        <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#faq10" aria-expanded="false">
+                            <span class="ff fs-5 p-2 ps-3 flex-grow-1 text-start">Will there be Japanese food at the festival?</span>
+                            <img class="p-2 object-fit-contain faq-icon">
+                        </button>
+                        <div id="faq10" class="collapse w-100">
+                            <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-1 pt-2">
+                                <p class="ff">Yes, at the festival you’ll be able to enjoy Japanese food.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 11 -->
+                    <div class="faq-item11 my-2">
+                        <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#faq11" aria-expanded="false">
+                            <span class="ff fs-5 p-2 ps-3 flex-grow-1 text-start">Is it allowed to bring outside food or drinks?</span>
+                            <img class="p-2 object-fit-contain faq-icon">
+                        </button>
+                        <div id="faq11" class="collapse w-100">
+                            <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-1 pt-2">
+                                <p class="ff">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 12 -->
+                    <div class="faq-item12 my-2">
+                        <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#faq12" aria-expanded="false">
+                            <span class="ff fs-5 p-2 ps-3 flex-grow-1 text-start">Are there tables and eating areas inside the venue?</span>
+                            <img class="p-2 object-fit-contain faq-icon">
+                        </button>
+                        <div id="faq12" class="collapse w-100">
+                            <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-1 pt-2">
+                                <p class="ff">Yes, the festival has spaces with tables and eating areas where you can comfortably enjoy the food available at the different stands.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 13 -->
+                    <div class="faq-item13 my-2">
+                        <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#faq13" aria-expanded="false">
+                            <span class="ff fs-5 p-2 ps-3 flex-grow-1 text-start">How can I participate as a volunteer?</span>
+                            <img class="p-2 object-fit-contain faq-icon">
+                        </button>
+                        <div id="faq13" class="collapse w-100">
+                            <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-1 pt-2">
+                                <p class="ff">To participate as a volunteer, click<span> </span><b>
+                                    <a class="text-decoration-none ff" href="https://docs.google.com/forms/d/e/1FAIpQLSdYfBGX-4bTODOZZE-s8JFxhPLHB74pOUtYBVIv8fJPaQE8sA/viewform" 
+                                    target="_blank" noopener noreferrer>here</a>
+                                </b><span> </span>and complete the registration form.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 14 -->
+                    <div class="faq-item14 my-2">
+                        <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#faq14" aria-expanded="false">
+                            <span class="ff fs-5 p-2 ps-3 flex-grow-1 text-start">How can I collaborate as a company or sponsor?</span>
+                            <img class="p-2 object-fit-contain faq-icon">
+                        </button>
+                        <div id="faq14" class="collapse w-100">
+                            <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-1 pt-2">
+                                <p class="ff">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 15 -->
+                    <div class="faq-item15 my-2">
+                        <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#faq15" aria-expanded="false">
+                            <span class="ff fs-5 p-2 ps-3 flex-grow-1 text-start">Are there any requirements to participate as an artist or cultural group?</span>
+                            <img class="p-2 object-fit-contain faq-icon">
+                        </button>
+                        <div id="faq15" class="collapse w-100">
+                            <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-1 pt-2">
+                                <p class="ff">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 16 -->
+                    <div class="faq-item16 my-2">
+                        <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#faq16" aria-expanded="false">
+                            <span class="ff fs-5 p-2 ps-3 flex-grow-1 text-start">Is it allowed to enter with a water bottle?</span>
+                            <img class="p-2 object-fit-contain faq-icon">
+                        </button>
+                        <div id="faq16" class="collapse w-100">
+                            <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-1 pt-2">
+                                <p class="ff">...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 17 -->
+                    <div class="faq-item17 my-2">
+                        <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#faq17" aria-expanded="false">
+                            <span class="ff fs-5 p-2 ps-3 flex-grow-1 text-start">What is recommended when attending the festival?</span>
+                            <img class="p-2 object-fit-contain faq-icon">
+                        </button>
+                        <div id="faq17" class="collapse w-100">
+                            <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-1 pt-2">
+                                <p class="ff">It is recommended to wear comfortable clothing and shoes and to apply sunscreen to fully enjoy the festival.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 18 -->
+                    <div class="faq-item18 my-2">
+                        <button class="bg-container-animation bg-dblue rounded-top-5 d-flex w-100 collapsed" data-bs-toggle="collapse"
+                            data-bs-target="#faq18" aria-expanded="false">
+                            <span class="ff fs-5 p-2 ps-3 flex-grow-1 text-start">Is there a kids’ zone?</span>
+                            <img class="p-2 object-fit-contain faq-icon">
+                        </button>
+                        <div id="faq18" class="collapse w-100">
+                            <div class="faq-content ps-3 d-flex bg-lgrey rounded-bottom-5 pb-1 pt-2">
+                                <p class="ff">Yes, the festival has a special kids’ zone where you can enjoy activities adapted to their age.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
                 </div>
             </div>
         </div>

@@ -1,6 +1,6 @@
 const voluntarios = {
     1: {
-        id:"MQ==",
+        id:btoa(String(1)),
         name:"SGVjdG9yIE1hcnRpbmV6IENlcnZlcmE=",
         rol:"dm9sdW50ZWVy",
         descripcion:"TWUgaW52aXRhcvNuIHBhcmEgY29sYWJvcmFyIGVuIGVsIE1hdHN1cmkgeSBtZSBvZnJlY+0gYSBheXVkYXIgcGFyYSBjb25vY2VyIHBlcnNvbmFzIGNvbiBsYXMgcXVlIGNvbXBhcnRpciBidWVub3MgbW9tZW50b3MgeSBtb3N0cmFyIGFsZ3VuYXMgZGUgbWlzIGhhYmlsaWRhZGVz",
@@ -16,7 +16,7 @@ const voluntarios = {
         ]
     },
     2: {
-        id:"Mg==",
+        id:btoa(String(2)),
         name:"UGVwYQ==",
         rol:"dm9sdW50ZWVy",
         descripcion:"VGhpcyBpcyBhbiBpbmZvcm1hdGl2ZSBkZXNjcmlwdGlvbiBzbyB1c2VycyBjYW4gdW5kZXJzdGFuZCBob3cgdGhpcyBzb2Z0d2FyZSB3b3Jrcy4gVGhlIFJvbGUgZmVhdHVyZSBpcyBub3QgdG8gYmUgdG91Y2hlZCB1bmxlc3MgeW91IGFyZSBhbiBhZG1pbiwgYXJ0aXN0LCBvciBzb21ldGhpbmcgZWxzZS4=",
@@ -29,7 +29,7 @@ const voluntarios = {
         ]
     },
     3: {
-        id:"MQ==",
+        id:btoa(String(3)),
         name:"SGVjdG9yIE1hcnRpbmV6IENlcnZlcmE=",
         rol:"dm9sdW50ZWVy",
         descripcion:"TWUgaW52aXRhcvNuIHBhcmEgY29sYWJvcmFyIGVuIGVsIE1hdHN1cmkgeSBtZSBvZnJlY+0gYSBheXVkYXIgcGFyYSBjb25vY2VyIHBlcnNvbmFzIGNvbiBsYXMgcXVlIGNvbXBhcnRpciBidWVub3MgbW9tZW50b3MgeSBtb3N0cmFyIGFsZ3VuYXMgZGUgbWlzIGhhYmlsaWRhZGVz",

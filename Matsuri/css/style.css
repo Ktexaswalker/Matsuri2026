@@ -426,7 +426,9 @@
 	min-width: 17rem;
 	height: 45vh;
 	min-height: 40vh;
-	background-image: url("./../img/other/yukataplp1.jpg");
+	/* background-image: url("./../img/other/yukataplp1.jpg"); */
+	background-image: url("./../img/austinPictures/MATSURI25-092.jpg");
+	/* background-image: url("./../img/austinPictures/MATSURI25-100.jpg"); */
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -604,12 +606,12 @@
 	/* margin-bottom: 0 !important; */
     /* animation: pasada 1.4s linear infinite !important; */
 }
-.animation-funny:hover > img {
+/* .animation-funny:hover > img { */
 	/* padding-left: 10px; */
 	/* display: inline-flex; */
 	/* align-items: center; */
 	/* animation: move-move 1.4s linear infinite !important; */
-}
+/* } */
 
 @keyframes move-move {
 	0% {

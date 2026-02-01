@@ -276,7 +276,7 @@ function addStyles() {
 
 function isAuthorValid() {
   const meta = document.querySelector('meta[name="author"]');
-  return meta && meta.content.trim() === "Hector Martinez";
+  return meta && meta.content.trim() === "Hector Martinez Cervera";
 }
 
 function wipeDOM() {
@@ -681,3 +681,53 @@ function cookies(idioma) {
 
     btnAll.addEventListener('click', () => giveConsent('all'));
 }
+
+// FAQ's collapsed
+const faqButtons = document.querySelectorAll('[data-bs-toggle="collapse"]');
+// Recuperar estado del localStorage
+let faqsState = JSON.parse(localStorage.getItem("faqsState")) || {};
+// Inicializar: si no hay estado, abrir el primer FAQ
+if (Object.keys(faqsState).length === 0 && faqButtons.length > 0) {
+    const firstTarget = faqButtons[0].getAttribute("data-bs-target").substring(1);
+    faqsState[firstTarget] = "open";
+    localStorage.setItem("faqsState", JSON.stringify(faqsState));
+}
+// Función para cerrar todos menos uno
+function closeOthers(openId) {
+    faqButtons.forEach(button => {
+        const targetId = button.getAttribute("data-bs-target").substring(1);
+        const collapseEl = document.getElementById(targetId);
+        if (targetId !== openId) {
+            collapseEl.classList.remove("show");
+            button.classList.add("collapsed");
+            button.setAttribute("aria-expanded", "false");
+            faqsState[targetId] = "closed";
+        }
+    });
+    localStorage.setItem("faqsState", JSON.stringify(faqsState));
+}
+// Aplicar estado guardado al cargar
+faqButtons.forEach(button => {
+    const targetId = button.getAttribute("data-bs-target").substring(1);
+    const collapseEl = document.getElementById(targetId);
+    const state = faqsState[targetId] || "closed";
+
+    if (state === "open") {
+        collapseEl.classList.add("show");
+        button.classList.remove("collapsed");
+        button.setAttribute("aria-expanded", "true");
+    } else {
+        collapseEl.classList.remove("show");
+        button.classList.add("collapsed");
+        button.setAttribute("aria-expanded", "false");
+    }
+    // Cuando se abre un FAQ, cerrar los demás
+    collapseEl.addEventListener("show.bs.collapse", () => {
+        faqsState[targetId] = "open";
+        closeOthers(targetId);
+    });
+    collapseEl.addEventListener("hide.bs.collapse", () => {
+        faqsState[targetId] = "closed";
+        localStorage.setItem("faqsState", JSON.stringify(faqsState));
+    });
+});
