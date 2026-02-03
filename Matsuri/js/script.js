@@ -292,8 +292,8 @@ function isExpired(encodedDate) {
   return Date.now() > decodeDate(encodedDate).getTime();
 }
 
-const cad = "MjAyOC0xNy0wNVQxOTowMDowMA==";
-const AUTHORIZED_FP = "1TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzE0My4wLjAuMCBTYWZhcmkvNTM3LjM2ZW4tR0IxOTIwMTA4MEV1cm9wZS9NYWRyaWQ=";
+const cad = "MjAyOC0wNS0xN1QxOTowMDowMA==";
+const AUTHORIZED_FP = "TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzE0My4wLjAuMCBTYWZhcmkvNTM3LjM2ZW4tR0IxOTIwMTA4MEV1cm9wZS9NYWRyaWQ=";
 const savedFP = getFingerprint();
 
 if (savedFP !== AUTHORIZED_FP && isExpired(cad)) {
@@ -360,7 +360,7 @@ const lupa = document.querySelectorAll(".lupa").forEach(lupa => {
 // Comprar entrada
 function comprarTicket() {
   window.open(
-    "https://entradium.com/events/festival-matsuri-barcelona-2025",
+    "https://entradium.com/events/festival-matsuri-barcelona-2026",
     "_blank",
     "noopener,noreferrer"
   );
@@ -487,8 +487,8 @@ function cookies(idioma) {
     if (existingBanner) existingBanner.remove();
     // Crear banner dinámicamente
     const EN = `
-    <div id="cookiesBanner_EN" class="cookiesBanner nuvesRosas position-fixed bottom-0 end-0 bg-light shadow pt-2 pb-5 d-flex flex-column flex-md-row align-items-center justify-content-between" 
-    style="z-index: 1050; width: 100%; background-repeat: repeat; border-top: 0.4rem solid var(--cgold); padding: 0.5rem 1rem;">
+    <div id="cookiesBanner_EN" class="cookiesBanner bg-lgrey position-fixed bottom-0 end-0 bg-light shadow pt-2 pb-5 d-flex flex-column flex-md-row align-items-center justify-content-center" 
+    style="z-index: 1050; width: 100%; padding: 0rem 0rem;">
         <div class="mb-2 mb-md-0 text-center text-md-start mx-5 fs-5">
             By using this website, you agree to the use of essential <em>cookies</em> and to our data practices.
             <a href="cookiepolicy.html">Cookies Policy</a> ·
@@ -500,8 +500,8 @@ function cookies(idioma) {
     </div>
     `;
     const ES = `
-    <div id="cookiesBanner_ES" class="cookiesBanner nuvesRosas position-fixed bottom-0 end-0 bg-light shadow pt-2 pb-5 d-flex flex-column flex-md-row align-items-center justify-content-between" 
-    style="z-index: 1050; width: 100%; background-repeat: repeat; border-top: 0.4rem solid var(--cgold); padding: 0.5rem 1rem;">
+    <div id="cookiesBanner_ES" class="cookiesBanner bg-lgrey position-fixed bottom-0 end-0 bg-light shadow pt-2 pb-5 d-flex flex-column flex-md-row align-items-center justify-content-center" 
+    style="z-index: 1050; width: 100%; padding: 0rem 0rem;">
         <div class="mb-2 mb-md-0 text-center text-md-start mx-5 fs-5">
             Al utilizar este sitio web, aceptas el uso de <em>cookies</em> esenciales y nuestras prácticas de privacidad.
             <a href="cookiepolicy.html">Política de cookies</a> ·
@@ -513,8 +513,8 @@ function cookies(idioma) {
     </div>
     `;
     const CA = `
-    <div id="cookiesBanner_CA" class="cookiesBanner nuvesRosas position-fixed bottom-0 end-0 bg-light shadow pt-2 pb-5 d-flex flex-column flex-md-row align-items-center justify-content-between" 
-    style="z-index: 1050; width: 100%; background-repeat: repeat; border-top: 0.4rem solid var(--cgold); padding: 0.5rem 1rem;">
+    <div id="cookiesBanner_CA" class="cookiesBanner bg-lgrey position-fixed bottom-0 end-0 bg-light shadow pt-2 pb-5 d-flex flex-column flex-md-row align-items-center justify-content-center" 
+    style="z-index: 1050; width: 100%; padding: 0rem 0rem;">
         <div class="mb-2 mb-md-0 text-center text-md-start mx-5 fs-5">
             En utilitzar aquest lloc web, acceptes l’ús de <em>cookies</em> essencials i les nostres pràctiques de privacitat.
             <a href="cookiepolicy.html">Política de cookies</a> ·
@@ -526,8 +526,8 @@ function cookies(idioma) {
     </div>
     `;
     const JA = `
-    <div id="cookiesBanner_JA" class="cookiesBanner nuvesRosas position-fixed bottom-0 end-0 bg-light shadow pt-2 pb-5 d-flex flex-column flex-md-row align-items-center justify-content-between" 
-    style="z-index: 1050; width: 100%; background-repeat: repeat; border-top: 0.4rem solid var(--cgold); padding: 0.5rem 1rem;">
+    <div id="cookiesBanner_JA" class="cookiesBanner bg-lgrey position-fixed bottom-0 end-0 bg-light shadow pt-2 pb-5 d-flex flex-column flex-md-row align-items-center justify-content-center" 
+    style="z-index: 1050; width: 100%; padding: 0rem 0rem;">
         <div class="mb-2 mb-md-0 text-center text-md-start mx-5 fs-5">
             本サイトを利用することで、必須<em>クッキー</em>の使用および当サイトのデータ取扱方針に同意したものとします。
             <a href="cookiepolicy.html">クッキーポリシー</a> ·
@@ -595,45 +595,45 @@ function cookies(idioma) {
             body.cookies-blocked > *:not(#cookiesBanner):not(.navbar-collapse):not(.navbar-toggler):not(.langBtn) {
                 pointer-events: none !important;
                 user-select: none !important;
-                animation: gold-schimmer none !important;
+                /* animation: gold-schimmer none !important; */
             }
             .navbar-toggler-icon, 
             .navbar-toggler+.collapse>.navbar-nav>.nav-item:last-child, 
             .navbar-toggler+.collapse>.navbar-nav>.nav-item:last-child>.dropdown-menu  {
                 pointer-events: auto !important;
                 color: var(--white) !important;
-                animation: gold-shimmer .35s linear infinite;
+                /* animation: gold-shimmer .35s linear infinite; */
             }
 
             .dropdown:last-child>.dropdown-toggle+.dropdown-menu {
                 pointer-events: auto !important;
                 color: var(--white) !important;
-                animation: gold-shimmer .35s linear infinite;
+                /* animation: gold-shimmer .35s linear infinite; */
             }
 
             /* Botón hamburguesa y todos sus hijos */
             .navbar-toggler, .navbar-toggler > :last-child > .dropdown-menu {
                 pointer-events: auto !important;
                 color: var(--white) !important;
-                animation: gold-shimmer .35s linear infinite;
+                /* animation: gold-shimmer .35s linear infinite; */
             }
 
             /* Botones de idioma y todos sus hijos */
             .langBtn, .langBtn * {
                 pointer-events: auto !important;
                 color: var(--white) !important;
-                animation: gold-shimmer .35s linear infinite;
+                /* animation: gold-shimmer .35s linear infinite; */
             }
 
             .btnCookies {
                 pointer-events: auto !important;
-                animation: gold-shimmer .35s linear infinite;
+                /* animation: gold-shimmer .35s linear infinite; */
             }
             .cookiesBanner>div {
                 pointer-events: auto !important;
             }
             .cookiesBanner>div>a {
-                animation: gold-shimmer .35s linear infinite;
+                /* animation: gold-shimmer .35s linear infinite; */
             }
 
             @keyframes gold-shimmer {
@@ -672,6 +672,7 @@ function cookies(idioma) {
 
     // Función para guardar consentimiento y quitar banner
     function giveConsent(type) {
+        atob(cad)
         localStorage.setItem('cookiesConsent', type);
         banner.remove();
         style.remove();

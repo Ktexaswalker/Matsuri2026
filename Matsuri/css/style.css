@@ -1,4 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/Gotham/gotham_light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/Gotham/gotham_book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/Gotham/gotham_medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/Gotham/gotham_bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("/fonts/Gotham/gotham_black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
 /* COLORS */
 :root { 
 	--dblue: #221C43; 
@@ -12,11 +54,15 @@
 	--dgrey: #BDBCC9;
 	--lgrey: #EAEAF4;
 	--3blue: #06b4cb;
-	--font-family: "Noto Sans JP", "Gotham", sans-serif;
+	--font-family: "Gotham", "Noto Sans JP", "Gotham", sans-serif;
+	--font-tittle: "Gotham";
 }
 
 .ff {
 	font-family: var(--font-family);
+}
+.ft {
+	font-family: var(--font-tittle);
 }
 /* ------ */
 /* BOTON MATSURI HAMBURGESA */
@@ -99,10 +145,28 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-
 @media (max-width: 576px) {
 	.titleMatsuri {
-		width: 80vw;
+		width: 75vw;
+		font-size: 7vw;
+	}
+	.subtitleMatsuri {
+		font-size: 4vw;
+	}
+	.homephoto {
+		height: 50vh;
+	}
+	.separation {
+		margin-bottom: 2vh;
+	}
+	.logo {
+		width: 42vw;
+		margin: 1rem 0 1.2rem;
+	}
+}
+@media (min-width: 576px) {
+	.titleMatsuri {
+		width: 60vw;
 		font-size: 7vw;
 	}
 	.homephoto {
@@ -118,7 +182,7 @@
 }
 @media (min-width: 768px) {
 	.titleMatsuri {
-		width: 70vw;
+		width: 60vw;
 		font-size: 5vw;
 	}
 	.homephoto {
@@ -164,7 +228,7 @@
 }
 @media (min-width: 1200px) {
 	.titleMatsuri {
-		width: 60vw;
+		width: 55vw;
 		font-size: 3.4vw;
 	}
 	.homephoto {
@@ -176,7 +240,7 @@
 }
 @media (min-width: 1400px) {
 	.titleMatsuri {
-		width: 60vw;
+		width: 40vw;
 		font-size: 3.4vw;
 	}
 	.homephoto {
@@ -191,7 +255,8 @@
 }
 
 .titleMatsuri {
-	font-family: var(--font-family);
+	/* font-family: var(--font-family) !important; */
+	font-family: var(--font-tittle) !important;
 	padding: 1.5vh 2.5vw 0;
 	color: var(--wwhite);
 	text-shadow: 2px 2px 4px var(--grey),
@@ -207,7 +272,8 @@
 }
 
 .subtitleMatsuri {
-	font-family: var(--font-family);
+	/* font-family: var(--font-family) !important; */
+	font-family: var(--font-title) !important;
 	padding: 0 2.5vw 0;
 	color: var(--wwhite);
 	text-shadow: 2px 2px 4px var(--grey),
@@ -327,7 +393,27 @@
 	font-family: var(--font-family);
 	font-weight: bold;
 	color: var(--lblack) !important;
+	border: none;
 }
+
+.small_btnGold {
+	margin: 2px 0vw;
+	border-radius: 50vh;
+	padding: 0.01em 0.1em;
+	width: 9em;
+	height: 2.2rem;
+	font-size: 1em;
+	font-family: var(--font-family);
+	font-weight: bold;
+	color: var(--lgrey) !important;
+	border: none;
+}
+
+.small_btnGold:hover {
+	scale: calc(1.1);
+	color: var(--wwhite) !important;
+}
+
 .aniBtn:hover {
 	scale: calc(1.1);
 	color: black !important;

@@ -16,7 +16,7 @@
     <script defer src="js/script.js"></script>
 </head>
 <body>
-    <nav class="navbar d-none d-md-block sticky-top bg-white">
+    <nav class="navbar d-none d-md-block sticky-top bg-white my-0 py-0">
         <div class="container-fluid">
             <div class="d-flex align-items-center w-100 pe-4 me-0">
                 <!-- LOGO -->
@@ -62,7 +62,7 @@
                 <!-- TICKETS -->
                 <div class="ms-auto d-flex align-items-center">
                     <div>
-                        <button class="tickets-nav ms-0 me-2 me-lg-5" type="button" onclick="comprarTicket()">TICKETS</button>
+                        <button class="tickets-nav ms-0 me-2 ms-lg-2 me-lg-3" type="button" onclick="comprarTicket()">TICKETS</button>
                         <div class="dropdown d-md-block d-lg-none">
                             <button class="dropdown-toggle normal_btn-nav me-0 langBtn"
                                 type="button"
@@ -183,7 +183,7 @@
             </div>
         </div>
     </nav>
-    <section class="homephoto d-flex align-items-end">
+    <section class="homephoto d-flex align-items-center py-2">
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
@@ -193,24 +193,24 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <button class="tickets" type="button" onclick="comprarTicket()">TICKETS</button>
+                    <button class="tickets fw-bold" type="button" onclick="comprarTicket()">TICKETS</button>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <button class="normal_btn" onclick="sponsorUs()">Sponsor us</button>
+                    <button class="normal_btn fw-bold" onclick="sponsorUs()">Sponsor us</button>
                     <!-- <button class="normal_btn" onclick="program()">Program</button> -->
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <button class="normal_btn" onclick="crowdunfUs()">Crowdfund us</button>
+                    <button class="normal_btn fw-bold" onclick="crowdunfUs()">Crowdfund us</button>
                     <!-- <button class="normal_btn" onclick="stands()">Stands</button> -->
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <button class="normal_btn" onclick="volunteer()">Volunteer</button>
+                    <button class="normal_btn fw-bold" onclick="volunteer()">Volunteer</button>
                     <!-- <button class="crowd_btn bg-3blue mb-5" onclick="crowdunfUs()">Crowdfunding
                         <img class="ms-1 help" src="./img/png/icono crowdfunding_V2.png" alt="Crowdfunding">
                     </button> -->
@@ -289,19 +289,28 @@
     <section>
         <div class="container-fluid bg-dblue bg-eventInfo">
             <div class="row d-flex align-items-center">
-                <div class="col-11 offset-1 offset-sm-1 col-sm-5 offset-md-1">
-                    <h3 class="text-wwhite pt-3 fw-normal display-6">Event Information</h3>
+                <div class="col-4 offset-1 col-lg-5 offset-lg-1 col-md-10 offset-md-1 col-sm-10 offset-sm-1 col-10 offset-1 border-2">
+                    <h3 class="text-wwhite pt-3 fw-medium display-6">Event Information</h3>
                     <!-- <p>Matsuri BCN is a Japanese cultural festival here in Barcelona where people can come and enjoy live performance, authentic food and activities just like in Japan!</p> -->
-                     <p class="ff">Matsuri Barcelona is an annual event where you can enjoy Japanese culture, featuring top artists and performances, numerous exhibitors, Japanese food and drinks, a children’s area, and various activities typical of Japanese festivals, so you can enjoy an immersive and fun weekend with your family and friends.</p>
-                    <div class="row mt-lg-5 mt-md-5">
+                     <p class="ff fw-light">Matsuri Barcelona is an annual event where you can enjoy Japanese culture, featuring top artists and performances, numerous exhibitors, Japanese food and drinks, a children’s area, and various activities typical of Japanese festivals, so you can enjoy an immersive and fun weekend with your family and friends.</p>
+                    <div class="row mt-lg-5 mt-md-0">
                         <div class="col">
-                            <button class="normal_btn mx-0" onclick="about()">Know more</button>
+                            <button class="normal_btn mx-0 fw-bold mb-sm-2" onclick="about()">Know more</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-10 offset-2 mt-3 mb-3 col-sm-6 offset-sm-0">
-					<div class="img50" alt="cultura japonesa"></div>
-                    <!-- <img class="img50 border border-5 border-black img-fluid" src="img/other/yukataplp1.jpg" alt=""> -->
+                <div class="col-4 offset-0 col-lg-5 offset-lg-0 col-md-10 offset-md-1 col-sm-10 offset-sm-1 col-10 offset-1 mb-sm-2 border-2">
+                    <div class="pt-3">
+                        <!-- <div class="img50" alt="cultura japonesa"></div> -->
+                         <iframe class="ratio ratio-16x9 rounded-4"
+                            width="560" height="315" src="https://www.youtube.com/embed/aHf68DnhoEM?si=hrm4NAIV8H5N1Wmk" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                        <!-- <img class="img50 border border-5 border-black img-fluid" src="img/other/yukataplp1.jpg" alt=""> -->
+                    </div>
                 </div>
             </div>
         </div>
@@ -322,7 +331,7 @@
         <div class="bg-container-animation container-fluid bg-dblue">
             <div class="justify-content-center align-items-center">
                 <div class="col">
-                    <h3 class="text-wwhite pt-4 ps-5 fw-normal display-6 py-3">Activities</h3>
+                    <h3 class="text-wwhite pt-4 ps-5 fw-medium display-6 py-3">Activities</h3>
 						<div class="swiper mySwiper px-3">
 							<div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -334,7 +343,7 @@
                                         </a>
                                         <div class="card-body">
                                             <p class="card-text">
-                                                <a href="program.html" class="text-white text-decoration-none animation-funny fw-light h3"><img class="pe-3" src="./img/png/Punto dorado.png">PROGRAM
+                                                <a href="program.html" class="text-white text-decoration-none animation-funny fw-light h3 fw-light"><img class="pe-3" src="./img/png/Punto dorado.png">PROGRAM
 													<!-- <img src="img/png/right-arrow.png" class="ard"> -->
                                                 </a>
                                             </p>
@@ -398,7 +407,7 @@
                                         </a>
                                         <div class="card-body">
                                             <p class="card-text">
-                                                <a href="food.html" class="text-white text-decoration-none animation-funny fw-light h3"><img class="pe-3" src="./img/png/Punto dorado.png">FOOD
+                                                <a href="food.html" class="text-white text-decoration-none animation-funny fw-light h3"><img class="pe-3" src="./img/png/Punto dorado.png">FOOD AND DRINKS
 													<!-- <img src="img/png/right-arrow.png" class="ard"> -->
                                                 </a>
                                             </p>
@@ -427,32 +436,35 @@
                                 offset-md-0 col-md-6 order-md-2
                                 offset-lg-0 col-lg-6 order-lg-2
                                 offset-xl-0 col-xl-6 order-xl-2
-                                offset-xxl-0 col-xxl-6 order-xxl-2
+                                offset-xxl-1 col-xxl-5 order-xxl-2
                                 rounded-4 ps-3 w-lg-50 w-xl-50 w-xxl-50">
-                        <h3 class="text-wwhite fw-normal display-6 mb-4">Location</h3>
-                        <span class="h4 mt-3">Moll de la Fusta</span>
-                        <p class="h6 mt-0 text-break pe-xl-4 pb-3 pb-md-0 mb-3">Ronda Litoral, 1740, Ciutat Vella, 08039 Barcelona</p>
+                        <h3 class="text-wwhite fw-light display-6 mb-4">Location</h3>
+                        <span class="h4 mt-3 fw-light">Moll de la Fusta</span>
+                        <p class="h6 mt-0 text-break fw-light pe-xl-4 pb-3 pb-md-0 mb-3">Ronda Litoral, 1740, Ciutat Vella, 08039 Barcelona</p>
                         <div class="container">
                             <div class="row">
                                 <div class="col-1 p-0">
                                     <img src="./img/png/iconos mapa metro bus.png" alt="">
                                 </div>
                                 <div class="col-10 ms-3">
-                                    <p class="h5 fw-normal pt-1">Subway: Drassanes (L3)</p>
-                                    <p class="h5 fw-normal p-0">Bus: V13, 59, D20</p>
-                                    <p class="h5 fw-normal pb-1 mb-4 mb-lg-0">Nearby parking available</p>
+                                    <p class="h5 fw-light pt-1">Subway: Drassanes (L3)</p>
+                                    <p class="h5 fw-light p-0">Bus: V13, 59, D20</p>
+                                    <p class="h5 fw-light pb-1 mb-4 mb-lg-0">Nearby parking available</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- PEQUEÑO movil -->
                     <div class="
-                        col-12 order-2 offset-0 d-block d-sm-none lupa w-lg-50 w-xl-50 w-xxl-50" style="border-radius: 1rem; overflow: hidden;">
+                        col-12 order-2 offset-0 d-block d-sm-none lupa w-lg-50 w-xl-50 w-xxl-50 ratio ratio-16x9" style="border-radius: 1rem; overflow: hidden;">
                         <a href="https://www.google.com/maps/place/Moll+de+la+Fusta/@41.3796026,2.1820142,16z/data=!3m1!4b1!4m6!3m5!1s0x12a4a31bfa32df1b:0xd262de734a5102a7!8m2!3d41.3796026!4d2.1820142!16s%2Fg%2F11sh4hh3gf?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D" target="_blank">
-							<img class="img-fluid rounded-3 idioma-en d-none" src="img/map/MapaBCN_EN.png" alt="mapa matsuri">
-							<img class="img-fluid rounded-3 idioma-es d-none" src="img/map/MapaBCN_ES.png" alt="mapa matsuri">
-							<img class="img-fluid rounded-3 idioma-ca d-none" src="img/map/MapaBCN_CA.png" alt="mapa matsuri">
-							<img class="img-fluid rounded-3 idioma-ja d-none" src="img/map/MapaBCN_JP.png" alt="mapa matsuri">
+                            <div>
+
+                            </div>
+							<img class="img-fluid rounded-3 idioma-en d-none ratio" style="min-height: 30vh; max-height: 40vh; resize: vertical(2);" src="img/map/MapaBCN_EN.png" alt="mapa matsuri">
+							<img class="img-fluid rounded-3 idioma-es d-none ratio" style="min-height: 30vh; max-height: 40vh; resize: vertical(2);" src="img/map/MapaBCN_ES.png" alt="mapa matsuri">
+							<img class="img-fluid rounded-3 idioma-ca d-none ratio" style="min-height: 30vh; max-height: 40vh; resize: vertical(2);" src="img/map/MapaBCN_CA.png" alt="mapa matsuri">
+							<img class="img-fluid rounded-3 idioma-ja d-none ratio" style="min-height: 30vh; max-height: 40vh; resize: vertical(2);" src="img/map/MapaBCN_JP.png" alt="mapa matsuri">
 						</a>
                     </div>
                     <!-- PEQUEÑO movil/tablet -->
@@ -461,10 +473,18 @@
                         col-sm-12 offset-sm-0 order-sm-2 d-sm-block
                         col-md-6 offset-md-0 order-md-1 col-lg-6 offset-lg-0 d-md-block lupa w-lg-50 w-xl-50 w-xxl-50" style="border-radius: 1rem; overflow: hidden;">
                         <a href="https://www.google.com/maps/place/Moll+de+la+Fusta/@41.3796026,2.1820142,16z/data=!3m1!4b1!4m6!3m5!1s0x12a4a31bfa32df1b:0xd262de734a5102a7!8m2!3d41.3796026!4d2.1820142!16s%2Fg%2F11sh4hh3gf?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D" target="_blank">
-							<img class="img-fluid rounded-3 idioma-en d-none" src="img/map/MapaBCN_EN.png" alt="mapa matsuri">
-							<img class="img-fluid rounded-3 idioma-es d-none" src="img/map/MapaBCN_ES.png" alt="mapa matsuri">
-							<img class="img-fluid rounded-3 idioma-ca d-none" src="img/map/MapaBCN_CA.png" alt="mapa matsuri">
-							<img class="img-fluid rounded-3 idioma-ja d-none" src="img/map/MapaBCN_JP.png" alt="mapa matsuri">
+							<div class="d-block d-xl-none d-xxl-none">
+                                <img class="img-fluid rounded-3 idioma-en d-none ratio" style="min-height: 30vh; max-height: 40vh; resize: vertical(2);" src="img/map/MapaBCN_EN.png" alt="mapa matsuri">
+                                <img class="img-fluid rounded-3 idioma-es d-none ratio" style="min-height: 30vh; max-height: 40vh; resize: vertical(2);" src="img/map/MapaBCN_ES.png" alt="mapa matsuri">
+                                <img class="img-fluid rounded-3 idioma-ca d-none ratio" style="min-height: 30vh; max-height: 40vh; resize: vertical(2);" src="img/map/MapaBCN_CA.png" alt="mapa matsuri">
+                                <img class="img-fluid rounded-3 idioma-ja d-none ratio" style="min-height: 30vh; max-height: 40vh; resize: vertical(2);" src="img/map/MapaBCN_JP.png" alt="mapa matsuri">
+                            </div>
+                            <div class="d-none d-xl-block d-xxl-block">
+                                <img class="img-fluid rounded-3 idioma-en d-none ratio" src="img/map/Mapa matsuri_EN.png" alt="mapa matsuri">
+                                <img class="img-fluid rounded-3 idioma-es d-none ratio" src="img/map/Mapa matsuri_ES.png" alt="mapa matsuri">
+                                <img class="img-fluid rounded-3 idioma-ca d-none ratio" src="img/map/Mapa matsuri_ES.png" alt="mapa matsuri">
+                                <img class="img-fluid rounded-3 idioma-ja d-none ratio" src="img/map/Mapa matsuri_JP.png" alt="mapa matsuri">
+                            </div>
 						</a>
                     </div>
                 </div>
@@ -477,23 +497,24 @@
         <div class="container pb-5">
             <div class="bg-container-animation container-fluid bg-dblue border rounded-4 p-sm-4 p-3">
                 <!-- <h3 class="text-wwhite pt-3 fw-normal display-6 my-4 text-break pe-xl-5 d-md-block d-lg-block">Be part of Matsuri</h3> -->
+                <h3 class="text-wwhite fw-medium display-6 my-4 text-break pe-xl-5 d-none d-md-block d-lg-none">Be part of Matsuri</h3>
                 <div class="row d-flex align-items-center justify-content-center">
-                    <div class="bg-transparent h-100
+                    <div class="bg-transparent
                                 offset-0 col-12 order-1
                                 offset-sm-0 col-sm-12
                                 offset-md-0 col-md-6
                                 offset-xl-0 col-xl-6
                                 offset-xxl-1 col-xxl-5
                                 bg-dblue rounded-4 ps-3 w-lg-50 w-xl-50 w-xxl-50">
-                        <h3 class="text-wwhite fw-normal display-6 my-4 text-break pe-xl-5">Be part of Matsuri</h3>
-                        <p class="fs-5 mt-0 fw-normal text-break pe-xl-4 pb-3 pb-md-0 mb-5">Join our community as volunteer or help us make one of Barcelona's greatest Japanese festival through crowdfunding.</p>
+                        <h3 class="text-wwhite fw-medium display-6 my-4 text-break pe-xl-5 d-block d-md-none d-lg-block">Be part of Matsuri</h3>
+                        <p class="fs-5 mt-0 fw-light text-break pe-xl-4 pb-3 pb-md-0 mb-5">Join our community as volunteer or help us make one of Barcelona's greatest Japanese festival through crowdfunding.</p>
                         <div class="container-fluid mb-5">
                             <div class="row d-flex align-items-center">
                                 <div class="col-3">
                                     <img class="img-fluid pe-xs-2 pe-sm-3 pe-md-0 pe-lg-0 me-xl-4 pe-xl-4 pe-xxl-3 pe-0" src="img/svg/Icon crowdfunding_gris.svg" class="help">
                                 </div>
                                 <div class="col-8 ps-0">
-                                    <button class="small_btn aniBtn bg-cgold text-dark mx-2 pb-1" onclick="sponsorUs()">Sponsor us</button>
+                                    <button class="small_btnGold aniBtnGld bg-cgold mx-2 pb-1" onclick="sponsorUs()">Sponsor us</button>
                                     <button class="small_btn aniBtn bg-3blue mx-2 pb-1" onclick="crowdunfUs()">Support us</button>
                                     <button class="small_btn aniBtn mx-2 pb-1" onclick="volunteer()">Volunteer</button>
                                 </div>

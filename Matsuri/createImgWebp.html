@@ -188,7 +188,7 @@
                 "order-xxl-2", "bg-dblue", "rounded-4", "ps-3", "w-lg-50", "w-xl-50", "w-xxl-50");
                 // NOMBRE
                 const name = document.createElement("h3");
-                name.classList.add("fw-bold", "d-flex", "justify-content-between");
+                name.classList.add("fw-medium", "d-flex", "justify-content-between");
                 name.textContent = valor.name;
                 article1.appendChild(name);
                 // ROL
@@ -210,7 +210,7 @@
                     const button = document.createElement("button");
                     button.classList.add("mx-1", "p-1", "bg-cgold", "rounded");
                     const a = document.createElement("a");
-                    a.classList.add("p-0", "text-decoration-none", "text-wwhite");
+                    a.classList.add("p-0", "text-decoration-none", "text-wwhite", "fw-light");
                     a.href = l;
                     a.textContent = `${obtenerDominio(l)}`;
                     a.target = "_blank";
