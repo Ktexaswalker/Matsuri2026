@@ -11,7 +11,7 @@ const translations = {
         "Performers": "Artistas",
         "Kids zone": "Zona infantil",
         "Booths": "Stands",
-        "Foods & Drinks": "Comidas y bebidas",
+        "Food & Drink": "Comida y bebidas",
         "About":"Acerca de",
         "Support us":"Crowdfunding",
         // "Support us":"Apóyanos",
