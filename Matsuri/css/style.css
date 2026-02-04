@@ -1,42 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
 @font-face {
   font-family: 'Gotham';
-  src: url('../fonts/Gotham Bold.otf') format('opentype');
+  src: url('../fonts/Matsuri/Gotham/Gotham-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Gotham";
-  src: url("/fonts/Gotham/gotham_light.otf") format("opentype");
+  src: url("../fonts/Matsuri/Gotham/Gotham-Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/fonts/Gotham/gotham_book.otf") format("opentype");
+  src: url("../fonts/Matsuri/Gotham/Gotham-Book.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/fonts/Gotham/gotham_medium.otf") format("opentype");
+  src: url("../fonts/Matsuri/Gotham/Gotham-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/fonts/Gotham/gotham_bold.otf") format("opentype");
+  src: url("../fonts/Matsuri/Gotham/Gotham-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham";
-  src: url("/fonts/Gotham/gotham_black.otf") format("opentype");
+  src: url("../fonts/Matsuri/Gotham/Gotham-Black.otf") format("opentype");
   font-weight: 900;
   font-style: normal;
 }
@@ -491,11 +491,21 @@
 .separador {
 	height: 4.8rem;
 	border: none;
-	background-image: url("./../img/png/Separador\ logo\ dorado\ matsuri.png");
+	/* background-image: url("./../img/png/Separador\ logo\ dorado\ matsuri.png"); */
+	background-image: url("./../img/b_Separadores/separador_isologo_dorado_1980.png");
 	background-repeat: repeat-x;
 	background-position: center;
 	opacity: 1;
 }
+/* .separadorOk {
+	height: 4.8rem;
+	border: none;
+	background-image: url("./../img/b_Separadores/separador_isologo_dorado_1980.png");
+	background-image: url("./../img/b_Separadores/separador_isologo_dorado_1980.png");
+	background-repeat: repeat-x;
+	background-position: center;
+	opacity: 1;
+} */
 
 .tejas {
 	height: 4.8rem;
