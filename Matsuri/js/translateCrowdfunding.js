@@ -4,20 +4,29 @@ window.translations = window.translations || {
     日本語: {}
 };
 Object.assign(window.translations.Español, {
-    "Matsuri is made possible thanks to the donations of many people like you who support our crowdfunding. Everyone who is part of Matsuri is a volunteer, which is why Matsuri is the result of the unity and support of wonderful people who come together so that we can enjoy this festival together every year.":"Matsuri es posible gracias a las donaciones de muchas personas cómo tú, que colaboran con nuestro Crowdfunding. Todas las personas que formamos Matsuri somos voluntarias, por eso, Matsuri es el resultado de la unión y soporte de personas maravillosas que colaboran para que podamos disfrutar de este festival juntos cada año.",
+    "Matsuri is made possible thanks to the donations of many people like you who support our crowdfunding.":"Matsuri es posible gracias a las donaciones de muchas personas como tú que apoyan nuestro crowdfunding.",
+    "Everyone who is part of Matsuri is a volunteer, which is why Matsuri is the result of the unity and support of wonderful people who come together so that we can enjoy this festival together every year.":"Todas las personas que forman parte de Matsuri son voluntarias, por lo que Matsuri es el resultado de la unidad y el apoyo de personas maravillosas que se unen para que podamos disfrutar juntos de este festival cada año.",
     "Do you want to join our crowdfunding?":"¿Quieres unirte a nuestro Crowdfunding?",
     "You’ll also receive exclusive gifts!":"¡Recibirás además regalos exclusivos!",
-    "":"",
+    "Support us and join our":"Apóyanos y únete a nuestro",
+    "Crowdfunding here.":"Crowdfunding aquí.",
+    "¡You will receive, in addition, exclusive gifts!":"¡Recibirás, además, obsequios exclusivos!",
 });
 Object.assign(window.translations.Català, {
-    "Matsuri is made possible thanks to the donations of many people like you who support our crowdfunding. Everyone who is part of Matsuri is a volunteer, which is why Matsuri is the result of the unity and support of wonderful people who come together so that we can enjoy this festival together every year.":"Matsuri és possible gràcies a les donacions de moltes persones com tu, que col·laboren amb el nostre micromecenatge. Totes les persones que formem part de Matsuri som voluntàries; per això, Matsuri és el resultat de la unió i el suport de persones meravelloses que col·laboren perquè puguem gaudir d’aquest festival junts cada any.",
+    "Matsuri is made possible thanks to the donations of many people like you who support our crowdfunding.":"Matsuri és possible gràcies a les donacions de moltes persones com tu que donen suport al nostre crowdfunding.",
+    "Everyone who is part of Matsuri is a volunteer, which is why Matsuri is the result of the unity and support of wonderful people who come together so that we can enjoy this festival together every year.":"Totes les persones que formen part de Matsuri són voluntàries, per això Matsuri és el resultat de la unitat i el suport de persones meravelloses que s’ajunten perquè puguem gaudir junts d’aquest festival cada any.",
     "Do you want to join our crowdfunding?":"Vols unir-te al nostre micromecenatge?",
     "You’ll also receive exclusive gifts!":"A més, rebràs regals exclusius!",
-    "":"",
+    "Support us and join our":"Apòyanos i uneix-te al nostre",
+    "Crowdfunding here.":"Crowdfunding aquí.",
+    "¡You will receive, in addition, exclusive gifts!":"¡Rebràs, a més, obsequis exclusius!",
 });
 Object.assign(window.translations.日本語, {
-    "Matsuri is made possible thanks to the donations of many people like you who support our crowdfunding. Everyone who is part of Matsuri is a volunteer, which is why Matsuri is the result of the unity and support of wonderful people who come together so that we can enjoy this festival together every year.":"マツリは、クラウドファンディングを通じて支援してくださる、あなたのような多くの方々の寄付によって実現しています。マツリに関わるすべてのメンバーはボランティアであり、だからこそマツリは、毎年このフェスティバルを一緒に楽しむために力を合わせてくれる素晴らしい人々の支えによって成り立っています。",
+    "Matsuri is made possible thanks to the donations of many people like you who support our crowdfunding.":"祭りは、私たちのクラウドファンディングを支援してくれる、あなたのような多くの人々の寄付のおかげで実現しています。",
+    "Everyone who is part of Matsuri is a volunteer, which is why Matsuri is the result of the unity and support of wonderful people who come together so that we can enjoy this festival together every year.":"祭りに関わるすべての人はボランティアです。そのため、祭りは素晴らしい人々が団結し支え合うことで実現しており、私たちは毎年一緒にこのお祭りを楽しむことができます。",
     "Do you want to join our crowdfunding?":"クラウドファンディングに参加しませんか？",
     "You’ll also receive exclusive gifts!":"限定の特典もご用意しています！",
-    "":"",
+    "Support us and join our":"私たちを応援して、私たちの",
+    "Crowdfunding here.":"クラウドファンディングに参加してください。",
+    "¡You will receive, in addition, exclusive gifts!":"受け取れます、さらに限定のギフトを！",
 });

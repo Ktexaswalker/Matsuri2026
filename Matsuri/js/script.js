@@ -593,7 +593,7 @@ function cookies(idioma) {
         }
         /* Bloquea toda la web salvo el banner y elementos permitidos */
             body.cookies-blocked > *:not(#cookiesBanner):not(.navbar-collapse):not(.navbar-toggler):not(.langBtn) {
-                pointer-events: none !important;
+                /* pointer-events: none !important; */
                 user-select: none !important;
                 /* animation: gold-schimmer none !important; */
             }

@@ -147,11 +147,11 @@
 }
 @media (max-width: 576px) {
 	.titleMatsuri {
-		width: 75vw;
-		font-size: 7vw;
+		width: 95vw;
+		font-size: 6.5vw;
 	}
 	.subtitleMatsuri {
-		font-size: 4vw;
+		font-size: 3.5vw;
 	}
 	.homephoto {
 		height: 50vh;
@@ -166,7 +166,7 @@
 }
 @media (min-width: 576px) {
 	.titleMatsuri {
-		width: 60vw;
+		width: 70vw;
 		font-size: 7vw;
 	}
 	.homephoto {
@@ -240,7 +240,7 @@
 }
 @media (min-width: 1400px) {
 	.titleMatsuri {
-		width: 40vw;
+		width: 45vw;
 		font-size: 3.4vw;
 	}
 	.homephoto {
@@ -511,6 +511,20 @@
 	height: 4.8rem;
 	border: none;
 	background-image: url("./../img/png/Separador\ olas\ 2_gris.png");
+	background-repeat: repeat-x;
+	opacity: 1;
+}
+.escamasAzules {
+	height: 4.8rem;
+	border: none;
+	background-image: url("./../img/b_Separadores/Separador\ escamas_azul.png");
+	background-repeat: repeat-x;
+	opacity: 1;
+}
+.escamasRojas {
+	height: 4.8rem;
+	border: none;
+	background-image: url("./../img/b_Separadores/Separador\ escamas_rojo.png");
 	background-repeat: repeat-x;
 	opacity: 1;
 }
