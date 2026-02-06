@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="google" content="notranslate">
+    <meta name="google" content="notranslate">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matsuri 2026</title>
     <link rel="shortcut icon" href="./img/logo/acj logo red.png" type="image/x-icon">
@@ -38,7 +40,7 @@
                         <ul class="dropdown-menu border-0 my-0">
                             <li><a class="dropdown-item fw-medium" href="program.html">Program</a></li>
                             <li><a class="dropdown-item fw-medium" href="performers.html">Performers</a></li>
-                            <li><a class="dropdown-item fw-medium" href="kids.html">Kids zone</a></li>
+                            <li><a class="dropdown-item fw-medium" href="kids.html">Kids area</a></li>
                             <li><a class="dropdown-item fw-medium" href="booths.html">Booths</a></li>
                             <li><a class="dropdown-item fw-medium" href="food.html">Food & Drink</a></li>
                         </ul>
@@ -143,7 +145,7 @@
                         <ul class="dropdown-menu border-0 py-0 my-0">
                             <li><a class="dropdown-item px-0 fs-5 fw-medium" href="program.html">Program</a></li>
                             <li><a class="dropdown-item px-0 fs-5 fw-medium" href="performers.html">Performers</a></li>
-                            <li><a class="dropdown-item px-0 fs-5 fw-medium" href="kids.html">Kids zone</a></li>
+                            <li><a class="dropdown-item px-0 fs-5 fw-medium" href="kids.html">Kids area</a></li>
                             <li><a class="dropdown-item px-0 fs-5 fw-medium" href="booths.html">Booths</a></li>
                             <li><a class="dropdown-item px-0 fs-5 fw-medium" href="food.html">Foods & Drinks</a></li>
                         </ul>
@@ -192,41 +194,72 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col">
-                    <button class="tickets fw-bold" type="button" onclick="comprarTicket()">TICKETS</button>
+                <div class="container-fluid d-flex align-items-start justify-content-start">
+                    <div class="row ps-1">
+                        <div class="col">
+                            <button class="normal_btn fw-bold specialFadeBtn me-0" onclick="crowdunfUs()">Crowdfunding</button>
+                            <button class="tickets fw-bold my-1 ms-2" type="button" onclick="comprarTicket()">TICKETS</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid d-flex align-items-start justify-content-start">
+                    <div class="row ps-1">
+                        <div class="col">
+                            <button class="normal_btn fw-bold specialFadeBtn" onclick="volunteer()">Volunteer</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                    <button class="normal_btn fw-bold" onclick="sponsorUs()">Sponsor us</button>
-                    <!-- <button class="normal_btn" onclick="program()">Program</button> -->
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <button class="normal_btn fw-bold" onclick="crowdunfUs()">Crowdfund us</button>
+        </div>
+    </section>
+                <!-- <div class="row">
+                    <div class="col"> 
+                        <button class="normal_btn fw-bold" onclick="sponsorUs()">Sponsor us</button>
+                        <button class="normal_btn" onclick="program()">Program</button>
+                    </div>
+                </div>-->                    
                     <!-- <button class="normal_btn" onclick="stands()">Stands</button> -->
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <button class="normal_btn fw-bold" onclick="volunteer()">Volunteer</button>
+                    
                     <!-- <button class="crowd_btn bg-3blue mb-5" onclick="crowdunfUs()">Crowdfunding
                         <img class="ms-1 help" src="./img/png/icono crowdfunding_V2.png" alt="Crowdfunding">
                     </button> -->
-                </div>
-            </div>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col">
                     <div class="separation"></div>
                 </div>
+            </div> -->
+    <section class="bg-white p-3">
+        <div class="container-fluid px-0">
+            <div class="container">
+                <div class="row d-flex justify-content-evenly align-items-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 px-0">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <div class="col-4 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                                <img class="border border-3 border-secondary-subtle" src="./img/grafismo/lampara chochin.png" alt="ランタン">
+                            </div>
+                            <div class="col-8 col-sm-9 col-md-9 col-lg-9 col-xl-9 col-xxl-9">
+                                <span class="h4 ff fw-medium mb-3">Join the Matsuri</span>
+                                <p class="ff fw-light my-0"><b class="fw-medium">We are opening the call for food vendors, exhibitors, and sponsors.</b><span> </span>If you want to take part in the festival, fill out the corresponding form.</p>
+                                <p class="ff fw-light">Choose your profile and send us your proposal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                        <div class="d-flex flex-wrap justify-content-center">
+                            <button class="normal_btn border-0 bg-cred fw-bold m-1" onclick="foodVendor()">Food Vendors</button>
+                            <button class="normal_btn border-0 bg-dblue fw-bold m-1" type="button" onclick="exhibitors()">Exhibitors</button>
+                            <button class="normal_btn border-0 bg-cgold fw-bold m-1" onclick="sponsorUs()">Sponsor us</button>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
     </section>
-    <hr class="nuvesRosas my-0">
-    <section>
-        <!-- SPONSORS -->
+    <!-- <hr class="nuvesRosas my-0"> -->
+    <!-- <section>
+        SPONSORS
         <div class="slider">
-            <div class="slider-track">
+            <div class="slider-track"> -->
 
                 <!-- <img class="optimizable sponsor-img" data-src="img/ajuntament/AJBCN_Sign_Com_CiutatVella_Vermell_Transparent.png" src="img/ajuntament/AJBCN_Sign_Com_CiutatVella_Vermell_Transparent.png" alt="Ajuntament de Barcelona">
                 <img class="optimizable sponsor-img" data-src="img/ajuntament/AJBCN_Sign_Com_CiutatVella_Vermell_Transparent.png" src="img/ajuntament/AJBCN_Sign_Com_CiutatVella_Vermell_Transparent.png" alt="Ajuntament de Barcelona">
@@ -282,9 +315,9 @@
                 <img class="optimizable sponsor-img" data-src="https://matsuri-bcn.com/public/images/Sponsors/Sponsor-10.jpg" src="https://matsuri-bcn.com/public/images/Sponsors/Sponsor-10.jpg" alt="" loading="lazy">
                 <img class="optimizable sponsor-img" data-src="https://matsuri-bcn.com/public/images/Sponsors/Sponsor-11.pn" src="https://matsuri-bcn.com/public/images/Sponsors/Sponsor-11.png" alt="" loading="lazy">
                 <img class="optimizable sponsor-img" data-src="https://matsuri-bcn.com/public/images/Sponsors/Sponsor-1.jpg" src="https://matsuri-bcn.com/public/images/Sponsors/Sponsor-1.jpg" alt="" loading="lazy"> -->
-            </div>
+            <!-- </div>
         </div>
-    </section>
+    </section> -->
     <!-- WHAT IS MATSURI -->
     <section>
         <div class="container-fluid bg-dblue bg-eventInfo">
@@ -375,7 +408,7 @@
                                         </a>
                                         <div class="card-body">
                                             <p class="card-text">
-                                                <a href="kids.html" class="text-white text-decoration-none animation-funny fw-light h3"><img class="pe-3" src="./img/png/Punto dorado.png">KIDS ZONE
+                                                <a href="kids.html" class="text-white text-decoration-none animation-funny fw-light h3"><img class="pe-3" src="./img/png/Punto dorado.png">KIDS AREA
 													<!-- <img src="img/png/right-arrow.png" class="ard"> -->
                                                 </a>
                                             </p>
@@ -456,7 +489,7 @@
                     </div>
                     <!-- PEQUEÑO movil -->
                     <div class="
-                        col-12 order-2 offset-0 d-block d-sm-none lupa w-lg-50 w-xl-50 w-xxl-50 ratio ratio-4x3" style="border-radius: 1rem; overflow: hidden;">
+                        col-12 order-2 offset-0 d-block d-sm-none w-lg-50 w-xl-50 w-xxl-50 ratio ratio-4x3" style="border-radius: 1rem; overflow: hidden;"> <!-- aqui habia lupa-->
                         <a href="https://www.google.com/maps/place/Moll+de+la+Fusta/@41.3796026,2.1820142,16z/data=!3m1!4b1!4m6!3m5!1s0x12a4a31bfa32df1b:0xd262de734a5102a7!8m2!3d41.3796026!4d2.1820142!16s%2Fg%2F11sh4hh3gf?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D" target="_blank">
                             <img class="img-fluid rounded-3 idioma-en d-none ratio" style="min-height: 30vh; max-height: 40vh; resize: vertical(2);" src="img/map/MapaBCN_EN.png" alt="mapa matsuri">
                             <img class="img-fluid rounded-3 idioma-es d-none ratio" style="min-height: 30vh; max-height: 40vh; resize: vertical(2);" src="img/map/MapaBCN_ES.png" alt="mapa matsuri">
@@ -468,7 +501,7 @@
                     <div class="
                         d-none
                         col-sm-12 offset-sm-0 order-sm-2 d-sm-block
-                        col-md-6 offset-md-0 order-md-1 col-lg-6 offset-lg-0 d-md-block lupa w-lg-50 w-xl-50 w-xxl-50" style="border-radius: 1rem; overflow: hidden;">
+                        col-md-6 offset-md-0 order-md-1 col-lg-6 offset-lg-0 d-md-block w-lg-50 w-xl-50 w-xxl-50" style="border-radius: 1rem; overflow: hidden;"> <!-- aqui habia lupa-->
                         <a href="https://www.google.com/maps/place/Moll+de+la+Fusta/@41.3796026,2.1820142,16z/data=!3m1!4b1!4m6!3m5!1s0x12a4a31bfa32df1b:0xd262de734a5102a7!8m2!3d41.3796026!4d2.1820142!16s%2Fg%2F11sh4hh3gf?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D" target="_blank">
 							<div class="d-block d-xl-none d-xxl-none">
                                 <img class="img-fluid rounded-3 idioma-en d-none ratio" style="min-height: 30vh; max-height: 40vh; resize: vertical(2);" src="img/map/MapaBCN_EN.png" alt="mapa matsuri">
@@ -535,7 +568,7 @@
                         col-12 order-2 
                         col-md-6 order-md-2
                         col-xl-6 offset-xl-0
-                        bg-dblue lupa w-lg-50 w-xl-50 w-xxl-50" style="border-radius: 1rem; overflow: hidden;">
+                        bg-dblue w-lg-50 w-xl-50 w-xxl-50" style="border-radius: 1rem; overflow: hidden;"> <!-- Aqui habia lupa -->
                         <img class="rounded-3 img-fluid" src="img/staff/staff2.jpg" class="card-img-top" alt="staff">
                     </div>
                 </div>

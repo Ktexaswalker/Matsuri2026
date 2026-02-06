@@ -140,6 +140,7 @@
 		transparent 45%, transparent 100%),
 		url("./../img/Stage/stage_ncrowd.jpg"); */
 	background-image: url(./../img/png/Foto\ Home\ Banner\ matsuri_web.png);
+	/* background-image: url(./../img/png/Fondo\ home\ matsuri\ foto\ estrecho.png); */
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -154,7 +155,7 @@
 		font-size: 3.5vw;
 	}
 	.homephoto {
-		height: 50vh;
+		height: 40vh;
 	}
 	.separation {
 		margin-bottom: 2vh;
@@ -170,7 +171,7 @@
 		font-size: 7vw;
 	}
 	.homephoto {
-		height: 50vh;
+		height: 40vh;
 	}
 	.separation {
 		margin-bottom: 2vh;
@@ -183,10 +184,10 @@
 @media (min-width: 768px) {
 	.titleMatsuri {
 		width: 60vw;
-		font-size: 5vw;
+		font-size: 4vw;
 	}
 	.homephoto {
-		height: 55vh;
+		height: 40vh;
 	}
 	.separation {
 		margin-bottom: 2vh;
@@ -208,10 +209,10 @@
 @media (min-width: 992px) {
 	.titleMatsuri {
 		width: 60vw;
-		font-size: 3.4vw;
+		font-size: 3.2vw;
 	}
 	.homephoto {
-		height: 60vh;
+		height: 45vh;
 	}
 	.separation {
 		margin-bottom: 5vh;
@@ -229,10 +230,10 @@
 @media (min-width: 1200px) {
 	.titleMatsuri {
 		width: 55vw;
-		font-size: 3.4vw;
+		font-size: 3vw;
 	}
 	.homephoto {
-		height: 70vh;
+		height: 45vh;
 	}
 	.separation {
 		margin-bottom: 7vh;
@@ -244,7 +245,7 @@
 		font-size: 3.4vw;
 	}
 	.homephoto {
-		height: 70vh;
+		height: 50vh;
 	}
 	.separation {
 		margin-bottom: 5vh;
@@ -357,7 +358,13 @@
 		rgba(192, 40, 46, 1) 100%);
 	}
 }
-
+.specialFadeBtn {
+	background-color: transparent !important;
+	color: var(--wwhite) !important;
+	border-color: var(--wwhite);
+	border-style: solid;
+	border-width: 0.15rem;
+}
 .normal_btn {
 	background-color: var(--wwhite);
 	color: var(--dblue);
@@ -529,6 +536,8 @@
 	opacity: 1;
 }
 /* ----------- */
+
+
 /* ¿MATSURI? */
 .img50 {
 	width: 70%;

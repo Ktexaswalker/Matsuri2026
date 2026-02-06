@@ -389,6 +389,24 @@ function volunteer() {
         "noopener,noreferrer"
     );
 }
+
+// boton FoodVendor
+function foodVendor() {
+    window.open(
+        "https://docs.google.com/forms/d/1xI8JSuusRFOGjstHwFFTqmkRRnuGFoE01R_fx-HvvIs/preview?edit_requested=true",
+        "_blank",
+        "noopener,noreferrer"
+    );
+}
+// boton Exhibitors
+function exhibitors() {
+    window.open(
+        "FALTA_LINK.html",
+        "_blank",
+        "noopener,noreferrer"
+    );
+}
+
 // boton Program
 function program() {
     window.open(
