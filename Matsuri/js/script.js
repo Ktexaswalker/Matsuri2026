@@ -1,45 +1,45 @@
-let logo = document.getElementsByClassName("navbar-toggler-icon")[0];
-if (logo) {
-    const borde = document.createElement("div");
-    borde.style.position = `relative`;
-    const fondo = document.createElement("div");
-    fondo.setAttribute("class", "fondo");
-    logo.parentNode.insertBefore(fondo, logo);
-    fondo.style.padding = `9px`;
-    fondo.appendChild(logo);
-    let angle = 0;
-    let porcentaje = 0;
-    let mas = 0;
-    let add = 0;
-    setInterval(() => {
-        if (angle >= 360) angle = 0;
-        if (angle % 90) {
-            porcentaje += 1;
-        }
-        if (porcentaje >= 200) {
-            porcentaje = 0; 
-            mas += add;
-            if (angle < 36)  {
-                add = -1;
-                if (mas == 0) {
-                    add = +1;
-                }
-            }
-            if (add < 0 && mas < 0) {
-                add += 1;
-                mas = 0;
-            }
-        }
-        angle += 1;
-        // fondo.style.background = `conic-gradient(from ${angle}deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1)), url("./img/logo/acj\ logo red.png")`;
-        fondo.style.background = `conic-gradient(from ${angle}deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1)), url("./img/svg/Isologo_matsuri_dorado.svg")`;
-        fondo.style.backgroundSize = 'cover';
-        fondo.style.borderRadius = `50%`;
-        fondo.style.backgroundRepeat = 'no-repeat';
-        fondo.style.backgroundPosition = 'center';
-        fondo.style.backgroundSize = `${Math.round(mas)*Math.round(mas)}%`;
-    }, 20);
-}
+// let logo = document.getElementsByClassName("navbar-toggler-icon")[0];
+// if (logo) {
+//     const borde = document.createElement("div");
+//     borde.style.position = `relative`;
+//     const fondo = document.createElement("div");
+//     fondo.setAttribute("class", "fondo");
+//     logo.parentNode.insertBefore(fondo, logo);
+//     fondo.style.padding = `9px`;
+//     fondo.appendChild(logo);
+//     let angle = 0;
+//     let porcentaje = 0;
+//     let mas = 0;
+//     let add = 0;
+//     setInterval(() => {
+//         if (angle >= 360) angle = 0;
+//         if (angle % 90) {
+//             porcentaje += 1;
+//         }
+//         if (porcentaje >= 200) {
+//             porcentaje = 0; 
+//             mas += add;
+//             if (angle < 36)  {
+//                 add = -1;
+//                 if (mas == 0) {
+//                     add = +1;
+//                 }
+//             }
+//             if (add < 0 && mas < 0) {
+//                 add += 1;
+//                 mas = 0;
+//             }
+//         }
+//         angle += 1;
+//         // fondo.style.background = `conic-gradient(from ${angle}deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1)), url("./img/logo/acj\ logo red.png")`;
+//         fondo.style.background = `conic-gradient(from ${angle}deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1)), url("./img/svg/Isologo_matsuri_dorado.svg")`;
+//         fondo.style.backgroundSize = 'cover';
+//         fondo.style.borderRadius = `50%`;
+//         fondo.style.backgroundRepeat = 'no-repeat';
+//         fondo.style.backgroundPosition = 'center';
+//         fondo.style.backgroundSize = `${Math.round(mas)*Math.round(mas)}%`;
+//     }, 20);
+// }
 
 // Carousel
 // const swiper = new Swiper(".mySwiper", {

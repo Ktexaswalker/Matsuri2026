@@ -50,26 +50,7 @@
     border-bottom-right-radius: 2rem;
     border-bottom-left-radius: 2rem;
 }
-.faq-item14>.collapsed {
-    border-bottom-right-radius: 2rem;
-    border-bottom-left-radius: 2rem;
-}
-.faq-item15>.collapsed {
-    border-bottom-right-radius: 2rem;
-    border-bottom-left-radius: 2rem;
-}
-.faq-item16>.collapsed {
-    border-bottom-right-radius: 2rem;
-    border-bottom-left-radius: 2rem;
-}
-.faq-item17>.collapsed {
-    border-bottom-right-radius: 2rem;
-    border-bottom-left-radius: 2rem;
-}
-.faq-item18>.collapsed {
-    border-bottom-right-radius: 2rem;
-    border-bottom-left-radius: 2rem;
-}
+
 .faq-icon {
     content: url("./../img/png/FAQ_Icon_RED.png");
 }

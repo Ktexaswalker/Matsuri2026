@@ -19,12 +19,12 @@
 </head>
 <body>
     <nav class="navbar d-none d-md-block sticky-top bg-white my-0 py-0">
-        <div class="container-fluid">
-            <div class="d-flex align-items-center w-100 pe-4 me-0">
+        <div class="container-fluid px-0">
+            <div class="d-flex align-items-center w-100 me-0">
                 <!-- LOGO -->
-                <div class="ms-lg-4">
+                <div class="ms-lg-4" style="transform: scale(.7);">
                     <a href="index.html">
-                        <img src="img/logo/matsuri_logo.png" class="logo" alt="logo matsuri">
+                        <img class="img-fluid py-0" src="img/logo/matsuri_logo.png" class="logo" alt="logo matsuri">
                     </a>
                 </div>
                 <!-- MENU -->
@@ -117,8 +117,8 @@
     <nav class="bg-white sticky-top navbar bg-cred border-body d-block d-md-none p-0" data-bs-theme="light">
         <div class="container-fluid px-0">
             <div>
-                <a class="navbar-brand px-3" href="index.html">
-                    <img class="logo" src="img/logo/matsuri_logo.png" alt="Matsuri">
+                <a class="navbar-brand px-0 mx-0" href="index.html">
+                    <img class="logo my-0" style="transform: scale(.7);" src="img/logo/matsuri_logo.png" alt="Matsuri">
                 </a>
             </div>
             <!-- Botón hamburguesa -->
@@ -189,7 +189,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
-                    <h2 class="titleMatsuri fw-bold display-3">Matsuri Festival Barcelona<span> </span><span class="text-2gold"> 2026</span></h2>
+                    <h2 class="titleMatsuri fw-bold display-3 lh-1">Matsuri Festival Barcelona<span> </span><span class="text-2gold"> 2026</span></h2>
                     <h5 class="subtitleMatsuri fw-bold pb-3 text-2gold">16th & 17th MAY - MOLL DE LA FUSTA</h5>
                 </div>
             </div>
@@ -197,7 +197,7 @@
                 <div class="container-fluid d-flex align-items-start justify-content-start">
                     <div class="row ps-1">
                         <div class="col">
-                            <button class="normal_btn fw-bold specialFadeBtn me-0" onclick="crowdunfUs()">Crowdfunding</button>
+                            <button class="normal_btn fw-bold specialFadeBtn me-0 w-auto ps-3 pe-4" onclick="crowdunfUs()">Crowdfunding</button>
                             <button class="tickets fw-bold my-1 ms-2" type="button" onclick="comprarTicket()">TICKETS</button>
                         </div>
                     </div>
@@ -228,27 +228,29 @@
                     <div class="separation"></div>
                 </div>
             </div> -->
-    <section class="bg-white p-3">
+    <section class="bg-white">
         <div class="container-fluid px-0">
-            <div class="container">
-                <div class="row d-flex justify-content-evenly align-items-center">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 px-0">
-                        <div class="d-flex justify-content-end align-items-center">
-                            <div class="col-4 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
-                                <img class="border border-3 border-secondary-subtle" src="./img/grafismo/lampara chochin.png" alt="ランタン">
+            <div class="container-fluid">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-8 col-xxl-6 px-0">
+                        <div class="d-flex justify-content-start align-items-start">
+                            <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-1 col-xxl-1 ps-xxl-3 ms-5 ms-0 me-2">
+                                <img class="img-fluid pt-3 pb-xl-2 pb-xxl-2" style="max-height: 15vh;" src="./img/grafismo/lampara chochin.png" alt="farolillo">
                             </div>
-                            <div class="col-8 col-sm-9 col-md-9 col-lg-9 col-xl-9 col-xxl-9">
+                            <div class="col-8 col-sm-8 col-md-8 col-lg-9 order-lg-1 col-xl-9 order-xl-1 col-xxl-10 order-xxl-1 pt-2">
                                 <span class="h4 ff fw-medium mb-3">Join the Matsuri</span>
                                 <p class="ff fw-light my-0"><b class="fw-medium">We are opening the call for food vendors, exhibitors, and sponsors.</b><span> </span>If you want to take part in the festival, fill out the corresponding form.</p>
                                 <p class="ff fw-light">Choose your profile and send us your proposal.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                    <div class="col-2 offset-lg-1 order-lg-1 offset-xl-0 order-xl-2 offset-xl-0 order-xxl-2">
+                    </div>
+                    <div class="col-10 col-sm-10 col-md-10 col-lg-12 order-lg-0 col-xl-4 order-xl-0 col-xxl-6 order-xxl-0">
                         <div class="d-flex flex-wrap justify-content-center">
                             <button class="normal_btn border-0 bg-cred fw-bold m-1" onclick="foodVendor()">Food Vendors</button>
                             <button class="normal_btn border-0 bg-dblue fw-bold m-1" type="button" onclick="exhibitors()">Exhibitors</button>
-                            <button class="normal_btn border-0 bg-cgold fw-bold m-1" onclick="sponsorUs()">Sponsor us</button>
+                            <button class="normal_btn border-0 bg-cgold fw-bold m-1" onclick="sponsorUs()">Sponsors</button>
                         </div>
                     </div>
                 </div>
