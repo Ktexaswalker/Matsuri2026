@@ -4,12 +4,14 @@
 	<meta charset="utf-8">
     <meta name="google" content="notranslate">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="matsuri-bcn, matsuri bcn, festival japones, evento japonés en barcelona">
 	<title>Sponsor</title>
 	<title>Matsuri 2026</title>
     <link rel="shortcut icon" href="./img/logo/acj logo red.png" type="image/x-icon">
     <meta name="author" content="Hector Martinez">
     <meta name="description" content="Festival Matsuri 2026">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sponsor.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<script src="js/bootstrap.bundle.js"></script>
 	<script defer src="js/swiper-bundle.min.js"></script>
@@ -201,6 +203,12 @@
                     <p class="ff fw-light d-none d-md-block">Matsuri Barcelona welcomes thousands of visitors every year and is held in a key location in Barcelona, right by the sea in a highly touristic area. The number of attendees has grown year after year, reaching around 40,000 people in 2024.</p>
                     <p class="ff fw-light">By collaborating as a Matsuri sponsor, you will gain advertising exposure and, moreover, enhance your brand’s value through cultural support, international exchange, and community contribution.</p>
                     <p class="ff fw-light">It is a great opportunity to promote your brand to thousands of attendees by showcasing it at strategic points throughout the venue in various advertising formats, as well as participating in sustainable cultural activities at a family-friendly, multigenerational cultural event with a highly positive public image.</p>
+
+                    <p class="ff fw-light">Download the PDF to learn more:</p>
+                    <div class="text-center pb-3">
+                        <a id="dynamicLink" class="badge rounded-pill text-bg-ligh px-5 fs-6 py-2 downloadPdf" href="" download>Download PDF</a>
+                    </div>
+
                     <p class="ff fw-light">If you want to collaborate as a sponsor of Matsuri Barcelona, write to us at<span> </span><a href="mailto:sponsor@acjm.es">sponsor@acjm.es</a></p>
                 </div>
                 <p class="ff fw-light d-none d-md-block mx-2">Meet last year’s sponsors</p>
@@ -276,5 +284,32 @@
             </div>
         </div>
     </footer>
+    <script>
+        function setPDF(lang) {
+            const linksByLang = {
+                "日本語": "https://drive.google.com/uc?export=download&id=1CoYwMGqCacC1_weE8D8pziKGH-iWt8Xd",
+                "Català": "https://drive.google.com/uc?export=download&id=1gn4z4N9S-1LH62-io6_muzYULuCK601V",
+                "Español": "https://drive.google.com/uc?export=download&id=16QXpPu6QJ4ru1cUO5jFzTaChiTfYQAi9",
+                "English": "https://drive.google.com/uc?export=download&id=1wlTydfhTjMm7HoilAGDKuyve3B6h7Wsk"
+            };
+
+            const link = document.getElementById("dynamicLink");
+            if (linksByLang[lang]) {
+                link.href = linksByLang[lang] || localStorage.getItem("lang");
+            }
+        }
+
+        function cargarPDF() {
+            document.querySelectorAll(".idioma").forEach(item => {
+                item.addEventListener("click", () => {
+                    setPDF(item.textContent.trim());
+                });
+            });
+
+            // idioma por defecto al cargar
+            setPDF(localStorage.getItem("lang"));
+        }
+        window.addEventListener('load', cargarPDF);
+    </script>
 </body>
 </html>
