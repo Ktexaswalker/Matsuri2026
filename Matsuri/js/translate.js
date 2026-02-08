@@ -164,7 +164,7 @@ const translations = {
       "Information":"情報",
       "PROGRAM":"プログラム",
       "PERFORMERS":"出演者",
-      "KIDS":"キッズ",
+      "KIDS AREA":"キッズエリア",
       "BOOTHS":"ブース",
       "FOOD AND DRINKS":"フード＆ドリンク",
       "Location":"開催場所",
