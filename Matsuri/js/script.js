@@ -702,7 +702,8 @@ function cookies(idioma) {
 }
 
 // FAQ's collapsed
-const faqButtons = document.querySelectorAll('[data-bs-toggle="collapse"]');
+// const faqButtons = document.querySelectorAll('[data-bs-toggle="collapse"]');
+const faqButtons = document.querySelectorAll('.faqs[data-bs-toggle="collapse"]');
 // Recuperar estado del localStorage
 let faqsState = JSON.parse(localStorage.getItem("faqsState")) || {};
 // Inicializar: si no hay estado, abrir el primer FAQ
