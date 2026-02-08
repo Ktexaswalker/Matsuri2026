@@ -10,7 +10,7 @@ Object.assign(window.translations.Español, {
     "If you want to collaborate as a sponsor of Matsuri Barcelona, write to us at":"Si quieres colaborar como patrocinador de Matsuri Barcelona, escríbenos a",
     "Meet last year’s sponsors":"Conoce a los patrocinadores del año pasado",
     "Download the PDF to learn more:":"Descarga el pdf para saber mas:",
-    "":"",
+    "Download PDF":"Descargar PDF",
     "":"",
 });
 Object.assign(window.translations.Català, {
@@ -20,7 +20,7 @@ Object.assign(window.translations.Català, {
     "If you want to collaborate as a sponsor of Matsuri Barcelona, write to us at":"Si vols col·laborar com a patrocinador de Matsuri Barcelona, escriu-nos a",
     "Meet last year’s sponsors":"Coneix els patrocinadors de l’any passat",
     "Download the PDF to learn more:":"Descarrega el pdf per saber-ne més:",
-    "":"",
+    "Download PDF":"Descarrega el PDF",
     "":"",
 });
 Object.assign(window.translations.日本語, {
@@ -30,6 +30,6 @@ Object.assign(window.translations.日本語, {
     "If you want to collaborate as a sponsor of Matsuri Barcelona, write to us at":"Matsuri Barcelonaのスポンサーとして協力をご希望の方は、ぜひご連絡ください：",
     "Meet last year’s sponsors":"昨年のスポンサーをご紹介します",
     "Download the PDF to learn more:":"詳細については PDF をダウンロードしてください:",
-    "":"",
+    "Download PDF":"PDFをダウンロード",
     "":"",
 });

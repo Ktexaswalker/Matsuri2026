@@ -155,7 +155,7 @@
 		font-size: 3.5vw;
 	}
 	.homephoto {
-		height: 50vh;
+		height: 48vh;
 	}
 	.separation {
 		margin-bottom: 2vh;
@@ -171,7 +171,7 @@
 		font-size: 7vw;
 	}
 	.homephoto {
-		height: 50vh;
+		height: 58vh;
 	}
 	.separation {
 		margin-bottom: 2vh;
@@ -187,7 +187,7 @@
 		font-size: 4vw;
 	}
 	.homephoto {
-		height: 55vh;
+		height: 53vh;
 	}
 	.separation {
 		margin-bottom: 2vh;
@@ -212,7 +212,7 @@
 		font-size: 3.2vw;
 	}
 	.homephoto {
-		height: 60vh;
+		height: 58vh;
 	}
 	.separation {
 		margin-bottom: 5vh;
@@ -233,7 +233,7 @@
 		font-size: 3vw;
 	}
 	.homephoto {
-		height: 60vh;
+		height: 58vh;
 	}
 	.separation {
 		margin-bottom: 7vh;
@@ -245,7 +245,7 @@
 		font-size: 3.4vw;
 	}
 	.homephoto {
-		height: 60vh;
+		height: 58vh;
 	}
 	.separation {
 		margin-bottom: 5vh;
@@ -358,6 +358,22 @@
 		rgba(192, 40, 46, 1) 100%);
 	}
 }
+
+.anuncio-text {
+	width: max-content;
+    animation: anuncio 20s linear infinite;
+}
+.anuncio-text p {
+    white-space: nowrap;
+    margin: 0;
+    padding-right: 3rem;
+    color: #fff;
+}
+@keyframes anuncio {
+    0%   { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+}
+
 .specialFadeBtn {
 	background-color: transparent !important;
 	color: var(--wwhite) !important;
