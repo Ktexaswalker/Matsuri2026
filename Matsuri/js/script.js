@@ -507,7 +507,7 @@ function cookies(idioma) {
     const EN = `
     <div id="cookiesBanner_EN" class="cookiesBanner bg-lgrey position-fixed bottom-0 end-0 bg-light shadow pt-2 pb-5 d-flex flex-column flex-md-row align-items-center justify-content-center" 
     style="z-index: 1050; width: 100%; padding: 0rem 0rem;">
-        <div class="mb-2 mb-md-0 text-center text-md-start mx-5 fs-5">
+        <div class="mb-2 mb-md-0 text-center text-md-start mx-5 fs-5 lh-sm">
             By using this website, you agree to the use of essential <em>cookies</em> and to our data practices.
             <a href="cookiepolicy.html">Cookies Policy</a> ·
             <a href="privacypolicy.html">Privacy Policy</a>
@@ -520,7 +520,7 @@ function cookies(idioma) {
     const ES = `
     <div id="cookiesBanner_ES" class="cookiesBanner bg-lgrey position-fixed bottom-0 end-0 bg-light shadow pt-2 pb-5 d-flex flex-column flex-md-row align-items-center justify-content-center" 
     style="z-index: 1050; width: 100%; padding: 0rem 0rem;">
-        <div class="mb-2 mb-md-0 text-center text-md-start mx-5 fs-5">
+        <div class="mb-2 mb-md-0 text-center text-md-start mx-5 fs-5 lh-sm">
             Al utilizar este sitio web, aceptas el uso de <em>cookies</em> esenciales y nuestras prácticas de privacidad.
             <a href="cookiepolicy.html">Política de cookies</a> ·
             <a href="privacypolicy.html">Política de privacidad</a>
@@ -533,7 +533,7 @@ function cookies(idioma) {
     const CA = `
     <div id="cookiesBanner_CA" class="cookiesBanner bg-lgrey position-fixed bottom-0 end-0 bg-light shadow pt-2 pb-5 d-flex flex-column flex-md-row align-items-center justify-content-center" 
     style="z-index: 1050; width: 100%; padding: 0rem 0rem;">
-        <div class="mb-2 mb-md-0 text-center text-md-start mx-5 fs-5">
+        <div class="mb-2 mb-md-0 text-center text-md-start mx-5 fs-5 lh-sm">
             En utilitzar aquest lloc web, acceptes l’ús de <em>cookies</em> essencials i les nostres pràctiques de privacitat.
             <a href="cookiepolicy.html">Política de cookies</a> ·
             <a href="privacypolicy.html">Política de privacitat</a>
@@ -546,7 +546,7 @@ function cookies(idioma) {
     const JA = `
     <div id="cookiesBanner_JA" class="cookiesBanner bg-lgrey position-fixed bottom-0 end-0 bg-light shadow pt-2 pb-5 d-flex flex-column flex-md-row align-items-center justify-content-center" 
     style="z-index: 1050; width: 100%; padding: 0rem 0rem;">
-        <div class="mb-2 mb-md-0 text-center text-md-start mx-5 fs-5">
+        <div class="mb-2 mb-md-0 text-center text-md-start mx-5 fs-5 lh-sm">
             本サイトを利用することで、必須<em>クッキー</em>の使用および当サイトのデータ取扱方針に同意したものとします。
             <a href="cookiepolicy.html">クッキーポリシー</a> ·
             <a href="privacypolicy.html">プライバシーポリシー</a>
