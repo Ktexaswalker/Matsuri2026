@@ -401,7 +401,7 @@ function foodVendor() {
 // boton Exhibitors
 function exhibitors() {
     window.open(
-        "ops.html",
+        "booths.html",
         "_blank",
         "noopener,noreferrer"
     );

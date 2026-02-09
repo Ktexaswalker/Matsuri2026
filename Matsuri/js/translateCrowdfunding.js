@@ -9,7 +9,6 @@ Object.assign(window.translations.Español, {
     "Do you want to join our crowdfunding?":"¿Quieres unirte a nuestro Crowdfunding?",
     "You’ll also receive exclusive gifts!":"¡Recibirás además regalos exclusivos!",
     "Support us and join our":"Apóyanos y únete a nuestro",
-    "Crowdfunding here.":"Crowdfunding aquí.",
     "You'll be able to access our crowdfunding campaign in the coming days!":"¡En los próximos días podrás acceder a nuestra campaña de crowdfunding!",
 });
 Object.assign(window.translations.Català, {
@@ -18,7 +17,6 @@ Object.assign(window.translations.Català, {
     "Do you want to join our crowdfunding?":"Vols unir-te al nostre micromecenatge?",
     "You’ll also receive exclusive gifts!":"A més, rebràs regals exclusius!",
     "Support us and join our":"Apòyanos i uneix-te al nostre",
-    "Crowdfunding here.":"Crowdfunding aquí.",
     "You'll be able to access our crowdfunding campaign in the coming days!":"En els propers dies podràs accedir a la nostra campanya de micromecenatge!",
 });
 Object.assign(window.translations.日本語, {
@@ -27,6 +25,5 @@ Object.assign(window.translations.日本語, {
     "Do you want to join our crowdfunding?":"クラウドファンディングに参加しませんか？",
     "You’ll also receive exclusive gifts!":"限定の特典もご用意しています！",
     "Support us and join our":"私たちを応援して、私たちの",
-    "Crowdfunding here.":"クラウドファンディングに参加してください。",
     "You'll be able to access our crowdfunding campaign in the coming days!":"近日中に、クラウドファンディングキャンペーンにアクセスできるようになります！",
 });
