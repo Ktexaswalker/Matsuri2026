@@ -551,6 +551,13 @@
 	background-repeat: repeat-x;
 	opacity: 1;
 }
+.floresDoradas {
+	height: 4.8rem;
+	border: none;
+	background-image: url("./../img/b_Separadores/separador\ flores_dorado.png");
+	background-repeat: repeat-x;
+	opacity: 1;
+}
 /* ----------- */
 
 
