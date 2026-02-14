@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="matsuri-bcn, matsuri bcn, festival japones, evento japonés en barcelona">
+    <title>言ってください</title>
+    <title>Matsuri 2026</title>
+    <link rel="shortcut icon" href="./../img/logo/acj logo red.png" type="image/x-icon">
+    <meta name="author" content="Hector Martinez">
+    <meta name="description" content="Festival Matsuri 2026">
+    <link rel="stylesheet" href="./../css/style.css">
+    <link rel="stylesheet" href="./../css/bootstrap.css">
+    <script src="./../js/bootstrap.bundle.js"></script>
+    <script defer src="./../js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./../css/swiper-bundle.min.css">
+    <script src="./../js/translateOps.js"></script>
+    <script defer src="./../js/translate.js"></script>
+    <script defer src="./../js/script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar d-none d-md-block sticky-top bg-white my-0 py-0">
+        <div class="container-fluid px-0">
+            <div class="d-flex align-items-center w-100 me-0">
+                <!-- LOGO -->
+                <div class="ms-lg-4" style="transform: scale(.7);">
+                    <a href="./../index.html">
+                        <img class="img-fluid py-0" src="./../img/logo/matsuri_logo.png" class="logo" alt="logo matsuri">
+                    </a>
+                </div>
+                <!-- MENU -->
+                <div class="ms-auto d-flex align-items-center gap-4">
+                <!-- LINKS IZQUIERDA -->
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle navmenu rounded-pill border-0 fw-medium"
+                            type="button" 
+                            data-bs-toggle="dropdown" 
+                            aria-expanded="false">
+                            The Festival
+                        </button>
+                        <ul class="dropdown-menu border-0 my-0">
+                            <li><a class="dropdown-item fw-medium" href="./../program.html">Program</a></li>
+                            <li><a class="dropdown-item fw-medium" href="./../performers.html">Artists</a></li>
+                            <li><a class="dropdown-item fw-medium" href="./../kids.html">Kids area</a></li>
+                            <li><a class="dropdown-item fw-medium" href="./../booths.html">Stands</a></li>
+                            <li><a class="dropdown-item fw-medium" href="./../food.html">Food and drinks</a></li>
+                        </ul>
+                    </div>
+                    <div class="navmenu"><a href="./../About.html" class="nav-link fw-medium">About</a></div>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle rounded-pill border-0 fw-medium" 
+                            type="button" 
+                            data-bs-toggle="dropdown" 
+                            aria-expanded="false">
+                            Support us
+                        </button>
+                        <ul class="dropdown-menu border-0 my-0">
+                            <li><a class="dropdown-item fw-medium" href="./../volunteer.html">Volunteering</a></li>
+                            <li><a class="dropdown-item fw-medium" href="./../crowdfund.html">Crowdfund us</a></li>
+                            <li><a class="dropdown-item fw-medium" href="./../sponsor.html">Sponsor us</a></li>
+                        </ul>
+                    </div>
+                    <div class="navmenu"><a href="./../contact.html" class="nav-link fw-medium">Contact</a></div>
+                </div>
+                <!-- TICKETS -->
+                <div class="ms-auto d-flex align-items-center">
+                    <div>
+                        <button class="tickets-nav ms-0 me-2 ms-lg-2 me-lg-3" type="button" onclick="comprarTicket()">TICKETS</button>
+                        <div class="dropdown d-md-block d-lg-none">
+                            <button class="dropdown-toggle normal_btn-nav me-0 langBtn fw-medium"
+                                type="button"
+                                data-bs-toggle="dropdown" 
+                                aria-expanded="false">Español</button>
+                                <ul class="dropdown-menu border-0">
+                                    <li>
+                                        <a class="dropdown-item fw-medium idioma d-none" href="#">English</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item fw-medium idioma" href="#">Español</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item fw-medium idioma" href="#">Català</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item fw-medium idioma" href="#">日本語</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- IDIOMA -->
+                    <div class="dropdown d-md-none d-lg-block">
+                        <button class="dropdown-toggle normal_btn-nav me-0 langBtn fw-medium"
+                            type="button"
+                            data-bs-toggle="dropdown" 
+                            aria-expanded="false">Español</button>
+                            <ul class="dropdown-menu border-0">
+                                <li>
+                                    <a class="dropdown-item fw-medium idioma d-none" href="#">English</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fw-medium idioma" href="#">Español</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fw-medium idioma" href="#">Català</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item fw-medium idioma" href="#">日本語</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Hamburgesa -->
+    <nav class="bg-white sticky-top navbar bg-cred border-body d-block d-md-none p-0" data-bs-theme="light">
+        <div class="container-fluid px-0">
+            <div>
+                <a class="navbar-brand px-0 mx-0" href="./../index.html">
+                    <img class="logo my-0" style="transform: scale(.7);" src="./../img/logo/matsuri_logo.png" alt="Matsuri">
+                </a>
+            </div>
+            <!-- Botón hamburguesa -->
+            <button class="navbar-toggler ms-auto border-0 mx-3" 
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#desplegar"
+                aria-controls="desplegar"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                data-bs-theme="dark">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menú desplegable -->
+            <div class="collapse navbar-collapse" id="desplegar">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown px-3">
+                        <a class="nav-link dropdown-toggle px-0 py-1 fs-5 fw-medium"
+                            href="#"
+                            data-bs-toggle="dropdown">
+                            The Festival
+                        </a>
+                        <ul class="dropdown-menu border-0 py-0 my-0">
+                            <li><a class="dropdown-item px-0 fs-5 fw-medium" href="./../program.html">Program</a></li>
+                            <li><a class="dropdown-item px-0 fs-5 fw-medium" href="./../performers.html">Artists</a></li>
+                            <li><a class="dropdown-item px-0 fs-5 fw-medium" href="./../kids.html">Kids area</a></li>
+                            <li><a class="dropdown-item px-0 fs-5 fw-medium" href="./../booths.html">Stands</a></li>
+                            <li><a class="dropdown-item px-0 fs-5 fw-medium" href="./../food.html">Food and drinks</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item px-3 fs-5">
+                        <a class="nav-link fw-medium itemColor py-1" href="./../about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown px-3">
+                        <a class="nav-link dropdown-toggle px-0 py-1 fs-5 fw-medium"
+                            href="#"
+                            data-bs-toggle="dropdown">
+                            Support us
+                        </a>
+                        <ul class="dropdown-menu border-0 py-0 my-0">
+                            <li><a class="dropdown-item px-0 fw-medium fs-5" href="./../volunteer.html">Volunteering</a></li>
+                            <li><a class="dropdown-item px-0 fw-medium fs-5" href="./../crowdfund.html">Crowdfund us</a></li>
+                            <li><a class="dropdown-item px-0 fw-medium fs-5" href="./../sponsor.html">Sponsor us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item px-3 fs-5">
+                        <a class="nav-link fw-medium itemColor py-1" href="./../contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown px-3">
+                        <a class="nav-link dropdown-toggle px-0 py-1 fs-5 fw-bold fw-medium"
+                            href="#"
+                            data-bs-toggle="dropdown">
+                            Lang
+                        </a>
+                        <ul class="dropdown-menu border-0 py-0 my-0">
+                            <li><a class="dropdown-item idioma px-0 fw-medium fs-5" href="#">English</a></li>
+                            <li><a class="dropdown-item idioma px-0 fw-medium fs-5" href="#">Español</a></li>
+                            <li><a class="dropdown-item idioma px-0 fw-medium fs-5" href="#">Català</a></li>
+                            <li><a class="dropdown-item idioma px-0 fw-medium fs-5" href="#">日本語</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <section>
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="text-center h-100">
+                    <!-- OCTAVA 0 -->
+                    <button onclick="playWhistle(midiToFreq(0x15), .1)">A0</button>
+                    <button onclick="playWhistle(midiToFreq(0x16), .1)">A#0</button>
+                    <button onclick="playWhistle(midiToFreq(0x17), .1)">B0</button>
+                    <!-- OCTAVA 1 -->
+                    <button onclick="playWhistle(midiToFreq(0x18), .1)">C1</button>
+                    <button onclick="playWhistle(midiToFreq(0x19), .1)">C#1</button>
+                    <button onclick="playWhistle(midiToFreq(0x1A), .1)">D1</button>
+                    <button onclick="playWhistle(midiToFreq(0x1B), .1)">D#1</button>
+                    <button onclick="playWhistle(midiToFreq(0x1C), .1)">E1</button>
+                    <button onclick="playWhistle(midiToFreq(0x1D), .1)">F1</button>
+                    <button onclick="playWhistle(midiToFreq(0x1E), .1)">F#1</button>
+                    <button onclick="playWhistle(midiToFreq(0x1F), .1)">G1</button>
+                    <button onclick="playWhistle(midiToFreq(0x20), .1)">G#1</button>
+                    <button onclick="playWhistle(midiToFreq(0x21), .1)">A1</button>
+                    <button onclick="playWhistle(midiToFreq(0x22), .1)">A#1</button>
+                    <button onclick="playWhistle(midiToFreq(0x23), .1)">B1</button>
+                    <!-- OCTAVA 2 -->
+                    <button onclick="playWhistle(midiToFreq(0x24), .1)">C2</button>
+                    <button onclick="playWhistle(midiToFreq(0x25), .1)">C#2</button>
+                    <button onclick="playWhistle(midiToFreq(0x26), .1)">D2</button>
+                    <button onclick="playWhistle(midiToFreq(0x27), .1)">D#2</button>
+                    <button onclick="playWhistle(midiToFreq(0x28), .1)">E2</button>
+                    <button onclick="playWhistle(midiToFreq(0x29), .1)">F2</button>
+                    <button onclick="playWhistle(midiToFreq(0x2A), .1)">F#2</button>
+                    <button onclick="playWhistle(midiToFreq(0x2B), .1)">G2</button>
+                    <button onclick="playWhistle(midiToFreq(0x2C), .1)">G#2</button>
+                    <button onclick="playWhistle(midiToFreq(0x2D), .1)">A2</button>
+                    <button onclick="playWhistle(midiToFreq(0x2E), .1)">A#2</button>
+                    <button onclick="playWhistle(midiToFreq(0x2F), .1)">B2</button>
+                    <!-- OCTAVA 3 -->
+                    <button onclick="playWhistle(midiToFreq(0x30), .1)">C3</button>
+                    <button onclick="playWhistle(midiToFreq(0x31), .1)">C#3</button>
+                    <button onclick="playWhistle(midiToFreq(0x32), .1)">D3</button>
+                    <button onclick="playWhistle(midiToFreq(0x33), .1)">D#3</button>
+                    <button onclick="playWhistle(midiToFreq(0x34), .1)">E3</button>
+                    <button onclick="playWhistle(midiToFreq(0x35), .1)">F3</button>
+                    <button onclick="playWhistle(midiToFreq(0x36), .1)">F#3</button>
+                    <button onclick="playWhistle(midiToFreq(0x37), .1)">G3</button>
+                    <button onclick="playWhistle(midiToFreq(0x38), .1)">G#3</button>
+                    <button onclick="playWhistle(midiToFreq(0x39), .1)">A3</button>
+                    <button onclick="playWhistle(midiToFreq(0x3A), .1)">A#3</button>
+                    <button onclick="playWhistle(midiToFreq(0x3B), .1)">B3</button>
+                    <!-- OCTAVA 4 -->
+                    <button onclick="playWhistle(midiToFreq(0x3C), .1)">C4</button>
+                    <button onclick="playWhistle(midiToFreq(0x3D), .1)">C#4</button>
+                    <button onclick="playWhistle(midiToFreq(0x3E), .1)">D4</button>
+                    <button onclick="playWhistle(midiToFreq(0x3F), .1)">D#4</button>
+                    <button onclick="playWhistle(midiToFreq(0x40), .1)">E4</button>
+                    <button onclick="playWhistle(midiToFreq(0x41), .1)">F4</button>
+                    <button onclick="playWhistle(midiToFreq(0x42), .1)">F#4</button>
+                    <button onclick="playWhistle(midiToFreq(0x43), .1)">G4</button>
+                    <button onclick="playWhistle(midiToFreq(0x44), .1)">G#4</button>
+                    <button onclick="playWhistle(midiToFreq(0x45), .1)">A4</button>
+                    <button onclick="playWhistle(midiToFreq(0x46), .1)">A#4</button>
+                    <button onclick="playWhistle(midiToFreq(0x47), .1)">B4</button>
+                    <!-- OCTAVA 5 -->
+                    <button onclick="playWhistle(midiToFreq(0x48), .1)">C5</button>
+                    <button onclick="playWhistle(midiToFreq(0x49), .1)">C#5</button>
+                    <button onclick="playWhistle(midiToFreq(0x4A), .1)">D5</button>
+                    <button onclick="playWhistle(midiToFreq(0x4B), .1)">D#5</button>
+                    <button onclick="playWhistle(midiToFreq(0x4C), .1)">E5</button>
+                    <button onclick="playWhistle(midiToFreq(0x4D), .1)">F5</button>
+                    <button onclick="playWhistle(midiToFreq(0x4E), .1)">F#5</button>
+                    <button onclick="playWhistle(midiToFreq(0x4F), .1)">G5</button>
+                    <button onclick="playWhistle(midiToFreq(0x50), .1)">G#5</button>
+                    <button onclick="playWhistle(midiToFreq(0x51), .1)">A5</button>
+                    <button onclick="playWhistle(midiToFreq(0x52), .1)">A#5</button>
+                    <button onclick="playWhistle(midiToFreq(0x53), .1)">B5</button>
+                    <!-- OCTAVA 6 -->
+                    <button onclick="playWhistle(midiToFreq(0x54), .1)">C6</button>
+                    <button onclick="playWhistle(midiToFreq(0x55), .1)">C#6</button>
+                    <button onclick="playWhistle(midiToFreq(0x56), .1)">D6</button>
+                    <button onclick="playWhistle(midiToFreq(0x57), .1)">D#6</button>
+                    <button onclick="playWhistle(midiToFreq(0x58), .1)">E6</button>
+                    <button onclick="playWhistle(midiToFreq(0x59), .1)">F6</button>
+                    <button onclick="playWhistle(midiToFreq(0x5A), .1)">F#6</button>
+                    <button onclick="playWhistle(midiToFreq(0x5B), .1)">G6</button>
+                    <button onclick="playWhistle(midiToFreq(0x5C), .1)">G#6</button>
+                    <button onclick="playWhistle(midiToFreq(0x5D), .1)">A6</button>
+                    <button onclick="playWhistle(midiToFreq(0x5E), .1)">A#6</button>
+                    <button onclick="playWhistle(midiToFreq(0x5F), .1)">B6</button>
+                    <!-- OCTAVA 7 -->
+                    <button onclick="playWhistle(midiToFreq(0x60), .1)">C7</button>
+                    <button onclick="playWhistle(midiToFreq(0x61), .1)">C#7</button>
+                    <button onclick="playWhistle(midiToFreq(0x62), .1)">D7</button>
+                    <button onclick="playWhistle(midiToFreq(0x63), .1)">D#7</button>
+                    <button onclick="playWhistle(midiToFreq(0x64), .1)">E7</button>
+                    <button onclick="playWhistle(midiToFreq(0x65), .1)">F7</button>
+                    <button onclick="playWhistle(midiToFreq(0x66), .1)">F#7</button>
+                    <button onclick="playWhistle(midiToFreq(0x67), .1)">G7</button>
+                    <button onclick="playWhistle(midiToFreq(0x68), .1)">G#7</button>
+                    <button onclick="playWhistle(midiToFreq(0x69), .1)">A7</button>
+                    <button onclick="playWhistle(midiToFreq(0x6A), .1)">A#7</button>
+                    <button onclick="playWhistle(midiToFreq(0x6B), .1)">B7</button>
+                    <!-- OCTAVA 8 -->
+                    <button onclick="playWhistle(midiToFreq(0x6C), .1)">C8</button>
+                    <!-- SEPARACION -->
+                    <button onclick="tocarMelodia()">MELODIA</button>
+                    <!-- --------- -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const noteToMidi = {
+            "A0": 0x15, "A#0": 0x16, "B0": 0x17,
+            "C1": 0x18, "C#1": 0x19, "D1": 0x1A, "D#1": 0x1B, "E1": 0x1C, "F1": 0x1D, "F#1": 0x1E, "G1": 0x1F, "G#1": 0x20, "A1": 0x21, "A#1": 0x22, "B1": 0x23,
+            "C2": 0x24, "C#2": 0x25, "D2": 0x26, "D#2": 0x27, "E2": 0x28, "F2": 0x29, "F#2": 0x2A, "G2": 0x2B, "G#2": 0x2C, "A2": 0x2D, "A#2": 0x2E, "B2": 0x2F,
+            "C3": 0x30, "C#3": 0x31, "D3": 0x32, "D#3": 0x33, "E3": 0x34, "F3": 0x35, "F#3": 0x36, "G3": 0x37, "G#3": 0x38, "A3": 0x39, "A#3": 0x3A, "B3": 0x3B,
+            "C4": 0x3C, "C#4": 0x3D, "D4": 0x3E, "D#4": 0x3F, "E4": 0x40, "F4": 0x41, "F#4": 0x42, "G4": 0x43, "G#4": 0x44, "A4": 0x45, "A#4": 0x46, "B4": 0x47,
+            "C5": 0x48, "C#5": 0x49, "D5": 0x4A, "D#5": 0x4B, "E5": 0x4C, "F5": 0x4D, "F#5": 0x4E, "G5": 0x4F, "G#5": 0x50, "A5": 0x51, "A#5": 0x52, "B5": 0x53,
+            "C6": 0x54, "C#6": 0x55, "D6": 0x56, "D#6": 0x57, "E6": 0x58, "F6": 0x59, "F#6": 0x5A, "G6": 0x5B, "G#6": 0x5C, "A6": 0x5D, "A#6": 0x5E, "B6": 0x5F,
+            "C7": 0x60, "C#7": 0x61, "D7": 0x62, "D#7": 0x63, "E7": 0x64, "F7": 0x65, "F#7": 0x66, "G7": 0x67, "G#7": 0x68, "A7": 0x69, "A#7": 0x6A, "B7": 0x6B,
+            "C8": 0x6C
+        };
+        function playNote(freq, duration) {
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+
+            osc.type = "sine";
+            osc.frequency.value = freq;
+
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            osc.start();
+            osc.stop(audioCtx.currentTime + duration);
+            }
+            const notes = {
+                C4: 261.63,
+                D4: 293.66,
+                E4: 329.63,
+                G4: 392.00,
+                A4: 440.00
+            };
+
+            function playMelody() {
+            let time = audioCtx.currentTime;
+
+            notes.forEach(note => {
+                playScheduled(notes[note[0]], note[1], time);
+                time += note[1];
+            });
+        }
+
+        function playScheduled(freq, duration, startTime) {
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+
+            osc.frequency.value = freq;
+            osc.type = "triangle";
+
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            osc.start(startTime);
+            osc.stop(startTime + duration);
+        }
+        function playSoftNote(freq, duration) {
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+
+            osc.type = "sine"; // puedes probar "triangle" o "sawtooth"
+            osc.frequency.value = freq;
+
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            // Envelope ADSR
+            const now = audioCtx.currentTime;
+            gain.gain.setValueAtTime(0, now);
+            gain.gain.linearRampToValueAtTime(0.6, now + 0.05);      // Attack
+            gain.gain.linearRampToValueAtTime(0.4, now + 0.2);       // Decay
+            gain.gain.setValueAtTime(0.4, now + duration);           // Sustain
+            gain.gain.linearRampToValueAtTime(0, now + duration + 0.2); // Release
+
+            osc.start(now);
+            osc.stop(now + duration + 0.2);
+            return freq;
+        }
+
+        function playPianoApprox(freq, duration) {
+            // console.log(freq, duration)
+            const osc1 = audioCtx.createOscillator();
+            const osc2 = audioCtx.createOscillator();
+            const osc3 = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+
+            osc1.type = "sine";   // fundamental
+            osc2.type = "triangle"; // primer armónico
+            osc3.type = "sawtooth"; // segundo armónico
+
+            osc1.frequency.value = freq;
+            osc2.frequency.value = freq * 2;  // doble frecuencia
+            osc3.frequency.value = freq * 3;  // triple frecuencia
+
+            osc1.connect(gain);
+            osc2.connect(gain);
+            osc3.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            const now = audioCtx.currentTime;
+            gain.gain.setValueAtTime(0, now);
+            gain.gain.linearRampToValueAtTime(0.5, now + 0.01); // ataque
+            gain.gain.exponentialRampToValueAtTime(0.001, now + duration + 0.5); // release
+
+            osc1.start(now); osc1.stop(now + duration + 0.5);
+            osc2.start(now); osc2.stop(now + duration + 0.5);
+            osc3.start(now); osc3.stop(now + duration + 0.5);
+        }
+
+        function playKick(midi, duration = 0.5) {
+            const freq = midiToFreq(midi); // usa la nota
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+
+            osc.type = "sine";
+            osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+            osc.frequency.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+
+            gain.gain.setValueAtTime(1, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            osc.start();
+            osc.stop(audioCtx.currentTime + duration);
+        }
+
+        function playSnare(midi, duration = 0.2) {
+            const freq = midiToFreq(midi); // tono base
+            const osc = audioCtx.createOscillator();
+            const gainOsc = audioCtx.createGain();
+            osc.type = "triangle";
+            osc.frequency.value = freq;
+
+            // Ruido blanco
+            const bufferSize = audioCtx.sampleRate * duration;
+            const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+            const output = buffer.getChannelData(0);
+            for (let i = 0; i < bufferSize; i++) output[i] = Math.random() * 2 - 1;
+
+            const noise = audioCtx.createBufferSource();
+            noise.buffer = buffer;
+            const gainNoise = audioCtx.createGain();
+            gainNoise.gain.setValueAtTime(0.7, audioCtx.currentTime);
+            gainNoise.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+
+            osc.connect(gainOsc);
+            gainOsc.connect(audioCtx.destination);
+            gainOsc.gain.setValueAtTime(1, audioCtx.currentTime);
+            gainOsc.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+
+            noise.connect(gainNoise);
+            gainNoise.connect(audioCtx.destination);
+
+            osc.start();
+            osc.stop(audioCtx.currentTime + duration);
+            noise.start();
+            noise.stop(audioCtx.currentTime + duration);
+        }
+
+        function playHiHat(midi, duration = 0.05) {
+            const freq = midiToFreq(midi);
+            const bufferSize = audioCtx.sampleRate * duration;
+            const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+            const output = buffer.getChannelData(0);
+
+            for (let i = 0; i < bufferSize; i++)
+                output[i] = Math.random() * 2 - 1;
+
+            const noise = audioCtx.createBufferSource();
+            noise.buffer = buffer;
+
+            const gain = audioCtx.createGain();
+            gain.gain.setValueAtTime(0.7, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+
+            const filter = audioCtx.createBiquadFilter();
+            filter.type = "highpass";
+            filter.frequency.value = freq; // frecuencia variable según nota
+
+            noise.connect(gain);
+            gain.connect(filter);
+            filter.connect(audioCtx.destination);
+
+            noise.start();
+            noise.stop(audioCtx.currentTime + duration);
+        }
+        function playWhistle(freq, duration = 0.6) {
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+
+            osc.type = "sine";
+
+            osc.frequency.setValueAtTime(freq * 0.9, audioCtx.currentTime);
+            osc.frequency.linearRampToValueAtTime(freq, audioCtx.currentTime + 0.1);
+
+            gain.gain.setValueAtTime(0, audioCtx.currentTime);
+            gain.gain.linearRampToValueAtTime(0.25, audioCtx.currentTime + 0.02);
+            gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+
+            osc.connect(gain).connect(audioCtx.destination);
+            osc.start();
+            osc.stop(audioCtx.currentTime + duration);
+        }
+
+        function midiToFreq(midi) {
+            return 440 * Math.pow(2, (midi - 69) / 12);   
+        }
+        function tocarMelodia() {
+            let start = false;
+            const step = 180;
+            saxofon = [
+                "C6", "C6", "G6", "A6", "A#6", "A#6", "A6", "A6", "G6", "G6", "F6", "E6", "C6"
+            ];
+            bateria = [
+                1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0,
+            ];
+            silbato = [
+                0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0,
+            ]
+            longitud = saxofon.length
+            function estribillo(bateria, saxofon) {
+                const containers = 8;
+                let child = 0;
+                return new Promise(resolve => {
+                    silbato.forEach((pi, to) => {
+                        setTimeout(() => {
+                            if (pi === 1) {
+                                playWhistle(midiToFreq(0x66), 0.3);
+                                child += pi
+                                // console.log(child)
+                                if (child == containers) {
+                                    start = true;
+                                }
+                                if (start == true) {
+                                    // console.log(child, "SI")
+                                }
+                            }
+                        }, to * step);
+                    });
+                    bateria.forEach((num, i) => {
+                        setTimeout(() => {
+                            if (num === 1) {
+                                playKick(noteToMidi["G1"], 0.2);
+                            }
+                        }, i * step);
+                    });
+                    const offset = bateria.length * step;
+                    const total = offset + saxofon.length * step;
+                    for (let i = 0; i < saxofon.length; i++) {
+                        setTimeout(() => {
+                            // Saxofón
+                            if (i < saxofon.length) {
+                                const midiSaxo = noteToMidi[saxofon[i]];
+                                if (midiSaxo !== undefined) playSoftNote(midiToFreq(midiSaxo, 1), .20);
+                            }
+                            if (bateria[i]) {
+                                playKick(noteToMidi["G1"], .20)
+                            }
+                        }, offset + i * step);
+                    }
+                    setTimeout(resolve, total);
+                });
+            }
+            async function tocar(repeticiones) {
+                for (let x = 0; x < repeticiones; x++) {
+                    await estribillo(bateria, saxofon);
+                }
+            }
+            tocar(5);
+            start = false;
+        }
+    </script>
+
+    <footer>
+        <div class="bg-container-animation bg-dblue">
+            <div class="container-fluid">
+                <div class="container-fluid d-flex justify-content-start justify-content-md-center">
+                    <div class="d-flex flex-column flex-md-row justify-content-evenly px-4 pt-1 mt-3">
+                        <div class=""><a href="./../about.html#FAQs" class="text-decoration-none text-white mx-1 mx-sm-2 mx-md-3">Frequently asked questions</a></div>
+                        <div class=""><a href="./../contact.html" class="text-decoration-none text-white mx-1 mx-sm-2 mx-md-3">Contact</a></div>
+                        <div class=""><a href="./../cookiepolicy.html" class="text-decoration-none text-white mx-1 mx-sm-2 mx-md-3">Cookie&nbsp;policy</a></div>
+                        <div class=""><a href="./../privacypolicy.html" class="text-decoration-none text-white mx-1 mx-sm-2 mx-md-3">Privacy&nbsp;policy</a></div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end socialNetworks">
+                    <a href="https://www.instagram.com/matsuribarcelona/?hl=en" 
+                        class="instagram text-decoration-none text-white px-1 mb-2"
+                        target="_blank" rel="noopener noreferrer" alt="Instagram">
+                        <img class="instagram" src="./../img/logo/instagram.png">
+                    </a>
+                    <a href="https://www.youtube.com/@MATSURI-Barcelona/videos" 
+                        class="youtube text-decoration-none text-white px-1 mb-2"
+                        target="_blank" rel="noopener noreferrer">
+                        <img class="youtube" src="./../img/logo/youtube.png" alt="YouTube">
+                    </a>
+                    <a href="https://www.facebook.com/matsurijapaninbarcelona/?locale=es_ES" 
+                        class="facebook text-decoration-none text-white px-1 mb-1"
+                        target="_blank" rel="noopener noreferrer">
+                        <img class="facebook" src="./../img/logo/facebook.png" alt="Facebook">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

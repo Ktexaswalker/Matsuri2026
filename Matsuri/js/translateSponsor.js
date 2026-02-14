@@ -9,7 +9,7 @@ Object.assign(window.translations.Español, {
     "It's a fantastic opportunity to promote your brand to thousands of attendees by displaying it at various strategic points throughout the venue and using diverse advertising formats. You'll also have the opportunity to collaborate on sustainable cultural activities at this family-friendly, multigenerational, and culturally vibrant event, which projects a very positive image to the public.":"Es una gran oportunidad para publicitar tu marca ante miles de asistentes exponiéndola en diferentes puntos estratégicos del recinto y varios formatos publicitarios, así como colaborando en actividades culturales sostenibles, en un evento familiar, multigeneracional, cultural, con una imagen muy positiva ante el público.",
     "If you'd like to sponsor Matsuri Barcelona, ​​please write to us at":"Si quieres colaborar como patrocinador de Matsuri Barcelona, escríbenos a",
     "Meet last year’s sponsors":"Conoce a los patrocinadores del año pasado",
-    "Download the PDF to learn more:":"Descarga el pdf para saber mas:",
+    "Download the PDF to learn more:":"Descarga el pdf para saber más:",
     "Download PDF":"Descargar PDF",
     "":"",
 });
