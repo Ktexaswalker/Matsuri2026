@@ -304,6 +304,8 @@
 .normal_btn-nav {
 	border-radius: 50vh;
 	padding: 0.3em;
+	padding-top: 0.4em;
+	padding-bottom: 0.4em;
 	width: 10vw;
 	font-size: 1em;
 	font-family: var(--font-family);

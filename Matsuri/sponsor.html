@@ -202,12 +202,14 @@
                                 <p class="d-flex align-items-center ff fw-light mb-3">It's a fantastic opportunity to promote your brand to thousands of attendees by displaying it at various strategic points throughout the venue and using diverse advertising formats. You'll also have the opportunity to collaborate on sustainable cultural activities at this family-friendly, multigenerational, and culturally vibrant event, which projects a very positive image to the public.</p>
                                 <p class="d-flex align-items-center ff fw-light mb-3 me-5">Download the PDF to learn more:</p>
                                 <div class="text-center pb-3 d-flex align-items-center justify-content-end justify-content-lg-center">
-                                    <a id="dynamicLink" class="bg-cred text-decoration-none rounded-pill text-bg-ligh px-5 fs-6 py-2 downloadPdf" href="" download>Download PDF</a>
+                                    <a id="dynamicLink" class="bg-cred text-decoration-none rounded-pill text-bg-ligh px-5 fs-6 py-2 downloadPdf" 
+                                    href="" download>Download PDF</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-lg-12 col-xl-6 col-xxl-6 offset-xxl-1 lupa rounded-5">
-                            <img class="img-fluid optimizable rounded-5" src="webp/img/grafismo/foto sponsor.webp" alt="Performers" loading="lazy">
+                            <!-- <img class="img-fluid optimizable rounded-5" src="webp/img/grafismo/foto sponsor.webp" alt="Performers"> -->
+                            <img class="img-fluid optimizable rounded-5" src="webp/img/austinPictures/MATSURI25-147.webp" alt="Performers">
                         </div>
                         <div class="d-flex align-items-center justify-content-start">
                             <img class="me-3 mt-3" src="img/svg/Isologo_matsuri_dorado.svg" style="width: 3rem;" alt="matsuri gold">
@@ -290,17 +292,40 @@
         </div>
     </footer>
     <script>
+        const downloadTime = {
+            "日本語": "ダウンロード中…",
+            "Català": "baixant…",
+            "Español": "descargando…",
+            "English": "downloading…"
+        };
+
+        const link = document.getElementById("dynamicLink");
+
+        link.addEventListener("click", () => {
+            const lang = localStorage.getItem("lang") || "Español";
+            changeText(downloadTime[lang] || downloadTime["Español"]);
+        })
+
+        function changeText(text) {
+            const originalText = document.getElementById("dynamicLink").innerText
+            setTimeout (() => {
+                document.getElementById("dynamicLink").innerText = originalText;
+            }, 5000);
+            document.getElementById("dynamicLink").innerText = text
+        }
+
         function setPDF(lang) {
             const linksByLang = {
-                "日本語": "https://drive.google.com/uc?export=download&id=1CoYwMGqCacC1_weE8D8pziKGH-iWt8Xd",
-                "Català": "https://drive.google.com/uc?export=download&id=1gn4z4N9S-1LH62-io6_muzYULuCK601V",
-                "Español": "https://drive.google.com/uc?export=download&id=16QXpPu6QJ4ru1cUO5jFzTaChiTfYQAi9",
-                "English": "https://drive.google.com/uc?export=download&id=1wlTydfhTjMm7HoilAGDKuyve3B6h7Wsk"
+                "日本語": "https://drive.google.com/uc?export=download&id=1fuLyJ7LVrqgOBAREEzh_eL-bH2-26uAP",
+                "Català": "https://drive.google.com/uc?export=download&id=1tw6F3ZbnlH2ANKPWwHNqMHKiI3KV-DnA",
+                "Español": "https://drive.google.com/uc?export=download&id=1QxrisRoP_cd3BLAvPCP4C4rLh_vncr6w",
+                "English": "https://drive.google.com/uc?export=download&id=1ZwTv7WlmEbdwMP2UbE4HIv9VFs7KPHvx"
             };
-
+            
             const link = document.getElementById("dynamicLink");
+            const text = link.textContent;
             if (linksByLang[lang]) {
-                link.href = linksByLang[lang] || localStorage.getItem("lang");
+                link.href = linksByLang[lang] || localStorage.getItem("lang") || linksByLang["Español"];
             }
         }
 
@@ -312,7 +337,7 @@
             });
 
             // idioma por defecto al cargar
-            setPDF(localStorage.getItem("lang"));
+            setPDF(localStorage.getItem("lang") || "Español");
         }
         window.addEventListener('load', cargarPDF);
     </script>

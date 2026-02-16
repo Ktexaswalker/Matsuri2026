@@ -10,6 +10,10 @@ const noteToMidi = {
     "C7": 0x60, "C#7": 0x61, "D7": 0x62, "D#7": 0x63, "E7": 0x64, "F7": 0x65, "F#7": 0x66, "G7": 0x67, "G#7": 0x68, "A7": 0x69, "A#7": 0x6A, "B7": 0x6B,
     "C8": 0x6C
 };
+// const savedLang = localStorage.getItem("lang") || "Español"; //cargar idioma inicial
+// const browserLang = (navigator.language || navigator.userLanguage).slice(0, 2);
+// const currentLang = savedLang || browserLangMap[browserLang] || "English";
+
 
 const expresiones = {
     uaah: { Español: "¡Uaaah!", English: "Woooow!", Català: "Uaaah!", 日本語: "うわぁ！" },
@@ -109,11 +113,10 @@ function generarNivel(words, nivel) {
 }
 
 function empezarJuego(nivel, parte) {
-    const lang = localStorage.getItem("lang");
     switch(parte) {
-        case "easy": parte = words.easy[lang];break;
-        case "medium": parte = words.medium[lang];break;
-        case "hard": parte = words.hard[lang];break;
+        case "easy": parte = words.easy[localStorage.getItem("lang") || "Español"];break;
+        case "medium": parte = words.medium[localStorage.getItem("lang") || "Español"];break;
+        case "hard": parte = words.hard[localStorage.getItem("lang") || "Español"];break;
     }
     const iframe = document.getElementById("iframe");
     const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
@@ -141,10 +144,10 @@ function empezarJuego(nivel, parte) {
         }
         span.style.color = "var(--cred)";
         span.style.textShadow = `
-            -0.1em -0.1rem 0 var(--cgold),
-            0.1rem -0.1rem 0 var(--cgold),
-            -0.1rem  0.1rem 0 var(--cgold),
-            0.1rem  0.1rem 0 var(--cgold)
+            -0.1em -0.1rem 0 white,
+            0.1rem -0.1rem 0 white,
+            -0.1rem  0.1rem 0 white,
+            0.1rem  0.1rem 0 white
         `;
         span.style.color = "var(--cred)";
         span.style.fontSize = "2.5em"
@@ -321,11 +324,10 @@ function midiToFreq(midi) {
 }
 
 function comprobarExistenPalabras(nivel, parte) {
-    const lang = localStorage.getItem("lang");
     switch(parte) {
-        case "easy": parte = words.easy[lang];break;
-        case "medium": parte = words.medium[lang];break;
-        case "hard": parte = words.hard[lang];break;
+        case "easy": parte = words.easy[localStorage.getItem("lang") || "Español"];break;
+        case "medium": parte = words.medium[localStorage.getItem("lang") || "Español"];break;
+        case "hard": parte = words.hard[localStorage.getItem("lang") || "Español"];break;
     }
     if (generarNivel(parte, nivel) == undefined) {
         mostrarMensaje("sorryNoWords");
@@ -342,9 +344,8 @@ function mostrarMensaje(expresion) {
     const inicio = iframeDocument.getElementById("inicio");
     inicio.classList.remove("d-none");
     iFI.classList.add("d-none");
-    const lang = localStorage.getItem("lang");
     if (expresiones[expresion]) {
-        iframeDocument.getElementById("inicio").textContent = expresiones[expresion][lang];
+        iframeDocument.getElementById("inicio").textContent = expresiones[expresion][localStorage.getItem("lang") || "Español"];
     }
 }
 
@@ -488,11 +489,11 @@ async function inicio() {
     const iframe = document.getElementById("iframe");
     const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
     setTimeout(() => {
-        iframeDocument.getElementById("inicio").textContent = explicacion[localStorage.getItem("lang")];
-    }, TMessage)
-    setTimeout(() => {
-        iframeDocument.getElementById("inicio").textContent = preparado[localStorage.getItem("lang")];
+        iframeDocument.getElementById("inicio").textContent = explicacion[localStorage.getItem("lang") || "Español"];
     }, TMessage * 2)
+    setTimeout(() => {
+        iframeDocument.getElementById("inicio").textContent = preparado[localStorage.getItem("lang") || "Español"];
+    }, TMessage * 1)
     await tambores();
 }
 
@@ -503,5 +504,4 @@ async function final() {
 async function sucesos() {
     await inicio();
     tocarMelodia();
-    // función finalizar ¡YEAH!
 }
