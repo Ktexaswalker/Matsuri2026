@@ -433,6 +433,15 @@ function about() {
     );
 }
 
+// boton event Policy
+function eventPolicy() {
+    window.open(
+        "eventPolicy.html",
+        "_self",
+        "noopener,noreferrer"
+    );
+}
+
 function addSpaceUntilFooter() {
     const footer = document.getElementsByTagName("footer")[0];
     const body = document.getElementsByTagName("body")[0];
