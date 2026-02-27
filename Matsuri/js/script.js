@@ -402,7 +402,7 @@ function foodVendor() {
 function exhibitors() {
     window.open(
         "booths.html",
-        "_blank",
+        "_self",
         "noopener,noreferrer"
     );
 }

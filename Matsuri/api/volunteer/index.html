@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registro Voluntarios</title>
+  <meta name="author" content="Hector Martinez">
+  <meta name="description" content="Festival Matsuri 2026">
+  <link rel="stylesheet" href="./../../css/style.css">
+	<link rel="stylesheet" href="./../../css/bootstrap.css">
+	<script src="./../../js/bootstrap.bundle.js"></script>
+	<link rel="stylesheet" href="./../../css/swiper-bundle.min.css">
+	<script defer src="./../../js/swiper-bundle.min.js"></script>
+  <script defer src="./../docParse.js"></script>
+  <script defer src="./script.js"></script>
+</head>
+<body>
+  <!-- <h2>Formulario de Voluntariado</h2>
+
+  <form id="volunteerForm">
+    <input type="text" name="nombre" placeholder="Nombre" required />
+    <input type="text" name="about" placeholder="Cual fue el motivo de tu ingreso como voluntario?" required />
+    <input type="text" name="description" placeholder="Descripción sobre los trabajos realizados en Matsuri Barcelona" required />
+    <input type="url" name="urls" placeholder="Añade enlaces sobre ti: https://... separado por ',' comas" required />
+    <input type="email" name="area" placeholder="Area" required />
+    <input type="file" name="foto" placeholder="imagen de ti" required />
+    <button type="submit">Enviar</button>
+  </form> -->
+  <hr class="nuvesRojas my-0 py-0 bg-dblue">
+  <section id="carrousel-voluntarios"></section>
+  <hr class="escamasAzules bg-dblue my-0 py-0">
+  <section id="info" class="mt-0 pt-0"></section>
+
+  <hr class="olasRojas my-0 py-0 bg-dblue">
+
+
+
+  <script>
+    const target = document.getElementById("carrousel-voluntarios");
+    const observer = new MutationObserver((mutationsList, observer) => {
+      mutationsList.forEach(mutation => {
+        if (!mutation.target.classList.contains("swiper-slide-active")) return;
+        const volunters = document.getElementById("info");      
+        const aria = mutation.target.getAttribute("aria-label");
+        if (!aria) return;
+        const actual = parseInt(aria.split("/")[0].trim());
+        const indexReal = actual - 1;
+        const index = Number(mutation.target.getAttribute("data-swiper-slide-index"));
+        const id = Number(mutation.target.getAttribute("id"));
+        Array.from(volunters.children).forEach((el, i) => {
+            const slide = document.querySelector(`.swiper-slide[data-swiper-slide-index="${i}"]`);
+            if (i === indexReal) {
+              el.classList.remove("d-none");
+              if (slide) slide.style.opacity = "1";
+            } else {
+              el.classList.add("d-none");
+              if (slide) slide.style.opacity = "0.1";
+            }
+          });
+        });
+      });
+      observer.observe(target, {
+        childList: true,
+        subtree: true,
+        attributeFilter: ["class"]
+    });
+
+
+
+    // document.getElementById("volunteerForm").addEventListener("submit", async (e) => {
+    //   e.preventDefault();
+    //   //FALTA POR IMPLEMENTAR EL FORM CON EL BACKEND DE GOOGLE
+    //   const formData = new FormData(e.target);
+    //   const data = Object.fromEntries(formData);
+
+    //   await fetch("/api/volunteer", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify(data),
+    //   });
+
+    //   alert("¡Gracias por registrarte como voluntario!");
+    // });
+  </script>
+</body>
+</html>
+
