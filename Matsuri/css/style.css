@@ -466,8 +466,8 @@
 .slider-track {
     display: flex;
     width: max-content;
-    width: calc(200px * 11);
-    animation: scroll 20s linear infinite;
+    width: calc(200px * 16);
+    animation: scroll 25s linear infinite;
 }
 .slider-track > img {
     width: 150px;
