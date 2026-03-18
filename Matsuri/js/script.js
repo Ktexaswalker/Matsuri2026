@@ -523,6 +523,7 @@ function cookies(idioma) {
         </div>
         <div class="d-flex gap-2 justify-content-end">
             <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-all-close">Accept</button>
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-no-close">Cancel</button>
         </div>
     </div>
     `;
@@ -536,6 +537,7 @@ function cookies(idioma) {
         </div>
         <div class="d-flex gap-2 justify-content-end">
             <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-all-close">Aceptar</button>
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-no-close">Cancelar</button>
         </div>
     </div>
     `;
@@ -549,6 +551,7 @@ function cookies(idioma) {
         </div>
         <div class="d-flex gap-2 justify-content-end">
             <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-all-close">Accepta</button>
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-no-close">Cancelar</button>
         </div>
     </div>
     `;
@@ -562,6 +565,7 @@ function cookies(idioma) {
         </div>
         <div class="d-flex gap-2 justify-content-end">
             <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-all-close">同意する</button>
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-no-close">同意しない</button>
         </div>
     </div>
     `;
@@ -581,6 +585,7 @@ function cookies(idioma) {
     const banner = document.querySelector('.cookiesBanner:last-of-type');
     if (!banner) return;
     const btnAll = banner.querySelector('.js-cookies-all-close');
+    const btnNo = banner.querySelector('.js-cookies-no-close');
 
     // Bloquear scroll/tabulación si quieres
     document.body.classList.add('cookies-blocked');
@@ -698,16 +703,35 @@ function cookies(idioma) {
     document.head.appendChild(style);
 
     // Función para guardar consentimiento y quitar banner
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'default_consent', 'analytics_storage': 'denied' });
     function giveConsent(type) {
         atob(cad)
+        if (type === 'all') {
+            (function(w,d,s,l,i){
+                w[l]=w[l]||[];
+                w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+                var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+                    j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                    f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-NR5CSW7J');
+
+            const ns = document.createElement('noscript');
+            ns.innerHTML = '<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NR5CSW7J" height="0" width="0" style="display:none;visibility:hidden"></iframe>';
+            const gtm = document.getElementById('gtm-noscript-container');
+            if (gtm) gtm.appendChild(ns);
+            dataLayer.push({ event: 'update_consent', 'analytics_storage': 'granted' });
+        }
         localStorage.setItem('cookiesConsent', type);
         banner.remove();
         style.remove();
-        window.location.reload()
+        // window.location.reload()
         document.body.classList.remove('cookies-blocked');
     }
 
     btnAll.addEventListener('click', () => giveConsent('all'));
+    btnNo.addEventListener('click', () => giveConsent('no'));
 }
 
 // FAQ's collapsed

@@ -18,11 +18,14 @@
     <script defer src="js/script.js"></script>
 </head>
 <body>
+    <div id="gtm-noscript-container"></div>
+    <div id="gtm-noscript-container"></div>
     <nav class="navbar d-none d-md-block sticky-top bg-white my-0 py-0">
         <div class="container-fluid px-0">
             <div class="d-flex align-items-center w-100 me-0">
                 <!-- LOGO -->
                 <div class="ms-lg-4" style="transform: scale(.7);">
+                    <h1 class="d-none">Matsuri 2026</h1>
                     <a href="index.html">
                         <img class="img-fluid py-0" src="img/logo/matsuri_logo.png" class="logo" alt="logo matsuri">
                     </a>
@@ -243,11 +246,11 @@
             <div class="container-fluid">
                 <div class="row d-flex justify-content-center align-items-center my-3 my-md-0">
                     <div class="col-10 col-sm-12 col-md-12 col-lg-12 col-xl-8 col-xxl-6 px-0">
-                        <div class="d-flex justify-content-start align-items-start">
+                        <div class="d-flex justify-content-start align-items-start my-3">
                             <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-1 col-xxl-1 ps-xxl-3 ms-5 ms-0 me-2">
-                                <img class="img-fluid pt-3 pb-xl-2 pb-xxl-2" style="max-height: 15vh;" src="./img/grafismo/lampara chochin.png" alt="farolillo">
+                                <img class="img-fluid pt-3" style="max-height: 15vh;" src="./img/grafismo/lampara chochin.png" alt="farolillo">
                             </div>
-                            <div class="col-8 col-sm-8 col-md-8 col-lg-9 order-lg-1 col-xl-9 order-xl-1 col-xxl-10 order-xxl-1 pt-2">
+                            <div class="col-8 col-sm-8 col-md-8 col-lg-9 order-lg-1 col-xl-9 order-xl-1 col-xxl-10 order-xxl-1 pt-2 ps-3">
                                 <span class="h4 ff fw-medium mb-3">Join the Matsuri</span>
                                 <p class="ff fw-light my-0"><b class="fw-medium">We are opening the call for food vendors, exhibitors, and sponsors.</b><span> </span>If you want to take part in the festival, fill out the corresponding form.</p>
                                 <p class="ff fw-light">Choose your profile and send us your proposal.</p>
@@ -257,7 +260,7 @@
                     <div class="col-2 offset-lg-1 order-lg-1 offset-xl-0 order-xl-2 offset-xl-0 order-xxl-2">
                     </div>
                     <div class="col-10 col-sm-10 col-md-10 col-lg-12 order-lg-0 col-xl-4 order-xl-0 col-xxl-6 order-xxl-0">
-                        <div class="d-flex flex-wrap justify-content-center">
+                        <div class="d-flex flex-wrap justify-content-center justify-content-xxl-end my-3 gap-2 me-o me-xxl-4">
                             <button class="normal_btn border-0 bg-cred fw-bold m-1 py-2" onclick="foodVendor()">Food Vendors</button>
                             <button class="normal_btn border-0 bg-dblue fw-bold m-1 py-2" type="button" onclick="exhibitors()">Exhibitors</button>
                             <button class="normal_btn border-0 bg-cgold fw-bold m-1 py-2" onclick="sponsorUs()">Sponsors</button>
@@ -330,9 +333,27 @@
             <!-- </div>
         </div>
     </section> -->
+    
+    <hr class="diamantes my-0">
+    <section>
+        <div class="container-fluid bg-lgrey bg-poster">
+            <div class="row d-flex justify-content-evently align-items-center text-dark">
+                <div class="col-12 col-lg-5 offset-lg-1 col-xl-5 offset-xl-1 col-xxl-5 offset-xxl-1 text-center">
+                    <img class="img-fluid px-0" style="max-width: 70%; min-width: 350px;" src="img/png/MATSURI 2026 main design Jun Chihara.png" alt="Cartel Jun Chihara">
+                </div>
+                <div class="col-11 offset-1 offset-sm-1 offset-md-1 offset-lg-0 offset-xl-0 offset-xxl-0 col-lg-6 col-xl-5 col-xxl-5 pb-4">
+                    <h3 class="pt-3 fw-medium display-6">Matsuri 2026 Poster</h3>
+                    <p class="ff fw-light">We present our famous Matsuri Barcelona poster created every year by the tattoo artist<span> </span><b class="fw-medium">Jun Chihara</b>.</p>
+                    <p class="ff fw-light">The new 2026 poster reinterprets Japanese tradition with a vibrant energy inspired by ukiyo-e style. The composition combines symbolic creatures, movement and color in a scene full of life which celebrates the festival essence: the connection between Japanese culture, living together and celebrating.</p>
+                    <p class="ff fw-light">Get official merchandise during the Matsuri or support our<span> </span><a class="text-decoration-none text-dark fw-medium" href="crowdfund.html" target="_self">crowdfunding</a><span> </span>campaign and receive exclusive gifts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="separador my-0">
     <!-- WHAT IS MATSURI -->
     <section>
-        <div class="container-fluid bg-dblue bg-eventInfo">
+        <div class="container-fluid bg-dblue bg-eventInfo py-2">
             <div class="row d-flex align-items-center">
                 <div class="col-4 offset-1 col-lg-5 offset-lg-1 col-md-10 offset-md-1 col-sm-10 offset-sm-1 col-10 offset-1 border-2">
                     <h3 class="text-wwhite pt-3 fw-medium display-6">Information about the Event</h3>
@@ -360,7 +381,7 @@
             </div>
         </div>
     </section>
-    <hr class="separador">
+    <hr class="separador my-0">
     <!-- SPACE -->
     <!-- <section>
         <div class="container-fluid">
@@ -485,15 +506,20 @@
                                 rounded-4 ps-3 w-lg-50 w-xl-50 w-xxl-50">
                         <h3 class="text-wwhite fw-medium display-6 mb-4">Location</h3>
                         <span class="h4 mt-3 fw-light">Moll de la Fusta</span>
-                        <p class="h6 mt-0 text-break fw-light pe-xl-4 pb-3 pb-md-0 mb-3">Ronda Litoral, 1740, Ciutat Vella, 08039 Barcelona</p>
+                        <p class="h6 mt-0 text-break fw-light pe-xl-4 pb-3 pb-md-0 mb-3">Moll de Bosch i Alsina, 1, Ciutat Vella, 08039 Barcelona</p>
                         <div class="container">
-                            <div class="row">
-                                <div class="col-1 p-0">
-                                    <img src="./img/png/iconos mapa metro bus.png" alt="">
+                            <div class="row  p-0">
+                                <div class="col-1 d-flex flex-column justify-content-evenly">
+                                    <!-- <img src="./img/png/iconos mapa metro bus.png" alt=""> -->
+                                    <!-- <img class="pt-1" src="./img/png/L3.png" alt=""> -->
+                                    <!-- <img class="pb-1" src="./img/png/L4.png" alt=""> -->
+                                    <img class="pt-1" style="min-width:26px;" src="./img/png/M.png" alt="Metro">
+                                    <img class="py-2" style="min-width:26px;" src="./img/png/B.png" alt="Bus">
+                                    <img class="pb-2" style="min-width:26px;" src="./img/png/P.png" alt="Parking">
                                 </div>
                                 <div class="col-10 ms-3">
-                                    <p class="h5 fw-light pt-1">Subway: Drassanes (L3)</p>
-                                    <p class="h5 fw-light p-0">Bus: V13, 59, D20</p>
+                                    <p class="h5 fw-light pt-1 overflow-x-auto">Subway: Drassanes (L3) Barceloneta (L4)</p>
+                                    <p class="h5 fw-light p-0">Bus: 59, 120, D20, H14, V17</p>
                                     <p class="h5 fw-light pb-1 mb-4 mb-lg-0">Nearby parking available</p>
                                 </div>
                             </div>

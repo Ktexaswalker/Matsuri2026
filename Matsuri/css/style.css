@@ -522,6 +522,16 @@
 	background-position: center;
 	opacity: 1;
 }
+.diamantes {
+	height: 2rem;
+	border: none;
+	/* background-image: url("./../img/png/Separador\ logo\ dorado\ matsuri.png"); */
+	background-image: url("./../img/b_Separadores/Banner\ web\ diamante\ azul-36.png");
+	background-repeat: repeat-x;
+	background-size: auto 100%;
+	background-position: center;
+	opacity: 1;
+}
 /* .separadorOk {
 	height: 4.8rem;
 	border: none;
@@ -702,6 +712,15 @@
   --bg-opacity: 1;
   background-color: var(--wwhite) !important;
 }
+
+.bg-poster {
+	background: url("./../img/png/Fondo\ ilustraciones\ Poster.png");
+	background-size: auto 100%;
+	background-repeat: no-repeat !important;
+	background-position-x: left;
+	background-position-y: bottom;
+	font-family: var(--font-family);
+}
 /* ----------- */
 /* colors letters */
 .text-wwhite {
@@ -838,3 +857,6 @@
 	border-radius: 0.5rem / 0.5rem;
 }
 /* --------------- */
+/* VENDEDORES */
+
+/* ---------- */

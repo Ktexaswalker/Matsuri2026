@@ -20,11 +20,13 @@
     <script defer src="js/script.js"></script>
 </head>
 <body>
+    <div id="gtm-noscript-container"></div>
     <nav class="navbar d-none d-md-block sticky-top bg-white my-0 py-0">
         <div class="container-fluid px-0">
             <div class="d-flex align-items-center w-100 me-0">
                 <!-- LOGO -->
                 <div class="ms-lg-4" style="transform: scale(.7);">
+                    <h1 class="d-none">Matsuri 2026</h1>
                     <a href="index.html">
                         <img class="img-fluid py-0" src="img/logo/matsuri_logo.png" class="logo" alt="logo matsuri">
                     </a>
@@ -232,10 +234,13 @@
                 <div class="col">
                     <h4 class="ff">2. Personal Data and Privacy Considerations</h4>
                     <p class="ff fw-light">
-                        This website does not actively collect personal data through forms, tracking systems, or third-party services, unless explicitly stated otherwise. Any personal information voluntarily provided by users (e.g., through contact emails or direct communication) will be treated confidentially and used only for the purpose for which it was provided.
+                        This website does not actively collect personal data through forms or other direct registration mechanisms, unless explicitly stated otherwise. However, the website may use technical tools from third parties for analytical, operational, or service improvement purposes. These tools may collect anonymous or aggregated technical information about the use of the website (such as approximate IP address, device type, browser, or pages visited).
                     </p>
                     <p class="ff fw-light">
-                        No automated decision-making or profiling takes place on this website.
+                        This information is used exclusively for statistical purposes, technical functionality, or service improvement, and is not used to personally identify users or to create individual user profiles. Any personal information voluntarily provided by users (for example, through contact emails or direct communication) will be treated confidentially and used only for the purpose for which it was provided.
+                    </p>
+                    <p class="ff fw-light">
+                        No automated decision-making processes or individual profiling are carried out on this website.
                     </p>
                 </div>
             </div>
@@ -420,5 +425,11 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.getElementById('resetCookiesConsent').addEventListener('click', () => {
+            localStorage.removeItem('cookiesConsent'); // elimina la elección previa
+            cookies(currentLang); // vuelve a mostrar el banner según idioma
+        });
+    </script>
 </body>
 </html>

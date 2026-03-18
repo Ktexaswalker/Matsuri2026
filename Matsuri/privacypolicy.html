@@ -20,11 +20,13 @@
     <script defer src="js/script.js"></script>
 </head>
 <body>
+    <div id="gtm-noscript-container"></div>
     <nav class="navbar d-none d-md-block sticky-top bg-white my-0 py-0">
         <div class="container-fluid px-0">
             <div class="d-flex align-items-center w-100 me-0">
                 <!-- LOGO -->
                 <div class="ms-lg-4" style="transform: scale(.7);">
+                    <h1 class="d-none">Matsuri 2026</h1>
                     <a href="index.html">
                         <img class="img-fluid py-0" src="img/logo/matsuri_logo.png" class="logo" alt="logo matsuri">
                     </a>
@@ -225,7 +227,7 @@
                 <div class="col">
                     <h4 class="ff fw-medium">3. Personal Data Processed</h4>
                     <p class="ff fw-light">
-                        This Website does not actively collect personal data through registration forms, user accounts, or third-party tracking systems.
+                        This Website does not actively collect personal data through registration forms, user accounts, or third-party tracking systems without the user's consent.
                     </p>
                     <p class="ff fw-light">
                         However, personal data may appear on the Website in the following contexts:
@@ -237,6 +239,26 @@
                     </ul>
                     <p class="ff fw-light">
                         No sensitive personal data is intentionally collected or processed.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr class="separador">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h4 class="ff fw-medium">3b. Cookies and Tracking Tools</h4>
+                    <p class="ff fw-light">
+                        This Website uses cookies and tracking tools, such as Google Tag Manager (GTM) and Google Analytics, only after obtaining the user's consent.
+                    </p>
+                    <p class="ff fw-light">
+                        Cookies are used to collect anonymous browsing information to improve the user experience, analyze traffic, and optimize the Website.
+                    </p>
+                    <p class="ff fw-light">
+                        No personal data is collected via cookies without explicit user consent.
+                    </p>
+                    <p class="ff fw-light">
+                        Users can accept or reject cookies using the consent banner displayed when accessing the Website. To review or change your cookie preferences at any time,<span> </span><a class="text-decoration-none fw-medium" id="resetCookiesConsent">click here to show the banner again.</a>
                     </p>
                 </div>
             </div>
@@ -336,6 +358,7 @@
                         <li class="ff fw-light">Request the rectification or erasure of their data.</li>
                         <li class="ff fw-light">Object to processing or request its restriction.</li>
                         <li class="ff fw-light">Request the removal of images or content when legally appropriate.</li>
+                        <li class="ff fw-light">Withdraw consent for cookies and tracking tools at any time.</li>
                     </ul>
                     <p class="ff fw-light">
                         Applications must be submitted using the contact information provided on the Website and will be processed within the legally established timeframes.
@@ -431,5 +454,11 @@
             </div>
         </div>
     </footer>
+        <script>
+        document.getElementById('resetCookiesConsent').addEventListener('click', () => {
+            localStorage.removeItem('cookiesConsent'); // elimina la elección previa
+            cookies(currentLang); // vuelve a mostrar el banner según idioma
+        });
+    </script>
 </body>
 </html>
