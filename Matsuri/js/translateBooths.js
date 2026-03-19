@@ -31,7 +31,21 @@ Object.assign(window.translations.Español, {
     "Rising costs made this unsustainable, so admission was introduced in 2025.":", pero el aumento de costes obligó a introducir entrada en 2025.",
     "Prices remain among the lowest for comparable events, and children under 12 enter free of charge.":"El precio se mantiene entre los más bajos del sector y los menores de 12 años acceden gratis.",
     "Thank you for your understanding and continued support.":"Agradecemos su comprensión y apoyo.",
-
+    // VENDEDORES
+    "1":"",
+    "2":"",
+    "3":"",
+    "4":"",
+    "5":"",
+    "6":"",
+    "7":"",
+    "8":"",
+    "9":"",
+    "0":"",
+    "read more": "leer más",
+    //ARTISTAS
+    "Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.":"Mitsuru Nagata, es un artista japonés dedicado a la caligrafía Shodō y a la pintura Sumi-e. Realizará una demostración en el escenario y tendrá un puesto con sus obras originales. Tiene maestría en caligrafía por la escuela Futaba Shodō Kai y ha participado en diversos eventos en España, Japón y otros países. Participa en el Matsuri desdel año 2015.",
+    "":"",
 });
 Object.assign(window.translations.Català, {
     "At Matsuri, we always have a wide variety of exhibitors so you can take home a souvenir, find something unique for yourself, or buy gifts for your loved ones. You can also rent or buy and wear a yukata, purchase books, traditional Japanese crafts, antiques, handmade products, artwork, and much more. You'll soon be able to meet this year's exhibitors, so keep an eye on our website and Instagram!":"A Matsuri sempre comptem amb diferents expositors de tot tipus perquè puguis endur-te un record, trobar alguna cosa exclusiva per a tu o fer regals als teus. A més, pots llogar o comprar i vestir un yukata, comprar llibres, artesania tradicional japonesa, antiguitats, productes fets a mà, obres d’art i molt més. Aviat podràs conèixer els expositors d’aquest any, així que estigues atent a la web i al nostre Instagram!",
@@ -61,6 +75,21 @@ Object.assign(window.translations.Català, {
     "Rising costs made this unsustainable, so admission was introduced in 2025.":"L’augment de costos va fer necessari introduir entrada el 2025.",
     "Prices remain among the lowest for comparable events, and children under 12 enter free of charge.":"El preu és dels més baixos entre esdeveniments similars i els menors de 12 anys entren gratuïtament.",
     "Thank you for your understanding and continued support.":"Gràcies per la vostra comprensió i suport continuat.",
+    // VENDEDORES
+    "1":"",
+    "2":"",
+    "3":"",
+    "4":"",
+    "5":"",
+    "6":"",
+    "7":"",
+    "8":"",
+    "9":"",
+    "0":"",
+    "read more": "llegir més",
+    //ARTIS"read more":"",TAS
+    "Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.":"Mitsuru Nagata, és un artista japonès dedicat a la cal·ligrafia Shodō i a la pintura Sumi-e.  Realitzarà una demostració a l'escenari i tindrà un lloc amb les obres originals.  Té mestratge en cal·ligrafia per l'escola Futaba Shodō Kai i ha participat en diversos esdeveniments a Espanya, Japó i altres països.  Participa al Matsuri des de l'any 2015.",
+    "":"",
 });
 Object.assign(window.translations.日本語, {
     "At Matsuri, we always have a wide variety of exhibitors so you can take home a souvenir, find something unique for yourself, or buy gifts for your loved ones. You can also rent or buy and wear a yukata, purchase books, traditional Japanese crafts, antiques, handmade products, artwork, and much more. You'll soon be able to meet this year's exhibitors, so keep an eye on our website and Instagram!":"マツリでは、さまざまな出展者が揃っており、お土産を持ち帰ったり、自分だけの特別なものを見つけたり、大切な人へのギフトを選んだりすることができます。また、浴衣をレンタルまたは購入して着ることもでき、本、伝統的な日本の工芸品、骨董品、手作りの作品、アート作品なども購入可能です。今年の出展者たちもまもなくご紹介予定ですので、ぜひウェブサイトやInstagramをチェックしてください！",
@@ -90,4 +119,19 @@ Object.assign(window.translations.日本語, {
     "Rising costs made this unsustainable, so admission was introduced in 2025.":"同規模の民間イベントと比較しても最低水準の料金に抑え、12歳以下は無料としています。",
     "Prices remain among the lowest for comparable events, and children under 12 enter free of charge.":"2025年は来場者数が減少しましたが、安全性や体験の質が向上したという評価が多く寄せられています。",
     "Thank you for your understanding and continued support.":"MATSURI Barcelona は、日本文化を伝える場として、現実的に継続可能な形を模索しています。ご理解とご協力を心よりお願い申し上げます。",
+    // VENDEDORES
+    "1":"",
+    "2":"",
+    "3":"",
+    "4":"",
+    "5":"",
+    "6":"",
+    "7":"",
+    "8":"",
+    "9":"",
+    "0":"",
+    "read more": "続きを読む",
+    //ARTIS"read more":"",TAS
+    "Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.":"長田充（ながた みつる）、書道・墨絵アーティスト。双葉書道会で書道の師範資格を取得し、スペインや日本をはじめ、世界各国のさまざまなイベントで幅広く活躍。Matsuriには2015年より参加。ステージでのデモンストレーションを行うとともに、オリジナル作品を展示・販売するブースを出店。",
+    "":"",
 });
