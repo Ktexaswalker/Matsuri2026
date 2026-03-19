@@ -31,6 +31,7 @@ Object.assign(window.translations.Español, {
     "Rising costs made this unsustainable, so admission was introduced in 2025.":", pero el aumento de costes obligó a introducir entrada en 2025.",
     "Prices remain among the lowest for comparable events, and children under 12 enter free of charge.":"El precio se mantiene entre los más bajos del sector y los menores de 12 años acceden gratis.",
     "Thank you for your understanding and continued support.":"Agradecemos su comprensión y apoyo.",
+    "+info":"+info",
     // VENDEDORES
     "1":"",
     "2":"",
@@ -75,6 +76,7 @@ Object.assign(window.translations.Català, {
     "Rising costs made this unsustainable, so admission was introduced in 2025.":"L’augment de costos va fer necessari introduir entrada el 2025.",
     "Prices remain among the lowest for comparable events, and children under 12 enter free of charge.":"El preu és dels més baixos entre esdeveniments similars i els menors de 12 anys entren gratuïtament.",
     "Thank you for your understanding and continued support.":"Gràcies per la vostra comprensió i suport continuat.",
+    "+info":"+info",
     // VENDEDORES
     "1":"",
     "2":"",
@@ -119,6 +121,7 @@ Object.assign(window.translations.日本語, {
     "Rising costs made this unsustainable, so admission was introduced in 2025.":"同規模の民間イベントと比較しても最低水準の料金に抑え、12歳以下は無料としています。",
     "Prices remain among the lowest for comparable events, and children under 12 enter free of charge.":"2025年は来場者数が減少しましたが、安全性や体験の質が向上したという評価が多く寄せられています。",
     "Thank you for your understanding and continued support.":"MATSURI Barcelona は、日本文化を伝える場として、現実的に継続可能な形を模索しています。ご理解とご協力を心よりお願い申し上げます。",
+    "+info":"＋詳細",
     // VENDEDORES
     "1":"",
     "2":"",

@@ -19,6 +19,9 @@
     <script defer src="js/translate.js"></script>
     <script defer src="js/script.js"></script>
     <style>
+        .card {
+            overflow: visible;
+        }
         .text-container {
             height: auto;
             min-height: initial;
@@ -34,7 +37,7 @@
         /* degradado bonito */
         .text-preview::after {
             content: "";
-            position: absolute;
+            /* position: absolute; */
             bottom: 0;
             left: 0;
             /* right: 0; */
@@ -47,9 +50,10 @@
         .read-more-btn {
             position: absolute;
             bottom: 0.8rem;
+            padding-left: 8px;
             right: 8px;
             padding: auto;
-            background: rgba(255,255,255,0.8);
+            background: var(--wwhite);
             border: none;
             color: var(--cgold);
             cursor: pointer;
@@ -57,17 +61,27 @@
         }
         /* overlay */
         .text-overlay {
-            /* display: flex; */
-            display: absolute;
-            height: auto;
-            inset: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
             display: none;
-            overflow-y: auto;
-            z-index: 2;
+            z-index: 10;
+            background: white;
+            padding: 0.5rem;
+            border-left-style: solid;
+            border-right-style: solid;
+            border-width: 1px;
+            border-color: var(--bs-border-color-translucent);
+            border-radius: var(--bs-card-border-radius);
+        }
+        .text-overlay:nth-last-child {
+            height: auto;
         }
         /* activo */
         .text-overlay.active {
             display: block;
+            z-index: 2;
         }
     </style>
 </head>
@@ -287,9 +301,10 @@
                                     Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.
                                 </p>
                                 <button class="read-more-btn">read more</button>
-                                <div class="text-overlay px-2">
+                                <div class="text-overlay px-2 pt-0">
                                     <p class="fw-light mt-1">
                                         Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.
+                                        <button class="btn p-0 m-0"><a class="m-0 p-0" href="https://www.instagram.com/nagatayakyoto?igsh=MTBpdmpuNTdmM21wYQ==">+info</a></button>
                                     </p>
                                 </div>
                             </div>
@@ -309,9 +324,10 @@
                                     Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.
                                 </p>
                                 <button class="read-more-btn">read more</button>
-                                <div class="text-overlay px-2">
+                                <div class="text-overlay px-2 pt-0">
                                     <p class="fw-light mt-1">
                                         Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.
+                                        <button class="btn p-0 m-0"><a class="m-0 p-0" href="https://www.instagram.com/nagatayakyoto?igsh=MTBpdmpuNTdmM21wYQ==">+info</a></button>
                                     </p>
                                 </div>
                             </div>
@@ -331,9 +347,10 @@
                                     Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.
                                 </p>
                                 <button class="read-more-btn">read more</button>
-                                <div class="text-overlay px-2">
+                                <div class="text-overlay px-2 pt-0">
                                     <p class="fw-light mt-1">
                                         Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.
+                                        <button class="btn p-0 m-0"><a class="m-0 p-0" href="https://www.instagram.com/nagatayakyoto?igsh=MTBpdmpuNTdmM21wYQ==">+info</a></button>
                                     </p>
                                 </div>
                             </div>
@@ -353,9 +370,10 @@
                                     Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.
                                 </p>
                                 <button class="read-more-btn">read more</button>
-                                <div class="text-overlay px-2">
+                                <div class="text-overlay px-2 pt-0">
                                     <p class="fw-light mt-1">
                                         Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.
+                                        <button class="btn p-0 m-0"><a class="m-0 p-0" href="https://www.instagram.com/nagatayakyoto?igsh=MTBpdmpuNTdmM21wYQ==">+info</a></button>
                                     </p>
                                 </div>
                             </div>
@@ -375,9 +393,10 @@
                                     Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.
                                 </p>
                                 <button class="read-more-btn">read more</button>
-                                <div class="text-overlay px-2">
+                                <div class="text-overlay px-2 pt-0">
                                     <p class="fw-light mt-1">
                                         Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.
+                                        <button class="btn p-0 m-0"><a class="m-0 p-0" href="https://www.instagram.com/nagatayakyoto?igsh=MTBpdmpuNTdmM21wYQ==">+info</a></button>
                                     </p>
                                 </div>
                             </div>
@@ -397,9 +416,10 @@
                                     Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.
                                 </p>
                                 <button class="read-more-btn">read more</button>
-                                <div class="text-overlay px-2">
+                                <div class="text-overlay px-2 pt-0">
                                     <p class="fw-light mt-1">
                                         Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.
+                                        <button class="btn p-0 m-0"><a class="m-0 p-0" href="https://www.instagram.com/nagatayakyoto?igsh=MTBpdmpuNTdmM21wYQ==">+info</a></button>
                                     </p>
                                 </div>
                             </div>
@@ -419,9 +439,10 @@
                                     Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.
                                 </p>
                                 <button class="read-more-btn">read more</button>
-                                <div class="text-overlay px-2">
+                                <div class="text-overlay px-2 pt-0">
                                     <p class="fw-light mt-1">
                                         Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.
+                                        <button class="btn p-0 m-0"><a class="m-0 p-0" href="https://www.instagram.com/nagatayakyoto?igsh=MTBpdmpuNTdmM21wYQ==">+info</a></button>
                                     </p>
                                 </div>
                             </div>
@@ -441,9 +462,10 @@
                                     Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.
                                 </p>
                                 <button class="read-more-btn">read more</button>
-                                <div class="text-overlay px-2">
+                                <div class="text-overlay px-2 pt-0">
                                     <p class="fw-light mt-1">
                                         Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.
+                                        <button class="btn p-0 m-0"><a class="m-0 p-0" href="https://www.instagram.com/nagatayakyoto?igsh=MTBpdmpuNTdmM21wYQ==">+info</a></button>
                                     </p>
                                 </div>
                             </div>
@@ -463,9 +485,10 @@
                                     Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.
                                 </p>
                                 <button class="read-more-btn">read more</button>
-                                <div class="text-overlay px-2">
+                                <div class="text-overlay px-2 pt-0">
                                     <p class="fw-light mt-1">
                                         Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.
+                                        <button class="btn p-0 m-0"><a class="m-0 p-0" href="https://www.instagram.com/nagatayakyoto?igsh=MTBpdmpuNTdmM21wYQ==">+info</a></button>
                                     </p>
                                 </div>
                             </div>
@@ -485,9 +508,10 @@
                                     Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.
                                 </p>
                                 <button class="read-more-btn">read more</button>
-                                <div class="text-overlay px-2">
+                                <div class="text-overlay px-2 pt-0">
                                     <p class="fw-light mt-1">
                                         Mitsuru Nagata is a Japanese artist specializing in Shodō calligraphy and Sumi-e painting. He will give a demonstration on stage and have a stall displaying his original works. He holds a master's degree in calligraphy from the Futaba Shodō Kai school and has participated in various events in Spain, Japan, and other countries. He has been participating in the Matsuri since 2015.
+                                        <button class="btn p-0 m-0"><a class="m-0 p-0" href="https://www.instagram.com/nagatayakyoto?igsh=MTBpdmpuNTdmM21wYQ==">+info</a></button>
                                     </p>
                                 </div>
                             </div>
