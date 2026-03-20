@@ -16,7 +16,7 @@ Object.assign(window.translations.Català, {
     "Everyone involved with Matsuri is a volunteer, so Matsuri is the result of the unity and support of wonderful people who collaborate so that we can enjoy this festival together every year.":"Totes les persones que formen part de Matsuri són voluntàries, per això Matsuri és el resultat de la unitat i el suport de persones meravelloses que s’ajunten perquè puguem gaudir junts d’aquest festival cada any.",
     "Do you want to join our crowdfunding?":"Vols unir-te al nostre micromecenatge?",
     ", you will receive exclusive gifts!":", rebràs regals exclusius!",
-    "Support us and join our":"Apòyanos i uneix-te al nostre",
+    "Support us and join our":"Recolza'ns i uneix-te al nostre",
     "You'll be able to access our crowdfunding campaign in the coming days!":"En els propers dies podràs accedir a la nostra campanya de micromecenatge!",
 });
 Object.assign(window.translations.日本語, {

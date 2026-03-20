@@ -858,5 +858,65 @@
 }
 /* --------------- */
 /* VENDEDORES */
-
+.text-container {
+	height: auto;
+	min-height: initial;
+	position: relative;
+}
+/* Vista corta */
+.text-preview {
+	max-height: 4.4em;
+	overflow: hidden;
+	position: relative;
+	padding-bottom: 2rem; /* espacio para botón */
+}
+/* degradado bonito */
+.text-preview::after {
+	content: "";
+	/* position: absolute; */
+	bottom: 0;
+	left: 0;
+	/* right: 0; */
+	width: 100%;
+	height: 0.9rem;
+	background: linear-gradient(to bottom, transparent, white);
+	pointer-events: none;
+}
+/* botón */
+.read-more-btn {
+	position: absolute;
+	bottom: 0.8rem;
+	padding-left: 8px;
+	right: 8px;
+	padding: auto;
+	background: var(--wwhite);
+	border: none;
+	color: var(--cgold);
+	cursor: pointer;
+	z-index: 2;
+}
+/* overlay */
+.text-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: none;
+	z-index: 10;
+	background: white;
+	padding: 0.5rem;
+	border-left-style: solid;
+	border-right-style: solid;
+	border-width: 1px;
+	border-color: var(--bs-border-color-translucent);
+	border-radius: var(--bs-card-border-radius);
+}
+.text-overlay:nth-last-child {
+	height: auto;
+}
+/* activo */
+.text-overlay.active {
+	display: block;
+	z-index: 4;
+}
 /* ---------- */
