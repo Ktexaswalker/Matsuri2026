@@ -789,12 +789,14 @@ document.querySelectorAll('.text-container').forEach(container => {
     const prv = container.querySelector('.text-preview');
     const btn = container.querySelector('.read-more-btn');
     const overlay = container.querySelector('.text-overlay');
-    btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        overlay.classList.add('active');
-        prv.classList.add('d-none');
-        btn.classList.add('d-none');
-    });
+    if (btn) {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            overlay.classList.add('active');
+            prv.classList.add('d-none');
+            btn.classList.add('d-none');
+        });
+    }
     overlay.addEventListener('click', () => {
         overlay.classList.remove('active');
         prv.classList.remove('d-none');
@@ -806,9 +808,10 @@ document.addEventListener('click', () => {
         const prv = container.querySelector('.text-preview');
         const btn = container.querySelector('.read-more-btn');
         const overlay = container.querySelector('.text-overlay');
-
         overlay.classList.remove('active');
         prv.classList.remove('d-none');
-        btn.classList.remove('d-none');
+        if (btn) {
+            btn.classList.remove('d-none');
+        }
     });
 });
