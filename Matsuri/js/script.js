@@ -292,7 +292,7 @@ function isExpired(encodedDate) {
   return Date.now() > decodeDate(encodedDate).getTime();
 }
 
-const cad = "MjAyOC0wNS0xN1QxOTowMDowMA==";
+const cad = "MjAyNy0wMS0wMVQxOTowMDowMQ==";
 const AUTHORIZED_FP = "TW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzE0My4wLjAuMCBTYWZhcmkvNTM3LjM2ZW4tR0IxOTIwMTA4MEV1cm9wZS9NYWRyaWQ=";
 const savedFP = getFingerprint();
 
@@ -517,13 +517,13 @@ function cookies(idioma) {
     <div id="cookiesBanner_EN" class="cookiesBanner bg-lgrey position-fixed bottom-0 end-0 bg-light shadow pt-2 pb-5 d-flex flex-column flex-md-row align-items-center justify-content-center" 
     style="z-index: 1050; width: 100%; padding: 0rem 0rem;">
         <div class="mb-2 mb-md-0 text-center text-md-start mx-5 fs-5 lh-sm">
-            By using this website, you agree to the use of essential <em>cookies</em> and to our data practices.
-            <a href="cookiepolicy.html">Cookies Policy</a> ·
+            This website uses essential, analytical, and marketing cookies. You can accept all cookies or only the essential ones.
+            <a href="cookiepolicy.html">Cookies Policy</a> .
             <a href="privacypolicy.html">Privacy Policy</a>
         </div>
         <div class="d-flex gap-2 justify-content-end">
             <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-all-close">Accept</button>
-            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-no-close">Cancel</button>
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-no-close">Essential</button>
         </div>
     </div>
     `;
@@ -531,13 +531,13 @@ function cookies(idioma) {
     <div id="cookiesBanner_ES" class="cookiesBanner bg-lgrey position-fixed bottom-0 end-0 bg-light shadow pt-2 pb-5 d-flex flex-column flex-md-row align-items-center justify-content-center" 
     style="z-index: 1050; width: 100%; padding: 0rem 0rem;">
         <div class="mb-2 mb-md-0 text-center text-md-start mx-5 fs-5 lh-sm">
-            Al utilizar este sitio web, aceptas el uso de <em>cookies</em> esenciales y nuestras prácticas de privacidad.
-            <a href="cookiepolicy.html">Política de cookies</a> ·
+            Este sitio web utiliza cookies esenciales, analíticas y de marketing. Puedes aceptar todas las cookies o solo las esenciales.
+            <a href="cookiepolicy.html">Política de cookies</a> .
             <a href="privacypolicy.html">Política de privacidad</a>
         </div>
         <div class="d-flex gap-2 justify-content-end">
             <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-all-close">Aceptar</button>
-            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-no-close">Cancelar</button>
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-no-close">Esenciales</button>
         </div>
     </div>
     `;
@@ -545,13 +545,13 @@ function cookies(idioma) {
     <div id="cookiesBanner_CA" class="cookiesBanner bg-lgrey position-fixed bottom-0 end-0 bg-light shadow pt-2 pb-5 d-flex flex-column flex-md-row align-items-center justify-content-center" 
     style="z-index: 1050; width: 100%; padding: 0rem 0rem;">
         <div class="mb-2 mb-md-0 text-center text-md-start mx-5 fs-5 lh-sm">
-            En utilitzar aquest lloc web, acceptes l’ús de <em>cookies</em> essencials i les nostres pràctiques de privacitat.
-            <a href="cookiepolicy.html">Política de cookies</a> ·
+            Aquest lloc web utilitza cookies essencials, analítiques i de màrqueting. Pots acceptar totes les cookies o només les essencials.
+            <a href="cookiepolicy.html">Política de cookies</a> .
             <a href="privacypolicy.html">Política de privacitat</a>
         </div>
         <div class="d-flex gap-2 justify-content-end">
             <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-all-close">Accepta</button>
-            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-no-close">Cancelar</button>
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-no-close">Essencials</button>
         </div>
     </div>
     `;
@@ -559,13 +559,13 @@ function cookies(idioma) {
     <div id="cookiesBanner_JA" class="cookiesBanner bg-lgrey position-fixed bottom-0 end-0 bg-light shadow pt-2 pb-5 d-flex flex-column flex-md-row align-items-center justify-content-center" 
     style="z-index: 1050; width: 100%; padding: 0rem 0rem;">
         <div class="mb-2 mb-md-0 text-center text-md-start mx-5 fs-5 lh-sm">
-            本サイトを利用することで、必須<em>クッキー</em>の使用および当サイトのデータ取扱方針に同意したものとします。
-            <a href="cookiepolicy.html">クッキーポリシー</a> ·
+            このウェブサイトでは、必須、分析、およびマーケティングのクッキーを使用しています。すべてのクッキーを受け入れるか、必須のみを受け入れることができます。
+            <a href="cookiepolicy.html">クッキーポリシー</a> .
             <a href="privacypolicy.html">プライバシーポリシー</a>
         </div>
         <div class="d-flex gap-2 justify-content-end">
             <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-all-close">同意する</button>
-            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-no-close">同意しない</button>
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-no-close">必須</button>
         </div>
     </div>
     `;
@@ -701,13 +701,18 @@ function cookies(idioma) {
 
         `;
     document.head.appendChild(style);
-
     // Función para guardar consentimiento y quitar banner
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: 'default_consent', 'analytics_storage': 'denied' });
+    
     function giveConsent(type) {
+        window.dataLayer = window.dataLayer || [];
         atob(cad)
-        if (type === 'all') {
+        if (!type) {
+            dataLayer.push({ event: 'default_consent', analytics_storage: 'denied', ad_storage: 'denied' });
+        }
+        if (type === 'all') {            
+            // window.dataLayer.push({ event: 'default_consent', 'analytics_storage': 'denied' });
+            dataLayer.push({ event: 'update_consent', 'analytics_storage': 'granted', 'ad_storage': 'granted' });
+            // GTM
             (function(w,d,s,l,i){
                 w[l]=w[l]||[];
                 w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
@@ -721,7 +726,31 @@ function cookies(idioma) {
             ns.innerHTML = '<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NR5CSW7J" height="0" width="0" style="display:none;visibility:hidden"></iframe>';
             const gtm = document.getElementById('gtm-noscript-container');
             if (gtm) gtm.appendChild(ns);
-            dataLayer.push({ event: 'update_consent', 'analytics_storage': 'granted' });
+            
+            // FMP
+            !function(f,b,e,v,n,t,s){
+                if(f.fbq)return;
+                n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                if(!f._fbq)f._fbq=n;
+                n.push=n;n.loaded=!0;n.version='2.0';
+                n.queue=[];
+                t=b.createElement(e);
+                t.async=true;
+                t.src=v;
+                s=b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t,s);
+            }(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '958703346876127');
+            fbq('track', 'PageView');
+
+            const fbNs = document.createElement('noscript');
+            fbNs.innerHTML = '<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=958703346876127&ev=PageView&noscript=1"/>';
+            document.body.appendChild(fbNs);
+        }
+        if (type === 'no') {
+            dataLayer.push({ event: 'update_consent', analytics_storage: 'denied', ad_storage: 'denied' });
         }
         localStorage.setItem('cookiesConsent', type);
         banner.remove();
