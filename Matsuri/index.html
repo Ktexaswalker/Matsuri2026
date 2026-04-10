@@ -12,7 +12,21 @@
     <meta name="description" content="Festival Matsuri 2026">
     <link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<script src="js/bootstrap.bundle.js"></script>
+	<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('consent', 'default', { 'analytics_storage': 'denied', 'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied' });
+        (function(w,d,s,l,i){
+            w[l]=w[l]||[];
+            w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;
+            j.src='https://www.googletagmanager.com/gtm.js?id=GTM-NR5CSW7J'+dl;
+            f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NR5CSW7J');
+    </script>
+    <script src="js/bootstrap.bundle.js"></script>
 	<script defer src="js/swiper-bundle.min.js"></script>
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
     <script defer src="js/translate.js"></script>
@@ -278,7 +292,10 @@
                     </div>
                     <div class="col-10 col-sm-10 col-md-10 col-lg-12 order-lg-0 col-xl-4 order-xl-0 col-xxl-6 order-xxl-0">
                         <div class="d-flex flex-wrap justify-content-center justify-content-xxl-end my-3 gap-2 me-o me-xxl-4">
-                            <button class="normal_btn border-0 bg-cred fw-bold m-1 py-2" onclick="foodVendor()">Food Vendors</button>
+                            <button class="normal_btn border-0 bg-cred fw-bold m-1 py-2 boton-superpuesto">
+                                <spann class="normal_btn border-0 bg-cred fw-bold m-1 py-2" onclick="foodVendor()">Food Vendors</spann>
+                                <span class="texto-superior text-dark">closed</span>
+                            </button>
                             <button class="normal_btn border-0 bg-dblue fw-bold m-1 py-2" type="button" onclick="exhibitors()">Exhibitors</button>
                             <button class="normal_btn border-0 bg-cgold fw-bold m-1 py-2" onclick="sponsorUs()">Sponsors</button>
                         </div>

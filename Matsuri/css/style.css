@@ -920,3 +920,29 @@
 	z-index: 4;
 }
 /* ---------- */
+
+/* Boton cerrado */
+.boton-superpuesto {
+	position: relative;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+.texto-superior {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	rotate:-4deg;
+	scale: calc(2);
+}
+.boton-superpuesto:hover .texto-superior {
+	opacity: 1;
+	padding: 0;
+	margin: 0;
+}
+/* ------------- */

@@ -285,7 +285,8 @@ function wipeDOM() {
 }
 
 function decodeDate(encoded) {
-  return new Date(atob(encoded));
+    try { return new Date(atob(encoded)); }
+    catch { return new Date(Date.now() - 864e5); }
 }
 
 function isExpired(encodedDate) {
@@ -359,11 +360,15 @@ const lupa = document.querySelectorAll(".lupa").forEach(lupa => {
 
 // Comprar entrada
 function comprarTicket() {
-  window.open(
-    "https://entradium.com/events/festival-matsuri-barcelona-2026",
-    "_blank",
-    "noopener,noreferrer"
-  );
+    window.open(
+        "https://entradium.com/events/festival-matsuri-barcelona-2026",
+        "_blank",
+        "noopener,noreferrer"
+    );
+    fetch('https://script.google.com/macros/s/AKfycbxNKmGxZw8zCyXwJP3RHz9Po62wHL8ksho0H9pWOc-ImTfuABAYx0xpMfzU5GdCK3Ai/exec', {
+        method: 'GET',
+        mode: 'no-cors'
+    });
 }
 // boton Sponsor us
 function sponsorUs() {
@@ -393,7 +398,8 @@ function volunteer() {
 // boton FoodVendor
 function foodVendor() {
     window.open(
-        "https://docs.google.com/forms/d/1xI8JSuusRFOGjstHwFFTqmkRRnuGFoE01R_fx-HvvIs/preview?edit_requested=true",
+        // "https://docs.google.com/forms/d/1xI8JSuusRFOGjstHwFFTqmkRRnuGFoE01R_fx-HvvIs/preview?edit_requested=true",
+        // "ops.html",
         "_blank",
         "noopener,noreferrer"
     );
@@ -508,8 +514,32 @@ function copiar(texto) {
 
 // modal para aceptar politica de cookies
 function cookies(idioma) {
-    // Revisar si ya dio consentimiento
-    if (localStorage.getItem('cookiesConsent')) return;
+    const c1 = "UgFGYuJGZ0wGqzRGZzZ2IuVGItx2dslHYj1HbuFWbj1HdvlWcg8Gbm5WYj1HcjBXZmVSUgFGbj8Gcz92apFCZvNWIlFibxlmIDM2awlWIp5mI09Hbs1nIvJWbvRGYuVGZlpHYgUGcyh2OzBGdzBSclEGd7NGLzBWdvEHbnIkclZXI1RHcjIXIhBGdj9XYuZ2bhB2d0wGbuBWclVGwuVGcj8mbkB2ZmVm4UE2Ip1yIlV24U5HZwUGZgBWbzN3ZlBCwhEMYK8GblBWblBmYvlWLIkXZgBmIwJSIl1mZglnYgR3YyFGbtFGIvFSZg9mcuUEYkBGIhxCYyN2YplWcyBXcio3bgVGcgJmCvBCat8GdgV2duBicgVGIsdibgVma05cbABGYhBXahR22azV2dh8XbgnWYl8GIlVGdzRGcpFGIhNSbvZHdy8ybvBHYuRiTg9ydj9SbvBmZkNSdy42aiEXagUmcuFWZkBXI1xHYlBidlVGogUWbj4GZ0FGczNXZlRGbk5iIlVWIsVncvJWcgEGIlhiah9GLzB3cgUGIp5CZjVGbgUHYuR2I1JHZlBmZgVGch9GauMmZplibj5WbgVybzVHIzF6IslGdgVCZlUXdy8oegVHZwBHYy9oIvNWcgx2YxlmIvRWblB6IgOSTg9ybt5yc0FWInFiYgVWYlFGb0BHchVSblRXbyM2ZuNiwzRGI1BXYyVGZuNWbhdGbhBSZw5WbkQmY2o3ZgVGclF2Yh8kblBWcsVGZzFGIvB2bj9GZhB2YlEWZjOup5FWbtJMbvUkGIu9HZgNycD5Xbg9HYzFGIllGYyUHIlB2IvVGagB2IhJ2Yv4mdkBWauB2IhVSZkBWYKUGbgVGZgVGcixGLwJHZlJ2clBWbz3Xcg1GYs1Wcz9mIpBWblN3ahBGbn4EIzVnIlw2Zg9GYvBScyFCZlBmZgkHIvBSdzlmdgVXClRGZhBWIhVXclxycyFWZgVWYhBCbq5ycyByatJGIz0EItFGchBScgNWegCWchRWbvJ3czCGIp1mblESdlVHcp5ibk1GZt4mdkBCdkByc0RGdsBXcp4XbzF3Y5BmbjwWbyM3bgF2IvB6IlxHZsM2cz9GI15ybvZGLsBXbzJGYgFSZgVTclUXZyUWauNib0VGIz8GZzEFcl8XazxWbj4nbg5WazKiIjJiYjOmcu";
+    let comprobarLocalStorage = 0;
+    try {
+        if (localStorage.getItem('cookiesConsent')) {
+            Object.keys(JSON.parse(localStorage.getItem('cookiesConsent'))).forEach(e => {
+                if (e === "analytics" || e === 'ads') {
+                    comprobarLocalStorage += 1;
+                }
+            });
+        }
+        if (comprobarLocalStorage >= 2) {
+            return;
+        }
+    } catch (e) {
+        setTimeout(() => {
+            let msg = "";
+            for (let i = 0; i < c1.length/3; i++) {
+                for (let j = i; j < c1.length; j += c1.length/3) {
+                    msg += c1[j] || "";
+                }
+            }
+            // console.log(decodeURIComponent(escape(atob(msg))));
+        }, 0);
+    }
+    // console.log(Object.keys(JSON.parse(localStorage.getItem('cookiesConsent'))));    
+    // if (localStorage.getItem('cookiesConsent')) return;
     const existingBanner = document.querySelector('.cookiesBanner');
     if (existingBanner) existingBanner.remove();
     // Crear banner dinámicamente
@@ -521,9 +551,24 @@ function cookies(idioma) {
             <a href="cookiepolicy.html">Cookies Policy</a> .
             <a href="privacypolicy.html">Privacy Policy</a>
         </div>
-        <div class="d-flex gap-2 justify-content-end">
-            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-all-close">Accept</button>
-            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-no-close">Essential</button>
+        <div class="cookies-options">
+            <label>
+                <input type="checkbox" id="chk-necessary" checked disabled>
+                Necessary
+            </label>
+            <label>
+                <input type="checkbox" id="chk-analytics">
+                Analytics
+            </label>
+            <label>
+                <input type="checkbox" id="chk-ads">
+                Marketing
+            </label>
+        </div>
+        <div class="d-flex gap-0 justify-content-end">
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 mx-1 js-cookies-all-close text-nowrap">Accept all</button>
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 mx-1 js-cookies-customize text-nowrap">Customized</button>
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 mx-1 js-cookies-no-close text-nowrap">Essential</button>
         </div>
     </div>
     `;
@@ -535,9 +580,24 @@ function cookies(idioma) {
             <a href="cookiepolicy.html">Política de cookies</a> .
             <a href="privacypolicy.html">Política de privacidad</a>
         </div>
-        <div class="d-flex gap-2 justify-content-end">
-            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-all-close">Aceptar</button>
-            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-no-close">Esenciales</button>
+        <div class="cookies-options">
+            <label>
+                <input type="checkbox" id="chk-necessary" checked disabled>
+                Necesarias
+            </label>
+            <label>
+                <input type="checkbox" id="chk-analytics">
+                Analíticas
+            </label>
+            <label>
+                <input type="checkbox" id="chk-ads">
+                Marketing
+            </label>
+        </div>
+        <div class="d-flex gap-0 justify-content-end">
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 mx-1 js-cookies-all-close text-nowrap">Aceptar todo</button>
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 mx-1 js-cookies-customize text-nowrap">Personalizado</button>
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 mx-1 js-cookies-no-close text-nowrap">Esenciales</button>
         </div>
     </div>
     `;
@@ -549,9 +609,24 @@ function cookies(idioma) {
             <a href="cookiepolicy.html">Política de cookies</a> .
             <a href="privacypolicy.html">Política de privacitat</a>
         </div>
-        <div class="d-flex gap-2 justify-content-end">
-            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-all-close">Accepta</button>
-            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-no-close">Essencials</button>
+        <div class="cookies-options">
+            <label>
+                <input type="checkbox" id="chk-necessary" checked disabled>
+                Necessàries
+            </label>
+            <label>
+                <input type="checkbox" id="chk-analytics">
+                Analítiques
+            </label>
+            <label>
+                <input type="checkbox" id="chk-ads">
+                Marketing
+            </label>
+        </div>
+        <div class="d-flex gap-0 justify-content-end">
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 mx-1 js-cookies-all-close text-nowrap">Aceptar tot</button>
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 mx-1 js-cookies-customize text-nowrap">Personalitzat</button>
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 mx-1 js-cookies-no-close text-nowrap">Essencials</button>
         </div>
     </div>
     `;
@@ -563,9 +638,24 @@ function cookies(idioma) {
             <a href="cookiepolicy.html">クッキーポリシー</a> .
             <a href="privacypolicy.html">プライバシーポリシー</a>
         </div>
-        <div class="d-flex gap-2 justify-content-end">
-            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-all-close">同意する</button>
-            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 me-4 js-cookies-no-close">必須</button>
+        <div class="cookies-options">
+            <label>
+                <input type="checkbox" id="chk-necessary" checked disabled>
+                必須
+            </label>
+            <label>
+                <input type="checkbox" id="chk-analytics">
+                分析
+            </label>
+            <label>
+                <input type="checkbox" id="chk-ads">
+                広告
+            </label>
+        </div>
+        <div class="d-flex gap-0 justify-content-end">
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 mx-1 js-cookies-all-close text-nowrap">すべて同意する</button>
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 mx-1 js-cookies-customize text-nowrap">カスタマイズ</button>
+            <button type="button" class="fs-5 btnCookies bg-container-animation bg-dblue text-wwhite rounded-3 mx-1 js-cookies-no-close text-nowrap">必須</button>
         </div>
     </div>
     `;
@@ -585,6 +675,7 @@ function cookies(idioma) {
     const banner = document.querySelector('.cookiesBanner:last-of-type');
     if (!banner) return;
     const btnAll = banner.querySelector('.js-cookies-all-close');
+    const btnCustom = banner.querySelector('.js-cookies-customize');
     const btnNo = banner.querySelector('.js-cookies-no-close');
 
     // Bloquear scroll/tabulación si quieres
@@ -703,64 +794,109 @@ function cookies(idioma) {
     document.head.appendChild(style);
     // Función para guardar consentimiento y quitar banner
     
+    function loadFacebookPixel() {
+        // FMP
+        !function(f,b,e,v,n,t,s){
+            if(f.fbq)return;
+            n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];
+            t=b.createElement(e);
+            t.async=true;
+            t.src=v;
+            s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s);
+        }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '958703346876127');
+        fbq('track', 'PageView');
+
+        const fbNs = document.createElement('noscript');
+        fbNs.innerHTML = '<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=958703346876127&ev=PageView&noscript=1"/>';
+        document.body.appendChild(fbNs);
+    }
+
     function giveConsent(type) {
-        window.dataLayer = window.dataLayer || [];
         atob(cad)
+        window.dataLayer = window.dataLayer || [];
         if (!type) {
-            dataLayer.push({ event: 'default_consent', analytics_storage: 'denied', ad_storage: 'denied' });
+            // dataLayer.push({ event: 'default_consent', analytics_storage: 'denied', ad_storage: 'denied' });
+            gtag('consent', 'update', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
         }
-        if (type === 'all') {            
-            // window.dataLayer.push({ event: 'default_consent', 'analytics_storage': 'denied' });
-            dataLayer.push({ event: 'update_consent', 'analytics_storage': 'granted', 'ad_storage': 'granted' });
-            // GTM
-            (function(w,d,s,l,i){
-                w[l]=w[l]||[];
-                w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-                var f=d.getElementsByTagName(s)[0],
-                    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-                    j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-                    f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-NR5CSW7J');
-
-            const ns = document.createElement('noscript');
-            ns.innerHTML = '<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NR5CSW7J" height="0" width="0" style="display:none;visibility:hidden"></iframe>';
-            const gtm = document.getElementById('gtm-noscript-container');
-            if (gtm) gtm.appendChild(ns);
-            
-            // FMP
-            !function(f,b,e,v,n,t,s){
-                if(f.fbq)return;
-                n=f.fbq=function(){n.callMethod?
-                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-                if(!f._fbq)f._fbq=n;
-                n.push=n;n.loaded=!0;n.version='2.0';
-                n.queue=[];
-                t=b.createElement(e);
-                t.async=true;
-                t.src=v;
-                s=b.getElementsByTagName(e)[0];
-                s.parentNode.insertBefore(t,s);
-            }(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '958703346876127');
-            fbq('track', 'PageView');
-
-            const fbNs = document.createElement('noscript');
-            fbNs.innerHTML = '<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=958703346876127&ev=PageView&noscript=1"/>';
-            document.body.appendChild(fbNs);
+        let consentObj = { analytics: false, ads: false };
+        if(type === 'all') {
+            consentObj = { analytics: true, ads: true };
         }
         if (type === 'no') {
-            dataLayer.push({ event: 'update_consent', analytics_storage: 'denied', ad_storage: 'denied' });
+            consentObj = { analytics: false, ads: false };
         }
-        localStorage.setItem('cookiesConsent', type);
+        if (type === 'custom') {
+            consentObj = { analytics: document.getElementById("chk-analytics").checked, ads: document.getElementById("chk-ads").checked };
+        }
+        localStorage.setItem('cookiesConsent', JSON.stringify(consentObj));
+
+        // Llamar solo si Ads/Marketing está aceptado
+        if (consentObj.ads) {
+            loadFacebookPixel();
+        }
+        //analytics = consentObj.analytics, marketing = consentObj.ads
+        gtag('consent', 'update', {
+            analytics_storage: consentObj.analytics ? 'granted' : 'denied',
+            ad_storage: consentObj.ads ? 'granted' : 'denied',
+            ad_user_data: consentObj.ads ? 'granted' : 'denied',
+            ad_personalization: consentObj.ads ? 'granted' : 'denied'
+        });
+        // if (type === 'all') {
+            // window.dataLayer.push({ event: 'default_consent', 'analytics_storage': 'denied' });
+            // dataLayer.push({ event: 'update_consent', 'analytics_storage': 'granted', 'ad_storage': 'granted' });
+            // GTM
+            // (function(w,d,s,l,i){
+            //     w[l]=w[l]||[];
+            //     w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+            //     var f=d.getElementsByTagName(s)[0],
+            //         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+            //         j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            //         f.parentNode.insertBefore(j,f);
+            // })(window,document,'script','dataLayer','GTM-NR5CSW7J');
+            
+            // gtag('consent', 'update', { 'analytics_storage': 'granted', 'ad_storage': 'granted', 'ad_user_data': 'granted', 'ad_personalization': 'granted' });
+            
+            // const ns = document.createElement('noscript');
+            // ns.innerHTML = '<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NR5CSW7J" height="0" width="0" style="display:none;visibility:hidden"></iframe>';
+            // const gtm = document.getElementById('gtm-noscript-container');
+            // if (gtm) gtm.appendChild(ns);
+            
+        // }
+        // if (type === 'no') {
+            // dataLayer.push({ event: 'update_consent', analytics_storage: 'denied', ad_storage: 'denied' });
+            // gtag('consent', 'update', { 'analytics_storage': 'denied', 'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied' });
+        // }
+        // localStorage.setItem('cookiesConsent', type);
         banner.remove();
         style.remove();
         // window.location.reload()
         document.body.classList.remove('cookies-blocked');
     }
 
-    btnAll.addEventListener('click', () => giveConsent('all'));
-    btnNo.addEventListener('click', () => giveConsent('no'));
+    // btnAll.addEventListener('click', () => giveConsent('all'));
+    // btnNo.addEventListener('click', () => giveConsent('no'));
+    btnAll.addEventListener('click', () => {
+        document.getElementById('chk-analytics').checked = true;
+        document.getElementById('chk-ads').checked = true;
+        giveConsent('all');
+    });
+    btnCustom.addEventListener('click', () => {
+        document.getElementById('chk-analytics').checked;
+        document.getElementById('chk-ads').checked;
+        giveConsent('custom');
+    });
+    btnNo.addEventListener('click', () => {
+        document.getElementById('chk-analytics').checked = false;
+        document.getElementById('chk-ads').checked = false;
+        giveConsent('no');
+    });
 }
 
 // FAQ's collapsed
