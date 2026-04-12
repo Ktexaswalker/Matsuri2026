@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Forzar HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://matsuribcn.es/$1 [R=301,L]
+
+# Forzar sin www
+RewriteCond %{HTTP_HOST} ^www\.matsuribcn\.es [NC]
+RewriteRule ^(.*)$ https://matsuribcn.es/$1 [R=301,L]
