@@ -1,9 +1,2 @@
 User-agent: *
 Allow: /
-
-# Borrar almohadilla para descomentar
-# User-agent: *
-# Disallow: /
-
-# Allow: /js/script.js
-# Allow: /css/styles.css
