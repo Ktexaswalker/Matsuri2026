@@ -517,22 +517,28 @@ let gtmLoaded = false;
 function cookies(idioma) {
     const c1 = "UgFGYuJGZ0wGqzRGZzZ2IuVGItx2dslHYj1HbuFWbj1HdvlWcg8Gbm5WYj1HcjBXZmVSUgFGbj8Gcz92apFCZvNWIlFibxlmIDM2awlWIp5mI09Hbs1nIvJWbvRGYuVGZlpHYgUGcyh2OzBGdzBSclEGd7NGLzBWdvEHbnIkclZXI1RHcjIXIhBGdj9XYuZ2bhB2d0wGbuBWclVGwuVGcj8mbkB2ZmVm4UE2Ip1yIlV24U5HZwUGZgBWbzN3ZlBCwhEMYK8GblBWblBmYvlWLIkXZgBmIwJSIl1mZglnYgR3YyFGbtFGIvFSZg9mcuUEYkBGIhxCYyN2YplWcyBXcio3bgVGcgJmCvBCat8GdgV2duBicgVGIsdibgVma05cbABGYhBXahR22azV2dh8XbgnWYl8GIlVGdzRGcpFGIhNSbvZHdy8ybvBHYuRiTg9ydj9SbvBmZkNSdy42aiEXagUmcuFWZkBXI1xHYlBidlVGogUWbj4GZ0FGczNXZlRGbk5iIlVWIsVncvJWcgEGIlhiah9GLzB3cgUGIp5CZjVGbgUHYuR2I1JHZlBmZgVGch9GauMmZplibj5WbgVybzVHIzF6IslGdgVCZlUXdy8oegVHZwBHYy9oIvNWcgx2YxlmIvRWblB6IgOSTg9ybt5yc0FWInFiYgVWYlFGb0BHchVSblRXbyM2ZuNiwzRGI1BXYyVGZuNWbhdGbhBSZw5WbkQmY2o3ZgVGclF2Yh8kblBWcsVGZzFGIvB2bj9GZhB2YlEWZjOup5FWbtJMbvUkGIu9HZgNycD5Xbg9HYzFGIllGYyUHIlB2IvVGagB2IhJ2Yv4mdkBWauB2IhVSZkBWYKUGbgVGZgVGcixGLwJHZlJ2clBWbz3Xcg1GYs1Wcz9mIpBWblN3ahBGbn4EIzVnIlw2Zg9GYvBScyFCZlBmZgkHIvBSdzlmdgVXClRGZhBWIhVXclxycyFWZgVWYhBCbq5ycyByatJGIz0EItFGchBScgNWegCWchRWbvJ3czCGIp1mblESdlVHcp5ibk1GZt4mdkBCdkByc0RGdsBXcp4XbzF3Y5BmbjwWbyM3bgF2IvB6IlxHZsM2cz9GI15ybvZGLsBXbzJGYgFSZgVTclUXZyUWauNib0VGIz8GZzEFcl8XazxWbj4nbg5WazKiIjJiYjOmcu";
     let saved = null;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        'event': 'default_consent',
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied'
+    });
     try {
         const raw = localStorage.getItem('cookiesConsent');
         if (raw) {
             saved = JSON.parse(raw);
         }
         if (saved && typeof saved === 'object' && 'analytics' in saved && 'ads' in saved) {
-            if (saved.analytics || saved.ads) {
-                window.dataLayer = window.dataLayer || [];
-                window.dataLayer.push({
-                    event: 'consent_update',
-                    analytics_storage: saved.analytics ? 'granted' : 'denied',
-                    ad_storage: saved.ads ? 'granted' : 'denied'
-                });
-
-                if (saved.analytics) loadClarity();
-                if (saved.ads) loadFacebookPixel();
+            window.dataLayer.push({
+                'event': 'consent_update',
+                'analytics_storage': saved.analytics ? 'granted' : 'denied',
+                'ad_storage': saved.ads ? 'granted' : 'denied'
+            });
+            if (saved.analytics) {
+                loadClarity();
+            }
+            if (saved.ads) {
+                loadFacebookPixel();
                 loadGTM();
             }
             return;
