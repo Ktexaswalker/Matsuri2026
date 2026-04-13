@@ -1,6 +1,14 @@
 © 2026 Hector Martinez Cervera. All rights reserved.
-Over 450 hours of development, including ongoing improvements and refinements.
-Estimated market value: 15,000€+.
+
+Over 450 hours of development, including ongoing improvements and refinements.  
+Estimated market value: 15,000€+  
 SEO score above 70% according to a Seobility audit.
-[Ver Estadistica de SEO](https://matsuribcn.es/seo)
-![view](CardDevelloper.png)
+
+
+### 📊 Analytics & SEO
+[Ver estadística de SEO](https://matsuribcn.es/seo)
+
+
+### 🧑‍💻 Developer Card
+![Developer Card](CardDevelloper.png)
+
